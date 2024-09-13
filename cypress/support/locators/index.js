@@ -1,0 +1,1 @@
+export { default as Login_page } from './login-page.locator';
