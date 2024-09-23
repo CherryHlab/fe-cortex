@@ -7,6 +7,9 @@ Cypress.config('defaultCommandTimeout', 50000);
 export function navigateWelcomePage(){
   cy.get(Login_page.button_welcome).click();
   cy.get(Login_page.page_title).contains('cortex');
+  cy.get(Login_page.text_username).should('be.visible').should('be.enabled').should('be.empty');
+  cy.get(Login_page.text_password).should('be.visible').should('be.enabled').should('be.empty');
+  cy.get(Login_page.button_login).should('be.visible').should('be.enabled');
 }
 
 export function superuserLogin(){
