@@ -3,5 +3,5 @@ export default {
   text_username: '[id="username"]',
   text_password: '[id="password"]',
   button_login: '[id="kc-login"]',
-  page_title: '[id="kc-header-wrapper"]'
+  page_title: '[id="kc-header-wrapper"]',
 };
