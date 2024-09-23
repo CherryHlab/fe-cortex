@@ -19,7 +19,6 @@ export function superuserLogin(){
    cy.url().should('include','select-ward');
 }
 
-
 export function userLogin( data = { username: 'user1', password: 'MyPassw0rd' }){
   cy.get(Login_page.text_username).type(data.username);
   cy.get(Login_page.text_password).type(data.password);
