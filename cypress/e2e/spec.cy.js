@@ -11,35 +11,35 @@ describe('template spec', () => {
     Start.PageRedirect('ipd','welcome');
   });
 
-  it('should log in with super user account', function (){
+  it('should log in with super user account', function() {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then(data => {
       Login.userLogin();
     });
   });
 
-  it('should log in with x-physician account', function (){
+  it('should log in with x-physician account', function() {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then(data => {
       Login.userLogin(data.physician, data.physician);
     });
   });
 
-  it('should log in with x-nurse account', function (){
+  it('should log in with x-nurse account', function() {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then(data => {
       Login.userLogin(data.nurse, data.nurse);
     });
   });
 
-  it('should log in with x-pharmacist account', function (){
+  it('should log in with x-pharmacist account', function() {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then(data => {
       Login.userLogin(data.pharmacist, data.pharmacist);
     });
   });
 
-  it('should logout from cortex-x', function (){
+  it('should logout from cortex-x', function() {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then(data => {
       Login.userLogin();
