@@ -5,7 +5,6 @@ module.exports = defineConfig({
     baseUrl: "https://dev-x.cortexcloud.co",
     chromeWebSecurity: false,
     videoUploadOnPasses: false,
-    testIsolation: false,
     video: false,
     waitForAnimations: true,
     defaultCommandTimeout: 99000
