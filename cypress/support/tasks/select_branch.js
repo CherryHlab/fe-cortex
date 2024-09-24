@@ -16,7 +16,7 @@ export function selectBranch(branch = 1) {
   cy.get(Select_branch_page.text_search_box)
     .should('be.visible')
     .should('be.empty');
-  cy.get(searchBox).should('be.visible');
+  cy.get(searchBox).should('be.visible').should('not.empty');
   cy.get(searchBox).click();
   cy.get(Select_branch_page.button_submit).click();
 }
