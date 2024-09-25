@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
 import * as Login from '../support/tasks/login';
-import * as Logout from '../support/tasks/logout';
 import * as SelectBranch from '../support/tasks/select_branch';
 
 Cypress.config('defaultCommandTimeout', 30000);
