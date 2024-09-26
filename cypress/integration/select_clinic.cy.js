@@ -9,15 +9,15 @@ Cypress.config('defaultCommandTimeout', 30000);
 describe('template spec', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-  });
-
-  it('should select clinic', function () {
     Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
+  });
+
+  it('should select clinic', function () {
     SelectClinic.navigateSelectClinicPage();
     cy.fixture('department-clinic').then((department) => {
       SelectClinic.checkDepartmentAndClinic(department);

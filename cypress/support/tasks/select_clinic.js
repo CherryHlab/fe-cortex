@@ -32,6 +32,16 @@ export function checkDepartmentAndClinic(departmentData) {
     var lengthOfClinic = department[i].clinic.length;
     var clinic = department[i].clinic;
     cy.get(Select_clinic_page.list_select_clinic).click();
+
+    for (var j = 0; j < clinic.length; j++) {
+      var indexOfClinic = Select_clinic_page.item.indexOf('"');
+      var findClinic =
+        Select_clinic_page.item.slice(0, indexOfClinic + 1) +
+        clinic[j] +
+        Select_clinic_page.item.slice(indexOfClinic + 1);
+      cy.get(findClinic).scrollIntoView().should('be.visible');
+    }
+
     cy.get(Select_clinic_page.item_list).should('have.length', lengthOfClinic);
     cy.get(Select_clinic_page.list_select_clinic).click();
   }

@@ -8,10 +8,10 @@ Cypress.config('defaultCommandTimeout', 30000);
 describe('template spec', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
+    Login.navigateWelcomePage();
   });
 
   it('should not select branch if only have 1 branch', function () {
-    Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.physician);
     });
@@ -20,7 +20,6 @@ describe('template spec', () => {
   });
 
   it('should select branch if branch > 1 branch (select branch 1)', function () {
-    Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.nurse);
     });
@@ -29,7 +28,6 @@ describe('template spec', () => {
   });
 
   it('should select branch if branch > 1 branch (select branch 2)', function () {
-    Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.nurse);
     });
@@ -38,7 +36,6 @@ describe('template spec', () => {
   });
 
   it('should not select branch if branch > 1 branch but set default branch', function () {
-    Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.doctor);
     });
