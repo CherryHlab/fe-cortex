@@ -27,23 +27,29 @@ describe('template spec', () => {
     Bedlist.checkBedlist();
   });
 
-  //  it('nurse should see the bed list page', function () {
-  //    cy.fixture('login-credential').then((data) => {
-  //      Login.userLogin(data.nurse);
-  //    });
-  //    SelectBranch.navigateSelectBranchPage();
-  //    SelectBranch.selectBranch(1);
-  //    SelectClinic.navigateSelectClinicPage();
-  //    SelectClinic.selectDepartment();
-  //    SelectClinic.selectClinic();
-  //  });
-  //
-  //  it('super user should see the bed list page', function () {
-  //    Login.userLogin();
-  //    SelectBranch.navigateSelectBranchPage();
-  //    SelectBranch.oneBranchOrSetDefault();
-  //    SelectClinic.navigateSelectClinicPage();
-  //    SelectClinic.selectDepartment();
-  //    SelectClinic.selectClinic();
-  //  });
+  it('nurse should see the bed list page', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.nurse);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.selectBranch(1);
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    Bedlist.checkHeaderBedlist();
+    Bedlist.checkBedlist();
+  });
+  
+  it('super user should see the bed list page', function () {
+    Login.userLogin();
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    Bedlist.checkHeaderBedlist();
+    Bedlist.checkBedlist();
+  });
 });
