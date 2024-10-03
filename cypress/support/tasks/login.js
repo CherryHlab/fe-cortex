@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import { Login_page } from '../locators';
-import * as data from '../../fixtures/login-credential.json';
 
 Cypress.config('defaultCommandTimeout', 50000);
 
