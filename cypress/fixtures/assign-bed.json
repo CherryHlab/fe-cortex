@@ -1,0 +1,145 @@
+{
+  "assign_bed": [{
+    "hn": "88800002",
+    "name": "automation testing user",
+    "phone": "0987654321",
+    "emergency_name": "สมภิศ สุวรรณเขต",
+    "relationship": "บิดา",
+    "emergency_phone": "0123456789",
+    "physician": "000",
+    "department": [{ 
+      "name" : "รังสี",
+      "consult_name": "002"
+    },{
+      "name" : "เวชศาสตร์ฟื้นฟู",
+      "consult_name": "003"
+    },{
+      "name" : "จักษุ",
+      "consult_name": "004"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800003",
+    "name": "automation testing user",
+    "phone": "0987654322",
+    "emergency_name": "มานี มีนา",
+    "relationship": "บิดา",
+    "emergency_phone": "0123456788",
+    "physician": "005",
+    "department": [{
+      "name": "ผู้ป่วยหนัก",
+      "consult_name": "006"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800004",
+    "name": "automation testing user",
+    "phone": "0987654333",
+    "emergency_name": "พัฒน์ สุวรรณโชค",
+    "relationship": "บิดา",
+    "emergency_phone": "0123456777",
+    "physician": "007",
+    "department": [{
+      "name": "วิสัญญี",
+      "consult_name": "ฆาเม"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800005",
+    "name": "automation testing user",
+    "phone": "0987654444",
+    "emergency_name": "วราภรณ์ ซาลาเปา",
+    "relationship": "มารดา",
+    "emergency_phone": "0123456666",
+    "physician": "007",
+    "department": [{
+      "name": "วิสัญญี",
+      "consult_name": "ฆาเม"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800006",
+    "name": "automation testing user",
+    "phone": "0987655555",
+    "emergency_name": "ซาลาเปา วราภรณ์",
+    "relationship": "มารดา",
+    "emergency_phone": "0123455555",
+    "physician": "Physician Test",
+    "department": [{
+      "name": "กุมารเวช",
+      "consult_name": "Consult กุมารเวช"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800007",
+    "name": "automation testing user",
+    "phone": "0987666666",
+    "emergency_name": "เรวัต จิรวราพงศ์",
+    "relationship": "บิดา",
+    "emergency_phone": "0123444444",
+    "physician": "Automation Test",
+    "department": [{
+      "name": "กุมารเวช",
+      "consult_name": "Consult กุมารเวช"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800008",
+    "name": "automation testing user",
+    "phone": "0987777777",
+    "emergency_name": "จ้า สมวงศ์",
+    "relationship": "มารดา",
+    "emergency_phone": "0123333333",
+    "physician": "Automation Testing",
+    "department": [{ 
+      "name": "ศัลยศาสตร์",
+      "consult_name": "Consult ศัลยศาสตร์"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800009",
+    "name": "automation testing user",
+    "phone": "0988888888",
+    "emergency_name": "วราวุด ใจดี",
+    "relationship": "บิดา",
+    "emergency_phone": "0122222222",
+    "physician": "อิสระ สมบูรณ์",
+    "department": [{
+      "name": "จักษุ",
+      "consult_name": "Consult จักษุ"
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800010",
+    "name": "automation testing user",
+    "phone": "0999999999",
+    "emergency_name": "บงกช เผ่ารอด",
+    "relationship": "มารดา",
+    "emergency_phone": "0111111111",
+    "physician": "พาขวัญ วรรณา",
+    "department": [{ 
+      "name": "หู คอ จมูก",
+      "consult_name": ""
+    }],
+    "used": false
+  },
+  {
+    "hn": "88800011",
+    "name": "automation testing user",
+    "phone": "0912345678",
+    "emergency_name": "ศรุต ก้องกิจ",
+    "relationship": "บิดา",
+    "emergency_phone": "0198765432",
+    "physician": "วรรณา พาขวัญ",
+    "department": [],
+    "used": false
+  }] 
+}

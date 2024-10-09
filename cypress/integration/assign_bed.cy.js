@@ -4,6 +4,7 @@ import * as Login from '../support/tasks/login';
 import * as SelectBranch from '../support/tasks/select_branch';
 import * as SelectClinic from '../support/tasks/select_clinic';
 import * as Bedlist from '../support/tasks/bed_list';
+import * as AssignBed from '../support/tasks/assign_bed';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
@@ -13,7 +14,7 @@ describe('template spec', () => {
     Login.navigateWelcomePage();
   });
 
-  it('physician should see the bed list page', function () {
+  it('physician should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.physician);
     });
@@ -23,11 +24,11 @@ describe('template spec', () => {
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient();
   });
 
-  it('nurse should see the bed list page', function () {
+  it('nurse should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.nurse);
     });
@@ -37,19 +38,21 @@ describe('template spec', () => {
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(1);
   });
 
-  it('super user should see the bed list page', function () {
-    Login.userLogin();
+  it('super user should be assign patient to bed list page', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
+    let bed_label = AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(3);
   });
 });
