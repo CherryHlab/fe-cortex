@@ -52,7 +52,7 @@ describe('template spec', () => {
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    let bed_label = AssignBed.randomAvailableBed();
+    AssignBed.randomAvailableBed();
     AssignBed.assign_patient(3);
   });
 });
