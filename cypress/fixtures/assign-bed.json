@@ -110,10 +110,10 @@
     "emergency_name": "วราวุด ใจดี",
     "relationship": "บิดา",
     "emergency_phone": "0122222222",
-    "physician": "อิสระ สมบูรณ์",
+    "physician": "ณัฏฐกานต์ ณัฏฐกานต์",
     "department": [{
       "name": "จักษุ",
-      "consult_name": "Consult จักษุ"
+      "consult_name": "จักรภพ แสนสิรา"
     }],
     "used": false
   },
@@ -124,7 +124,7 @@
     "emergency_name": "บงกช เผ่ารอด",
     "relationship": "มารดา",
     "emergency_phone": "0111111111",
-    "physician": "พาขวัญ วรรณา",
+    "physician": "วรันธร  สาลี",
     "department": [{ 
       "name": "หู คอ จมูก",
       "consult_name": ""
@@ -138,7 +138,7 @@
     "emergency_name": "ศรุต ก้องกิจ",
     "relationship": "บิดา",
     "emergency_phone": "0198765432",
-    "physician": "วรรณา พาขวัญ",
+    "physician": "Physician Cortexcloud",
     "department": [],
     "used": false
   }] 

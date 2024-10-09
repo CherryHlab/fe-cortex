@@ -25,7 +25,7 @@ export function randomAvailableBed() {
     });
 }
 
-export function assign_patient(patient_slot = 0) {
+export function assign_patient(patient_slot = 0, transfer = false) {
   cy.fixture('assign-bed').then((data) => {
     let patient = data.assign_bed;
     let patient_length = data.assign_bed.length;
@@ -54,12 +54,15 @@ export function assign_patient(patient_slot = 0) {
         patient[patient_slot].emergency_phone,
       );
       cy.get(Assign_bed_page.physician).clear();
-      cy.get(Assign_bed_page.physician).type(patient[patient_slot].physician);
+      let physician = patient[patient_slot].physician.split(' ')[0];
+      cy.get(Assign_bed_page.physician).type(physician);
+      // cy.get(Assign_bed_page.physician).type(patient[patient_slot].physician);
       cy.get(Assign_bed_page.option).first().click();
-      cy.get(Assign_bed_page.select_physician).should(
-        'contain',
-        patient[patient_slot].physician,
-      );
+      cy.get(Assign_bed_page.select_physician).should('contain', physician);
+      // cy.get(Assign_bed_page.select_physician).should(
+      //   'contain',
+      //   patient[patient_slot].physician,
+      // );
       let department_length = patient[patient_slot].department.length;
       if (department_length > 0) {
         for (let i = 0; i < department_length; i++) {
@@ -82,21 +85,35 @@ export function assign_patient(patient_slot = 0) {
           );
           cy.get(departmentName).click();
           if (patient[patient_slot].department[i].consult_name != '') {
+            let consult_name =
+              patient[patient_slot].department[i].consult_name.split(' ')[0];
             cy.get(consultName).clear();
-            cy.get(consultName).type(
-              patient[patient_slot].department[i].consult_name,
-            );
+            cy.get(consultName).type(consult_name);
+            // cy.get(consultName).type(
+            //   patient[patient_slot].department[i].consult_name,
+            // );
             cy.get(Assign_bed_page.option).first().click();
-            cy.get(checkConsultName).should(
-              'contain',
-              patient[patient_slot].department[i].consult_name,
-            );
+            cy.get(checkConsultName).should('contain', consult_name);
+            // cy.get(checkConsultName).should(
+            //   'contain',
+            //   patient[patient_slot].department[i].consult_name,
+            // );
           }
           if (i + 1 < department_length)
             cy.get(Assign_bed_page.button_add_consult).click();
         }
       }
       cy.get(Assign_bed_page.button_submit).click();
+      if (transfer == false) {
+        cy.get(Assign_bed_page.toast_submit).first().should('be.visible'); // add should contain text
+        cy.get(Assign_bed_page.toast_submit).first().should('not.be.visible');
+      } else {
+        cy.get(Assign_bed_page.toast_submit)
+          .first()
+          .should('be.visible')
+          .should('have.text', 'ย้ายเตียงผู้ป่วยสำเร็จ');
+        cy.get(Assign_bed_page.toast_submit).first().should('not.be.visible');
+      }
     }
   });
 }

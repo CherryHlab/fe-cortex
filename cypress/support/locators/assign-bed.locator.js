@@ -15,7 +15,7 @@ export default {
   emergency_relationship: '[data-testid="emergencyContacts.0.relationship"]',
   emergency_phone_number: '[data-testid="emergencyContacts.0.phoneNumber"]',
 
-  physician: '#react-select-2-input',
+  physician: '[data-testid="primaryPhysician"] input',
   select_physician: '[data-testid="select-value-primaryPhysician"]',
   department:
     '[data-testid="searchbox-trigger-select-department-needtoreplace"]',
@@ -26,4 +26,5 @@ export default {
 
   button_add_consult: '[data-testid="add-consult-physician"]',
   button_submit: '[data-testid="assign-bed-submit-button"]',
+  toast_submit: 'ol',
 };
