@@ -27,7 +27,7 @@ describe('template spec', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assign_patient(7);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(7, true);
+    AssignBed.assign_patient(7, false);
   });
 
   it('nurse should be transfer patient in ward', function () {
@@ -43,7 +43,7 @@ describe('template spec', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assign_patient(8);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(8, true);
+    AssignBed.assign_patient(8, false);
   });
 
   it('super user should be transfer patient in ward', function () {
@@ -59,6 +59,63 @@ describe('template spec', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assign_patient(9);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(9, true);
+    AssignBed.assign_patient(9, false);
+  });
+
+  it('physician should be transfer patient between ward', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(4);
+    Start.PageRedirect('ipd', 'select-ward');
+    SelectClinic.selectDepartment('จิตเวช');
+    SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(4, false);
+  });
+
+  it('nurse should be transfer patient between ward', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.nurse);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.selectBranch(1);
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(5);
+    Start.PageRedirect('ipd', 'select-ward');
+    SelectClinic.selectDepartment('จิตเวช');
+    SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(5, false);
+  });
+
+  it('super user should be transfer patient between ward', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(6);
+    Start.PageRedirect('ipd', 'select-ward');
+    SelectClinic.selectDepartment('จิตเวช');
+    SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(6, false);
   });
 });
