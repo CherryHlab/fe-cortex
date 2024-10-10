@@ -71,7 +71,7 @@ export function selectClinic(clinic = 'อายุรกรรม ชาย', l
   cy.get(Select_clinic_page.text_search_clinic)
     .should('be.visible')
     .should('be.empty');
-  cy.get(Select_clinic_page.item_list).should('have.lengthOf', 2);
+  cy.get(Select_clinic_page.item_list).should('have.lengthOf', length);
   cy.get(Select_clinic_page.item_list).should('not.empty');
   cy.get(Select_clinic_page.list_box).scrollTo('bottom');
   var indexOfClinic = Select_clinic_page.item.indexOf('"');
