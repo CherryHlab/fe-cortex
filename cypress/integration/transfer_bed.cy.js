@@ -38,7 +38,7 @@ describe('Transfer in ward', () => {
     Patient.submit_form();
     Sidebar.navigateBedlist();
     Bedlist.dischargePatient();
-  })
+  });
 
   it('physician should be transfer patient in ward', function () {
     cy.fixture('login-credential').then((data) => {
@@ -89,7 +89,6 @@ describe('Transfer in ward', () => {
   });
 });
 
-
 describe('Transfer between ward', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
@@ -116,7 +115,7 @@ describe('Transfer between ward', () => {
     Patient.submit_form();
     Sidebar.navigateBedlist();
     Bedlist.dischargePatient();
-  })
+  });
 
   it('physician should be transfer patient between ward', function () {
     cy.fixture('login-credential').then((data) => {

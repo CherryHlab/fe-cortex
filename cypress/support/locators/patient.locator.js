@@ -7,5 +7,5 @@ export default {
   toast: 'ol',
   chip_label: '[data-testid="chip-label"]',
   confirm_bar: '[data-testid="submit-confirm-bar"]',
-  button_submit: '[data-testid="submit-btn"]'
+  button_submit: '[data-testid="submit-btn"]',
 };

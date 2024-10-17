@@ -49,7 +49,7 @@ describe('template spec', () => {
     Patient.submit_form();
     Sidebar.navigateBedlist();
     Bedlist.dischargePatient();
-  })
+  });
 
   it('physician should be discharge patient from bed list', function () {
     cy.fixture('login-credential').then((data) => {

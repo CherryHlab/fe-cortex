@@ -2,7 +2,6 @@
 import { Bed_list_page } from '../locators';
 import { Sidebar_page } from '../locators';
 
-
 export function navigateBedlistPage() {
   cy.get(Bed_list_page.bed_list_container).first().should('be.visible');
   cy.get(Bed_list_page.bed_list_container).first().contains('เตียงทั้งหมด');
@@ -71,9 +70,14 @@ export function checkBedlist() {
 
 export function dischargePatient() {
   cy.get('@bed_label').then((bed_label) => {
-    cy.log(bed_label)
-    cy.get(Sidebar_page.admitted_bed).contains(bed_label).parents().eq(2).find(Sidebar_page.button_action).click();
+    cy.log(bed_label);
+    cy.get(Sidebar_page.admitted_bed)
+      .contains(bed_label)
+      .parents()
+      .eq(2)
+      .find(Sidebar_page.button_action)
+      .click();
     cy.get(Sidebar_page.button_discharge).click();
     cy.get(Sidebar_page.dialog).find('button').contains('ยืนยัน').click();
-  })
+  });
 }

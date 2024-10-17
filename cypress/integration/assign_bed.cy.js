@@ -38,7 +38,7 @@ describe('template spec', () => {
     Patient.submit_form();
     Sidebar.navigateBedlist();
     Bedlist.dischargePatient();
-  })
+  });
 
   it('physician should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
