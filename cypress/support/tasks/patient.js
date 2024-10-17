@@ -16,10 +16,11 @@ export function navigateDischargeSummary() {
 
 export function submit_form(notNurse = true) {
   if (notNurse) {
+    cy.get(Patient_page.patient_outlet_form).children().children().children().should('have.length', 3);
     cy.get(Patient_page.button_submit).click();
     cy.get(Patient_page.toast).should('contain','Submit ข้อมูล discharge summary สำเร็จ');
     cy.get(Patient_page.chip_label).should('contain','Submitted');
   } else {
-    cy.get(Patient_page.button_submit).should('be.visible');
+    cy.get(Patient_page.patient_outlet_form).children().children().children().should('have.length', 2);
   }
 }
