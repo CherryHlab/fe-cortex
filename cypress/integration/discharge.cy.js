@@ -16,31 +16,6 @@ describe('template spec', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
     Login.navigateWelcomePage();
-  });
-
-  afterEach('discharge patient from bed', function () {
-    // I use super admin to discharge patient
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
-    cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
-    });
-    SelectBranch.navigateSelectBranchPage();
-    SelectBranch.oneBranchOrSetDefault();
-    SelectClinic.navigateSelectClinicPage();
-    SelectClinic.selectDepartment();
-    SelectClinic.selectClinic();
-    // cuz nurse can not submit discharge summary form
-    Patient.navigatePatientPage();
-    Discharge.dischargeSummary();
-    Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
-  });
-
-  it('physician should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
       Login.userLogin(data.physician);
     });
@@ -51,24 +26,49 @@ describe('template spec', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient();
+    AssignBed.assign_patient(3);
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
   });
 
-  it('nurse should be assign patient to bed list page', function () {
+  after('Discharge patient from nurse', function () {
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      Login.userLogin(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
-    AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(1);
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
   });
 
-  it('super user should be assign patient to bed list page', function () {
+  it('physician should be discharge patient from bed list', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Discharge.dischargeSummary();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
+  });
+
+  it('super user should be discharge patient from bed list', function () {
     cy.fixture('login-credential').then((data) => {
       Login.userLogin();
     });
@@ -77,8 +77,26 @@ describe('template spec', () => {
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
-    AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(3);
+    Patient.navigatePatientPage();
+    Discharge.dischargeSummary();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
+  });
+
+  it('nurse should not be discharge patient from bed list', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.nurse);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.selectBranch(1);
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Discharge.dischargeSummary();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form(false);
   });
 });

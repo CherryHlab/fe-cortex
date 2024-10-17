@@ -47,7 +47,7 @@ export function checkDepartmentAndClinic(departmentData) {
   }
 }
 
-export function selectDepartment(department = 'อายุรศาสตร์', length = 11) {
+export function selectDepartment(department = 'กุมารเวช', length = 11) {
   cy.get(Select_clinic_page.list_select_department).click();
   cy.get(Select_clinic_page.text_search_department)
     .should('be.visible')
@@ -66,7 +66,7 @@ export function selectDepartment(department = 'อายุรศาสตร์
     .should('not.have.attr', 'disabled', 'disabled');
 }
 
-export function selectClinic(clinic = 'อายุรกรรม ชาย', length = 2) {
+export function selectClinic(clinic = 'บริบาลทารกแรกเกิด', length = 1) {
   cy.get(Select_clinic_page.list_select_clinic).click();
   cy.get(Select_clinic_page.text_search_clinic)
     .should('be.visible')

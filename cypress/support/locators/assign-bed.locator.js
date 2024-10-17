@@ -15,14 +15,14 @@ export default {
   emergency_relationship: '[data-testid="emergencyContacts.0.relationship"]',
   emergency_phone_number: '[data-testid="emergencyContacts.0.phoneNumber"]',
 
-  physician: '[data-testid="primaryPhysician"] input',
-  select_physician: '[data-testid="select-value-primaryPhysician"]',
+  physician: '[data-testid="input-select-primary-physician"]',
+  select_physician: '[data-testid="select-value-primary-physician"]',
   department:
     '[data-testid="searchbox-trigger-select-department-needtoreplace"]',
   select_department: '[data-value="needtoreplace"]',
-  consultname: '[data-testid="consultPhysicians.needtoreplace.name"] input',
+  consultname: '[data-testid="input-select-consult-physicians-needtoreplace"]',
   select_consult:
-    '[data-testid="select-value-consultPhysicians.needtoreplace.name"]',
+    '[data-testid="select-value-consult-physicians-needtoreplace"]',
 
   button_add_consult: '[data-testid="add-consult-physician"]',
   button_submit: '[data-testid="assign-bed-submit-button"]',

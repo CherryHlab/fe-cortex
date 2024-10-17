@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import { Bed_list_page } from '../locators';
+import { Sidebar_page } from '../locators';
 
 export function navigateBedlistPage() {
   cy.get(Bed_list_page.bed_list_container).first().should('be.visible');
@@ -64,5 +65,19 @@ export function checkBedlist() {
         'ว่าง คลิกเพื่อเพิ่มผู้ป่วย',
       );
     }
+  });
+}
+
+export function dischargePatient() {
+  cy.get('@bed_label').then((bed_label) => {
+    cy.log(bed_label);
+    cy.get(Sidebar_page.admitted_bed)
+      .contains(bed_label)
+      .parents()
+      .eq(2)
+      .find(Sidebar_page.button_action)
+      .click();
+    cy.get(Sidebar_page.button_discharge).click();
+    cy.get(Sidebar_page.dialog).find('button').contains('ยืนยัน').click();
   });
 }
