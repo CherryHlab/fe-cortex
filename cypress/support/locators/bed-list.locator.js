@@ -18,4 +18,5 @@ export default {
   patient_los: '[data-testid="admitted-los"]',
 
   empty_bed: '[data-testid="empty-bed-text"]',
+  admit_bed: '[data-testid="admitted-bed-id"]',
 };

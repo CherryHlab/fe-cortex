@@ -12,7 +12,7 @@ import * as Sidebar from '../support/tasks/sidebar';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('template spec', () => {
+describe('Add discharge and discharge patient from ward', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
     Login.navigateWelcomePage();
@@ -100,3 +100,172 @@ describe('template spec', () => {
     Patient.submit_form(false);
   });
 });
+
+describe('Edit discharge', () => {
+  beforeEach('redirect to home page', function () {
+    Start.PageRedirect('ipd', 'welcome');
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(4);
+    Patient.navigatePatientPage();
+    Discharge.dischargeSummary();
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+  });
+
+  afterEach('Discharge patient', function () {
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
+  });
+
+  it('physician should be edit discharge', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.editDischarge(true, false);
+  });
+
+  it('super user should be edit discharge', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.editDischarge(true, false);
+  });
+
+  it('nurse should be edit discharge', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.nurse);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.selectBranch(1);
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.editDischarge(false, false);
+  });
+});
+
+// describe('View discharge', () => {
+//   beforeEach('redirect to home page', function () {
+//     Start.PageRedirect('ipd', 'welcome');
+//     Login.navigateWelcomePage();
+//     cy.fixture('login-credential').then((data) => {
+//       Login.userLogin(data.physician);
+//     });
+//     SelectBranch.navigateSelectBranchPage();
+//     SelectBranch.oneBranchOrSetDefault();
+//     SelectClinic.navigateSelectClinicPage();
+//     SelectClinic.selectDepartment();
+//     SelectClinic.selectClinic();
+//     Bedlist.navigateBedlistPage();
+//     AssignBed.randomAvailableBed();
+//     AssignBed.assign_patient(4);
+//     Patient.navigatePatientPage();
+//     Patient.navigateDischargeSummary();
+//     Discharge.editDischarge(false, true);
+//     Logout.navigateUserMenu();
+//     Logout.logoutButton();
+//     Login.navigateWelcomePage();
+//   });
+//
+//   afterEach('Discharge patient', function () {
+//     Logout.navigateUserMenu();
+//     Logout.logoutButton();
+//     Login.navigateWelcomePage();
+//     cy.fixture('login-credential').then((data) => {
+//       Login.userLogin(data.physician);
+//     });
+//     SelectBranch.navigateSelectBranchPage();
+//     SelectBranch.oneBranchOrSetDefault();
+//     SelectClinic.navigateSelectClinicPage();
+//     SelectClinic.selectDepartment();
+//     SelectClinic.selectClinic();
+//     Patient.navigatePatientPage();
+//     Patient.navigateDischargeSummary();
+//     Patient.submit_form();
+//     Sidebar.navigateBedlist();
+//     Bedlist.dischargePatient();
+//   });
+//
+//   it('physician should be view discharge summary', function () {
+//     cy.fixture('login-credential').then((data) => {
+//       Login.userLogin(data.physician);
+//     });
+//     SelectBranch.navigateSelectBranchPage();
+//     SelectBranch.oneBranchOrSetDefault();
+//     SelectClinic.navigateSelectClinicPage();
+//     SelectClinic.selectDepartment();
+//     SelectClinic.selectClinic();
+//     Patient.navigatePatientPage();
+//     Patient.navigateDischargeSummary();
+//     Discharge.viewDischarge();
+//   });
+//
+//   it('super user should be view discharge summary', function () {
+//     cy.fixture('login-credential').then((data) => {
+//       Login.userLogin();
+//     });
+//     SelectBranch.navigateSelectBranchPage();
+//     SelectBranch.oneBranchOrSetDefault();
+//     SelectClinic.navigateSelectClinicPage();
+//     SelectClinic.selectDepartment();
+//     SelectClinic.selectClinic();
+//     Patient.navigatePatientPage();
+//     Patient.navigateDischargeSummary();
+//     Discharge.viewDischarge();
+//   });
+//
+//   it('nurse should be view discharge summary', function () {
+//     cy.fixture('login-credential').then((data) => {
+//       Login.userLogin(data.nurse);
+//     });
+//     SelectBranch.navigateSelectBranchPage();
+//     SelectBranch.selectBranch(1);
+//     SelectClinic.navigateSelectClinicPage();
+//     SelectClinic.selectDepartment();
+//     SelectClinic.selectClinic();
+//     Patient.navigatePatientPage();
+//     Patient.navigateDischargeSummary();
+//     Discharge.viewDischarge();
+//   });
+// });

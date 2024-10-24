@@ -7,7 +7,7 @@ import * as Bedlist from '../support/tasks/bed_list';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('template spec', () => {
+describe('View bed list', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
     Login.navigateWelcomePage();
