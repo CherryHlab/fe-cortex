@@ -5,7 +5,7 @@ import * as Logout from '../support/tasks/logout';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('template spec', () => {
+describe('Login and logout', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
   });

@@ -81,3 +81,8 @@ export function dischargePatient() {
     cy.get(Sidebar_page.dialog).find('button').contains('ยืนยัน').click();
   });
 }
+
+export function clickOnAdmit() {
+  cy.get(Bed_list_page.admit_bed).click();
+  cy.url().should('include', 'ipd/patient');
+}

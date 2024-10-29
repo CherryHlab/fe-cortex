@@ -1,0 +1,33 @@
+{
+  "diagnosis": {
+    "principle_diagnosis": "Infectious disease",
+    "comorbid_diagnosis": ["Tay-Sachs disease","Diabetes mellitus"],
+    "complication_diagnosis": ["Retinopathy due to diabetes mellitus","Deep thrombophlebitis"],
+    "other_diagnosis": ["Retinopathy due to diabetes mellitus","Renal tubular acidosis"],
+    "external_cause_of_injury": ["Deep thrombophlebitis"]
+  },
+  "operation": {
+    "operating_room_procedure": [{
+      "or_procedure": "Percutaneous transluminal coronary angioplasty",
+      "surgeon_name": "Physician Cortexcloud",
+      "start_date": "",
+      "end_date": "",
+      "equipment": "Artificial nails, device",
+      "bodysite": "Structure of hypoglossal nerve lingual branches"
+    }],
+    "non_operating_room_procedure": {
+      "input_type": ["PRC TRANSFUSION","Mechanical fragility red blood cell"],
+      "suggestion": ["PERITONEAL DIALYSIS","IVIG","PLATELET FACTORS TRANSFUSION"],
+      "other": [{
+        "suggestion": "CT SCAN OF",
+        "detail": "BONE"
+      }]
+    }
+  },
+  "discharge":{
+    "discharge_status": "Complete recovery",
+    "cause_of_dead": "",
+    "discharge_type": "Escape",
+    "transfer_to": ""
+  }
+}

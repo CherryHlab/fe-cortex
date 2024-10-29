@@ -5,7 +5,7 @@ import * as SelectBranch from '../support/tasks/select_branch';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('template spec', () => {
+describe('Select branch', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
     Login.navigateWelcomePage();

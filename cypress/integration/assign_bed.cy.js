@@ -12,7 +12,7 @@ import * as Sidebar from '../support/tasks/sidebar';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('template spec', () => {
+describe('Assign bed', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
     Login.navigateWelcomePage();
