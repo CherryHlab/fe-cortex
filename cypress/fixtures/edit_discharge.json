@@ -26,6 +26,8 @@
   },
   "discharge":{
     "discharge_status": "Complete recovery",
-    "discharge_type": "Escape"
+    "cause_of_dead": "",
+    "discharge_type": "Escape",
+    "transfer_to": ""
   }
 }

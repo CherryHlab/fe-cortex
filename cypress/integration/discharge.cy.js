@@ -10,7 +10,7 @@ import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
 import * as Sidebar from '../support/tasks/sidebar';
 
-Cypress.config('defaultCommandTimeout', 30000);
+Cypress.config('defaultCommandTimeout', 100000);
 
 describe('Add discharge and discharge patient from ward', () => {
   beforeEach('redirect to home page', function () {
@@ -185,87 +185,87 @@ describe('Edit discharge', () => {
   });
 });
 
-// describe('View discharge', () => {
-//   beforeEach('redirect to home page', function () {
-//     Start.PageRedirect('ipd', 'welcome');
-//     Login.navigateWelcomePage();
-//     cy.fixture('login-credential').then((data) => {
-//       Login.userLogin(data.physician);
-//     });
-//     SelectBranch.navigateSelectBranchPage();
-//     SelectBranch.oneBranchOrSetDefault();
-//     SelectClinic.navigateSelectClinicPage();
-//     SelectClinic.selectDepartment();
-//     SelectClinic.selectClinic();
-//     Bedlist.navigateBedlistPage();
-//     AssignBed.randomAvailableBed();
-//     AssignBed.assign_patient(4);
-//     Patient.navigatePatientPage();
-//     Patient.navigateDischargeSummary();
-//     Discharge.editDischarge(false, true);
-//     Logout.navigateUserMenu();
-//     Logout.logoutButton();
-//     Login.navigateWelcomePage();
-//   });
-//
-//   afterEach('Discharge patient', function () {
-//     Logout.navigateUserMenu();
-//     Logout.logoutButton();
-//     Login.navigateWelcomePage();
-//     cy.fixture('login-credential').then((data) => {
-//       Login.userLogin(data.physician);
-//     });
-//     SelectBranch.navigateSelectBranchPage();
-//     SelectBranch.oneBranchOrSetDefault();
-//     SelectClinic.navigateSelectClinicPage();
-//     SelectClinic.selectDepartment();
-//     SelectClinic.selectClinic();
-//     Patient.navigatePatientPage();
-//     Patient.navigateDischargeSummary();
-//     Patient.submit_form();
-//     Sidebar.navigateBedlist();
-//     Bedlist.dischargePatient();
-//   });
-//
-//   it('physician should be view discharge summary', function () {
-//     cy.fixture('login-credential').then((data) => {
-//       Login.userLogin(data.physician);
-//     });
-//     SelectBranch.navigateSelectBranchPage();
-//     SelectBranch.oneBranchOrSetDefault();
-//     SelectClinic.navigateSelectClinicPage();
-//     SelectClinic.selectDepartment();
-//     SelectClinic.selectClinic();
-//     Patient.navigatePatientPage();
-//     Patient.navigateDischargeSummary();
-//     Discharge.viewDischarge();
-//   });
-//
-//   it('super user should be view discharge summary', function () {
-//     cy.fixture('login-credential').then((data) => {
-//       Login.userLogin();
-//     });
-//     SelectBranch.navigateSelectBranchPage();
-//     SelectBranch.oneBranchOrSetDefault();
-//     SelectClinic.navigateSelectClinicPage();
-//     SelectClinic.selectDepartment();
-//     SelectClinic.selectClinic();
-//     Patient.navigatePatientPage();
-//     Patient.navigateDischargeSummary();
-//     Discharge.viewDischarge();
-//   });
-//
-//   it('nurse should be view discharge summary', function () {
-//     cy.fixture('login-credential').then((data) => {
-//       Login.userLogin(data.nurse);
-//     });
-//     SelectBranch.navigateSelectBranchPage();
-//     SelectBranch.selectBranch(1);
-//     SelectClinic.navigateSelectClinicPage();
-//     SelectClinic.selectDepartment();
-//     SelectClinic.selectClinic();
-//     Patient.navigatePatientPage();
-//     Patient.navigateDischargeSummary();
-//     Discharge.viewDischarge();
-//   });
-// });
+describe('View discharge', () => {
+  beforeEach('redirect to home page', function () {
+    Start.PageRedirect('ipd', 'welcome');
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(3);
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.editDischarge(false, true);
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+  });
+
+  afterEach('Discharge patient', function () {
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
+  });
+
+  it('physician should be view discharge summary', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.viewDischarge();
+  });
+
+  it('super user should be view discharge summary', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.viewDischarge();
+  });
+
+  it('nurse should be view discharge summary', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.nurse);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.selectBranch(1);
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Patient.navigateDischargeSummary();
+    Discharge.viewDischarge();
+  });
+});

@@ -25,6 +25,24 @@ export default {
     '[data-testid="radio-dischargeSummary.conditionOfDischarge"]',
   discharge_type: '[data-testid="radio-dischargeSummary.dischargeType"]',
 
+  //Diagnosis
+  principal: '[label="Principal diagnosis"]',
+  comorbid: '[label="Comorbid diagnosis"]',
+  complication: '[label="Complication diagnosis"]',
+  other: '[label="Other diagnosis"]',
+  external: '[label="External cause of injury"]',
+
+  //Operation
+  operating: '[label="Operating room procedure"]',
+  non_operation: '[label="Non-operating room procedure"]',
+
+  //Discharge
+  status_of_discharge: '[label="Discharge status"]',
+  cause_of_dead: '[label="สาเหตุการเสียชีวิต"]',
+  type_of_discharge: '[label="Discharge type"]',
+  transfer_to: '[label="Transfer to"]',
+
+  //button
   button_modal: '[data-testid="modal-btn-confirm"]',
   toast_submit: 'ol',
   button_edit: '[data-testid="edit-button"]',

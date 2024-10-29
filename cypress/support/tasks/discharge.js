@@ -115,12 +115,20 @@ export function editDischarge(notNurseOrNotAdd = true, addDischarge = true) {
       let date_in = Discharge_page.date_in.replace('needtoreplace', i);
       cy.get(date_in).click();
       let randomNumber = randomDateNumber();
-      cy.get(Discharge_page.option).contains(randomNumber).click();
+      cy.get(Discharge_page.option).contains(Number(randomNumber)).click();
+      cy.get(date_in).then(($value) => {
+        let date_in_text = $value.find('input').val();
+        return cy.wrap(date_in_text).as('date_in');
+      });
       let date_out = Discharge_page.date_out.replace('needtoreplace', i);
       cy.get(date_out).click();
       cy.get(Discharge_page.option)
         .contains(randomDateNumber(randomNumber))
         .click();
+      cy.get(date_out).then(($value) => {
+        let date_out_text = $value.find('input').val();
+        return cy.wrap(date_out_text).as('date_out');
+      });
 
       cy.get(Discharge_page.or_proceduce)
         .eq(or_proceduceEq)
@@ -181,6 +189,123 @@ export function editDischarge(notNurseOrNotAdd = true, addDischarge = true) {
   cy.get(Discharge_page.toast_submit).first().should('not.be.visible');
 }
 
-export function viewDischarge() {
-  cy.log('viewDischarge function');
+export function viewDischarge(form = 'edit_discharge.json') {
+  cy.fixture(form).then((d) => {
+    let diagnosis = d.diagnosis;
+    let principal = diagnosis.principle_diagnosis;
+    cy.get(Discharge_page.principal)
+      .children()
+      .last()
+      .should('have.text', principal);
+    let comorbid = diagnosis.comorbid_diagnosis;
+    for (let i = 0; i < comorbid.length; i++) {
+      cy.get(Discharge_page.comorbid)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('have.text', comorbid[i]);
+    }
+    let complication = diagnosis.complication_diagnosis;
+    for (let i = 0; i < complication.length; i++) {
+      cy.get(Discharge_page.complication)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('have.text', complication[i]);
+    }
+    let other = diagnosis.other_diagnosis;
+    for (let i = 0; i < other.length; i++) {
+      cy.get(Discharge_page.other)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('have.text', other[i]);
+    }
+    let external = diagnosis.external_cause_of_injury;
+    for (let i = 0; i < external.length; i++) {
+      cy.get(Discharge_page.external)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('have.text', external[i]);
+    }
+
+    let operating = d.operation.operating_room_procedure;
+    for (let i = 0; i < operating.length; i++) {
+      cy.get(Discharge_page.operating)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('contain', operating[i].or_procedure);
+      cy.get(Discharge_page.operating)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('contain', operating[i].surgeon_name);
+      cy.get(Discharge_page.operating)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('contain', `Equipment: ${operating[i].equipment}`);
+      cy.get(Discharge_page.operating)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('contain', `Bodysite: ${operating[i].bodysite}`);
+    }
+
+    let non_operating_data = d.operation.non_operating_room_procedure;
+    let non_operating_buffer = non_operating_data.input_type.concat(
+      non_operating_data.suggestion,
+    );
+    let other_non_operating_buffer = [];
+    let other_non_operating = non_operating_data.other;
+    for (let i = 0; i < other_non_operating.length; i++) {
+      other_non_operating_buffer.push(
+        other_non_operating[i].suggestion.concat(
+          ' ',
+          `${other_non_operating[i].detail}`,
+        ),
+      );
+    }
+    let non_operating = non_operating_buffer.concat(other_non_operating_buffer);
+    for (let i = 0; i < non_operating.length; i++) {
+      cy.get(Discharge_page.non_operation)
+        .children()
+        .last()
+        .children()
+        .eq(i)
+        .should('contain', `${non_operating[i]}`);
+    }
+
+    let discharge = d.discharge;
+    if (discharge.discharge_status.length != 0)
+      cy.get(Discharge_page.status_of_discharge)
+        .children()
+        .last()
+        .should('have.text', discharge.discharge_status);
+    if (discharge.cause_of_dead.length != 0)
+      cy.get(Discharge_page.cause_of_dead)
+        .children()
+        .last()
+        .should('have.text', discharge.cause_of_dead);
+    if (discharge.discharge_type.length != 0)
+      cy.get(Discharge_page.type_of_discharge)
+        .children()
+        .last()
+        .should('have.text', discharge.discharge_type);
+    if (discharge.transfer_to.length != 0)
+      cy.get(Discharge_page.transfer_to)
+        .children()
+        .last()
+        .should('have.text', discharge.transfer_to);
+  });
 }
