@@ -7,3 +7,4 @@ export { default as Assign_bed_page } from './assign-bed.locator';
 export { default as Patient_page } from './patient.locator';
 export { default as Discharge_page } from './discharge.locator';
 export { default as Sidebar_page } from './sidebar.locator';
+export { default as Admission_page } from './admission.locator';

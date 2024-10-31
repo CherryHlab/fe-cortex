@@ -10,7 +10,7 @@ import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
 import * as Sidebar from '../support/tasks/sidebar';
 
-Cypress.config('defaultCommandTimeout', 100000);
+Cypress.config('defaultCommandTimeout', 30000);
 
 describe('Add discharge and discharge patient from ward', () => {
   beforeEach('redirect to home page', function () {
