@@ -46,5 +46,6 @@ export default {
   toast_submit: 'ol',
 
   button_set_today: '.set-today-button',
+  button_edit: '[data-testid="edit-button"]',
   button_submit: '[data-testid="submit-btn"]',
 };

@@ -75,3 +75,84 @@ describe('Add Admission Note', () => {
     Admission.submitAdmissionNote();
   });
 });
+
+describe('Edit Admission Note', () => {
+  beforeEach('redirect to home page', function () {
+    Start.PageRedirect('ipd', 'welcome');
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    AssignBed.randomAvailableBed();
+    AssignBed.assign_patient(9);
+    Patient.navigatePatientPage();
+    Admission.navigateAdmissionNote();
+    Admission.addAdmissionNote();
+    Admission.submitAdmissionNote();
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+  });
+
+  afterEach('discharge patient from bed', function () {
+    Logout.navigateUserMenu();
+    Logout.logoutButton();
+    Login.navigateWelcomePage();
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Patient.navigatePatientPage();
+    Discharge.dischargeSummary();
+    Patient.navigateDischargeSummary();
+    Patient.submit_form();
+    Sidebar.navigateBedlist();
+    Bedlist.dischargePatient();
+  });
+
+  it('Physician should be edit admision note', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin(data.physician);
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    // AssignBed.randomAvailableBed();
+    // AssignBed.assign_patient(9);
+    Patient.navigatePatientPage();
+    Admission.navigateAdmissionNotePage();
+    Admission.editAdmissionNote();
+    Admission.submitAdmissionNote(true);
+  });
+
+  it('Super user should be edit admision note', function () {
+    cy.fixture('login-credential').then((data) => {
+      Login.userLogin();
+    });
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    Bedlist.navigateBedlistPage();
+    // AssignBed.randomAvailableBed();
+    // AssignBed.assign_patient(9);
+    Patient.navigatePatientPage();
+    Admission.navigateAdmissionNotePage();
+    Admission.editAdmissionNote();
+    Admission.submitAdmissionNote(true);
+  });
+});
