@@ -130,8 +130,6 @@ describe('Edit Admission Note', () => {
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    // AssignBed.randomAvailableBed();
-    // AssignBed.assign_patient(9);
     Patient.navigatePatientPage();
     Admission.navigateAdmissionNotePage();
     Admission.editAdmissionNote();
@@ -148,8 +146,6 @@ describe('Edit Admission Note', () => {
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
-    // AssignBed.randomAvailableBed();
-    // AssignBed.assign_patient(9);
     Patient.navigatePatientPage();
     Admission.navigateAdmissionNotePage();
     Admission.editAdmissionNote();

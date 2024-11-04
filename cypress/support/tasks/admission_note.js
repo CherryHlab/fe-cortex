@@ -41,6 +41,13 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
         .find('input')
         .check({ force: true });
       let drug_allergy = d.drug_allergy;
+      cy.get(Admission_page.type_of_allergy).then((list) => {
+        if (list.length > drug_allergy.length) {
+          for (let i = 0; i < drug_allergy.length; i++) {
+            cy.get(Admission_page.button_remove_more).last().click();
+          }
+        }
+      })
       for (let i = 0; i < drug_allergy.length; i++) {
         cy.get(Admission_page.type_of_allergy)
           .eq(i)
@@ -68,6 +75,13 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
         .find('input')
         .check({ force: true });
       let other_allergy = d.other_allergy;
+      cy.get(Admission_page.type_of_other_allergy).then((list) => {
+        if (list.length > other_allergy.length) {
+          for (let i = 0; i < other_allergy.length; i++) {
+            cy.get(Admission_page.button_remove_other).last().click();
+          }
+        }
+      })
       for (let i = 0; i < other_allergy.length; i++) {
         cy.get(Admission_page.type_of_other_allergy)
           .eq(i)
@@ -125,7 +139,7 @@ export function submitAdmissionNote(isEdit = false) {
   cy.get(Admission_page.toast_submit).first().should('not.be.visible');
 }
 
-export function editAdmissionNote() {
+export function editAdmissionNote(myFixture = 'edit-admission-note.json') {
   cy.get(Admission_page.button_edit).click();
-  addAdmissionNote();
+  addAdmissionNote(myFixture);
 }

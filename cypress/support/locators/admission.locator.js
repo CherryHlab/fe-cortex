@@ -27,6 +27,8 @@ export default {
     '[aria-labelledby="doctor_admission_note/adverse_reaction_list/adverse_drug_reaction_risk/adverse_reaction_event/reaction_description-label"]',
   button_add_more:
     '[aria-controls="adverse_drug_reaction_risk-container-content"] [aria-label="Add container"]',
+  button_remove_more:
+    '[aria-controls="adverse_drug_reaction_risk-container-content"] [aria-label="Remove container"]',
 
   //Other allergy
   type_of_other_allergy:
@@ -37,6 +39,8 @@ export default {
     'textarea[aria-labelledby="doctor_admission_note/adverse_reaction_list/adverse_reaction_risk/adverse_reaction_event/reaction_description-label"]',
   button_add_other:
     '[aria-controls="adverse_reaction_risk-container-content"] [aria-label="Add container"]',
+  button_remove_other:
+    '[aria-controls="adverse_reaction_risk-container-content"] [aria-label="Remove container"]',
 
   physical_exam:
     '[aria-labelledby="doctor_admission_note/examination_findings/physical_examination_findings/any_event/description-label"]',
