@@ -1,5 +1,6 @@
 export default {
   option: '[role="option"]',
+  option_add: '[data-accent-color="blue"]',
   diagnosis: '[data-testid="input-select-diagnosis-summary"]',
   select_value_diagnosis: '[data-testid="select-value-diagnosis-summary"]',
 
