@@ -47,7 +47,7 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
             cy.get(Admission_page.button_remove_more).last().click();
           }
         }
-      })
+      });
       for (let i = 0; i < drug_allergy.length; i++) {
         cy.get(Admission_page.type_of_allergy)
           .eq(i)
@@ -81,7 +81,7 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
             cy.get(Admission_page.button_remove_other).last().click();
           }
         }
-      })
+      });
       for (let i = 0; i < other_allergy.length; i++) {
         cy.get(Admission_page.type_of_other_allergy)
           .eq(i)
@@ -109,17 +109,30 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
       cy.get(Admission_page.physical_exam).type(d.physical_examination);
     }
     if (d.template.length != 0) {
+      cy.get(Admission_page.template_selection).clear({ force: true });
       cy.get(Admission_page.template_selection).click({ force: true });
       cy.get(Admission_page.template_selection).type(d.template, {
         force: true,
       });
       cy.get(Admission_page.option_of_selection).eq(0).click();
-    }
-    if (d.detail.length != 0) {
-      // Use for CKEditor but it done before choose template
+
+      cy.wait(3000); // can't use another that why i use wait with time. (ckEditor so slow to re-render)
       cy.get(Admission_page.template_input).then((el) => {
         const editor = el[0].ckeditorInstance;
-        editor.setData(d.detail);
+        const ckData = editor.getData();
+        editor.setData(ckData);
+        const ckEditorData = editor.getData();
+        cy.pause();
+        return cy.wrap(ckData).as('ckData');
+      });
+    }
+    if (d.detail.length != 0) {
+      cy.get(Admission_page.template_input).then((el) => {
+        const editor = el[0].ckeditorInstance;
+        const ckData = editor.getData();
+        editor.setData(ckData.concat(d.detail));
+        const ckEditorData = editor.getData();
+        return cy.wrap(ckEditorData).as('ckData');
       });
     }
   });
@@ -142,4 +155,87 @@ export function submitAdmissionNote(isEdit = false) {
 export function editAdmissionNote(myFixture = 'edit-admission-note.json') {
   cy.get(Admission_page.button_edit).click();
   addAdmissionNote(myFixture);
+}
+
+export function viewAdmissionNote(myFixture = 'admission-note.json') {
+  cy.fixture(myFixture).then((d) => {
+    cy.get(Admission_page.view_admission_note)
+      .eq(1)
+      .should('have.text', d.chief_complaint);
+    if (d.present_illness.length > 0)
+      cy.get(Admission_page.view_admission_note)
+        .eq(2)
+        .should('have.text', d.present_illness);
+    else
+      cy.get(Admission_page.view_admission_note).eq(2).should('have.text', '-');
+    cy.get(Admission_page.view_admission_note)
+      .eq(3)
+      .should('have.text', d.initial_diagnosis);
+    if (d.past_history.length > 0)
+      cy.get(Admission_page.view_admission_note)
+        .eq(4)
+        .should('have.text', d.past_history);
+    else
+      cy.get(Admission_page.view_admission_note).eq(4).should('have.text', '-');
+    if (d.family_history.length > 0)
+      cy.get(Admission_page.view_admission_note)
+        .eq(5)
+        .should('have.text', d.family_history);
+    else
+      cy.get(Admission_page.view_admission_note).eq(5).should('have.text', '-');
+
+    let i = 0;
+    let other_allergy = d.other_allergy;
+    if (other_allergy.length > 0) {
+      for (i; i < other_allergy.length; i++) {
+        let display = Admission_page.view_allergy_display.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(display).should('contain', other_allergy[i].type_of_other);
+        let allergen = Admission_page.view_allergy_allergen.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(allergen).should('contain', other_allergy[i].other_allergic);
+        let reaction = Admission_page.view_allergy_reaction.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(reaction).should('contain', other_allergy[i].other_symptom);
+      }
+    }
+    let drug_allergy = d.drug_allergy;
+    if (drug_allergy.length > 0) {
+      for (i; i < drug_allergy.length; i++) {
+        let display = Admission_page.view_allergy_display.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(display).should('contain', drug_allergy[i].type_of_drug);
+        let allergen = Admission_page.view_allergy_allergen.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(allergen).should('contain', drug_allergy[i].medication);
+        let reaction = Admission_page.view_allergy_reaction.replace(
+          'needtoreplace',
+          i,
+        );
+        cy.get(reaction).should('contain', drug_allergy[i].symptom);
+      }
+    }
+    if (d.physical_examination.length > 0)
+      cy.get(Admission_page.view_admission_note)
+        .eq(7)
+        .should('have.text', d.physical_examination);
+    else
+      cy.get(Admission_page.view_admission_note).eq(7).should('have.text', '-');
+    cy.get('@ckData').then((data) => {
+      cy.get(Admission_page.view_admission_note)
+        .eq(8)
+        .children()
+        .should('have.html', data);
+    });
+  });
 }

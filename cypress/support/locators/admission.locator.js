@@ -49,6 +49,16 @@ export default {
 
   toast_submit: 'ol',
 
+  //View admission note
+  view_admission_note:
+    '[data-testid="admission-note-card-item-value-container"]',
+  view_allergy_display:
+    '[data-testid="past-illess-allergy-display-needtoreplace"]',
+  view_allergy_allergen:
+    '[data-testid="past-illess-allergy-allergen-needtoreplace"]',
+  view_allergy_reaction:
+    '[data-testid="past-illess-allergy-reaction-needtoreplace"]',
+
   button_set_today: '.set-today-button',
   button_edit: '[data-testid="edit-button"]',
   button_submit: '[data-testid="submit-btn"]',

@@ -115,7 +115,7 @@ describe('Edit discharge', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(4);
+    AssignBed.assign_patient(3);
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Logout.navigateUserMenu();
