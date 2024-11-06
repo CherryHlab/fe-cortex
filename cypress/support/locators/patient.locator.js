@@ -4,6 +4,11 @@ export default {
   title: '[data-testid="secondary-header-title"]',
   patient_outlet_form: '#patient-outlet-container',
 
+  //Admission note
+  admission_note_form:
+    '[data-testid="shortcut-menu-btn-add_doctor_admission_note"]',
+  admission_note_page: '[data-testid="admission-note"]',
+
   toast: 'ol',
   chip_label: '[data-testid="chip-label"]',
   confirm_bar: '[data-testid="submit-confirm-bar"]',

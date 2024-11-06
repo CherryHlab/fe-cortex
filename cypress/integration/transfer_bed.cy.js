@@ -67,9 +67,9 @@ describe('Transfer in ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(8);
+    AssignBed.assign_patient(7);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(8, false);
+    AssignBed.assign_patient(7, false);
   });
 
   it('super user should be transfer patient in ward', function () {
@@ -83,9 +83,9 @@ describe('Transfer in ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(9);
+    AssignBed.assign_patient(7);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(9, false);
+    AssignBed.assign_patient(7, false);
   });
 });
 
@@ -128,12 +128,12 @@ describe('Transfer between ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(4);
+    AssignBed.assign_patient(7);
     Start.PageRedirect('ipd', 'select-ward');
     SelectClinic.selectDepartment('จิตเวช');
     SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(4, false);
+    AssignBed.assign_patient(7, false);
   });
 
   it('nurse should be transfer patient between ward', function () {
@@ -147,12 +147,12 @@ describe('Transfer between ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assign_patient(7);
     Start.PageRedirect('ipd', 'select-ward');
     SelectClinic.selectDepartment('จิตเวช');
     SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5, false);
+    AssignBed.assign_patient(7, false);
   });
 
   it('super user should be transfer patient between ward', function () {
@@ -166,11 +166,11 @@ describe('Transfer between ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6);
+    AssignBed.assign_patient(7);
     Start.PageRedirect('ipd', 'select-ward');
     SelectClinic.selectDepartment('จิตเวช');
     SelectClinic.selectClinic('จิตเวชหญิง 1', 4);
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6, false);
+    AssignBed.assign_patient(7, false);
   });
 });
