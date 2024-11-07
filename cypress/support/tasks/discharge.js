@@ -133,12 +133,12 @@ export function editDischarge(notNurseOrNotAdd = true, addDischarge = true) {
       cy.get(Discharge_page.or_proceduce)
         .eq(or_proceduceEq)
         .type(operation[i].equipment);
-      cy.get(Discharge_page.option).first().click();
+      cy.get(Discharge_page.option_add).first().click();
       or_proceduceEq++;
       cy.get(Discharge_page.or_proceduce)
         .eq(or_proceduceEq)
         .type(operation[i].bodysite);
-      cy.get(Discharge_page.option).first().click();
+      cy.get(Discharge_page.option_add).first().click();
       or_proceduceEq++;
     }
 
@@ -149,7 +149,7 @@ export function editDischarge(notNurseOrNotAdd = true, addDischarge = true) {
         .parent()
         .click()
         .type(non_operating.input_type[i]);
-      cy.get(Discharge_page.option).first().click();
+      cy.get(Discharge_page.option_add).first().click();
     }
     for (let i = 0; i < non_operating.suggestion.length; i++) {
       let suggestionItem = Discharge_page.non_operating_room_procedure.replace(

@@ -65,7 +65,7 @@ describe('Assign bed', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(1);
+    AssignBed.assign_patient();
   });
 
   it('super user should be assign patient to bed list page', function () {
@@ -79,6 +79,6 @@ describe('Assign bed', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(3);
+    AssignBed.assign_patient();
   });
 });

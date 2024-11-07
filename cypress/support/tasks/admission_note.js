@@ -122,7 +122,6 @@ export function addAdmissionNote(myFixture = 'admission-note.json') {
         const ckData = editor.getData();
         editor.setData(ckData);
         const ckEditorData = editor.getData();
-        cy.pause();
         return cy.wrap(ckData).as('ckData');
       });
     }
