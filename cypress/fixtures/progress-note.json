@@ -1,5 +1,5 @@
 {
- "progress_note": [{
+  "progress_note": [{
     "time":{
       "perform_time": "now",
       "perform_date": "18/11/2024",
@@ -10,8 +10,7 @@
     "objective": "V/S\tT 38C BP 128/94 mmhg PR 78/min RR 13/min\nGA\talert, fully conscious\nHEENT\tno pale conjunctivae, anicteric sclerae, clear nasal discharge, mild injected pharynx, tonsils not enlarged\nCVS\tfull regular symmetrical pulse, CRT < 2s, normal S1S2, no murmur\nRS\tclear equal breath sound both lungs\nAbdomen\tsoft, no distension, not tender\nNeuro\tE4V5M6, motor power gr.V all ext, sensory intact, CN grossly intact",
     "assessment": "Acute febrile illness with upper respiratory tract symptom\tFluA positive คิดถึง Influenza infection มากที่สุด, symptoms slightly improved\nModerate dehydration\tsolved\nMild hypokalemia\tsolved\nEssential hypertension\tBP stable\nDiabetes mellitus type 2\tno hypoglycemic or hyperglycemic symptom\nAcute watery diarrhea\tno watery stool, solved",
     "plan": "Acute febrile illness with upper respiratory tract symptom\tsupportive care, continue Oseltamivir day 2/5\nModerate dehydration\tobserve sign of dehydration, urine output\nMild hypokalemia\tobserve sign of hypokalemia\nEssential hypertension\tcontinue Enalapril\nDiabetes mellitus type 2\tcontinue Metformin\nAcute watery diarrhea\tobserve stool, sign of dehydration, urine output"
-  }
-,{
+  },{
     "time":{
       "perform_time": "",
       "perform_date": "18/11/2024",
@@ -22,6 +21,5 @@
     "objective": "V/S\tT 39C BP 128/94 mmhg PR 78/min RR 13/min\nGA\talert, fully conscious\nHEENT\tno pale conjunctivae, anicteric sclerae, clear nasal discharge, mild injected pharynx, tonsils not enlarged\nCVS\tfull regular symmetrical pulse, CRT < 2s, normal S1S2, no murmur\nRS\tclear equal breath sound both lungs\nAbdomen\tsoft, no distension, not tender\nNeuro\tE4V5M6, motor power gr.V all ext, sensory intact, CN grossly intact",
     "assessment": "Acute febrile illness\tFluA positive คิดถึง Influenza infection มากที่สุด, symptoms slightly improved\nModerate dehydration\tsolved\nMild hypokalemia\tsolved\nEssential hypertension\tBP stable\nDiabetes mellitus type 2\tno hypoglycemic or hyperglycemic symptom\nAcute watery diarrhea\tno watery stool, solved",
     "plan": "Acute febrile illness\tsupportive care, continue Oseltamivir day 2/5\nModerate dehydration\tobserve sign of dehydration, urine output\nMild hypokalemia\tobserve sign of hypokalemia\nEssential hypertension\tcontinue Enalapril\nDiabetes mellitus type 2\tcontinue Metformin\nAcute watery diarrhea\tobserve stool, sign of dehydration, urine output"
-}]
-
+  }]
 }
