@@ -8,3 +8,4 @@ export { default as Patient_page } from './patient.locator';
 export { default as Discharge_page } from './discharge.locator';
 export { default as Sidebar_page } from './sidebar.locator';
 export { default as Admission_page } from './admission.locator';
+export { default as Progress_note_page } from './progress-note.locator';
