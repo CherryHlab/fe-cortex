@@ -220,10 +220,10 @@ describe('View Progress Note', () => {
 
   it('Nurse should be view progress note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.oneBranchOrSetDefault();
+    SelectBranch.selectBranch(1);
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
