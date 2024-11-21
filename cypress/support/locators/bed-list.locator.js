@@ -19,4 +19,6 @@ export default {
 
   empty_bed: '[data-testid="empty-bed-text"]',
   admit_bed: '[data-testid="admitted-bed-id"]',
+  
+  toast: 'ol:first'
 };
