@@ -26,7 +26,7 @@ describe('Add discharge and discharge patient from ward', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(3);
+    AssignBed.assign_patient(1);
     Logout.navigateUserMenu();
     Logout.logoutButton();
     Login.navigateWelcomePage();
@@ -115,7 +115,7 @@ describe('Edit discharge', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(3);
+    AssignBed.assign_patient(1);
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Logout.navigateUserMenu();
@@ -199,7 +199,7 @@ describe('View discharge', () => {
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(3);
+    AssignBed.assign_patient(1);
     Patient.navigatePatientPage();
     Patient.navigateDischargeSummary();
     Discharge.editDischarge(false, true);

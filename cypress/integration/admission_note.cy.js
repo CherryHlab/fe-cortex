@@ -229,10 +229,10 @@ describe('View Admission Note', () => {
 
   it('Nurse should be view admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.oneBranchOrSetDefault();
+    SelectBranch.selectBranch(1);
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
