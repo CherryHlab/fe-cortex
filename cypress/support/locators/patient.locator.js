@@ -14,6 +14,10 @@ export default {
     '[data-testid="shortcut-menu-btn-add_doctor_progress_note"]',
   progress_note_page: '[data-testid="progress-note"]',
 
+  //Focus note
+  focus_note_form: '[data-testid="shortcut-menu-btn-add_focus_note"]',
+  focus_note_page: '[data-testid="focus-note"]',
+
   toast: 'ol',
   chip_label: '[data-testid="chip-label"]',
   confirm_bar: '[data-testid="submit-confirm-bar"]',
