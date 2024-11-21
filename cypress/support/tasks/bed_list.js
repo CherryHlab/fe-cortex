@@ -80,6 +80,8 @@ export function dischargePatient() {
     cy.get(Sidebar_page.button_discharge).click();
     cy.get(Sidebar_page.dialog).find('button').contains('ยืนยัน').click();
   });
+  cy.get(Bed_list_page.toast).should('be.visible');
+  cy.get(Bed_list_page.toast).should('not.be.visible');
 }
 
 export function clickOnAdmit() {

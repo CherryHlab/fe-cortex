@@ -2,7 +2,7 @@
 import { Bed_list_page } from '../locators';
 import { Assign_bed_page } from '../locators';
 
-function randomANnumber(min = 1000, max = 9999) {
+function randomANnumber(min = 100, max = 99999) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
