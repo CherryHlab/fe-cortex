@@ -1,0 +1,15 @@
+{
+  "problem": [{
+    "name": "Acute febrile illness symptom",
+    "problem_status": "Active",
+    "severity": "Severe",
+    "start_time": {
+      "perform_time": "",
+      "perform_date": "03/10/2024",
+      "perform_hour": "06",
+      "perform_minute": "13"
+    },
+    "end_time": {},
+    "detail": ""
+  }]
+}
