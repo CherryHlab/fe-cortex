@@ -18,6 +18,10 @@ export default {
   focus_note_form: '[data-testid="shortcut-menu-btn-add_focus_note"]',
   focus_note_page: '[data-testid="focus-note"]',
 
+  //Problem list
+  problem_list_form: '[data-testid="shortcut-menu-btn-add_problem"]',
+  problem_list_page: '[data-testid="problem-list"]',
+
   toast: 'ol',
   chip_label: '[data-testid="chip-label"]',
   confirm_bar: '[data-testid="submit-confirm-bar"]',

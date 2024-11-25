@@ -10,3 +10,4 @@ export { default as Sidebar_page } from './sidebar.locator';
 export { default as Admission_page } from './admission.locator';
 export { default as Progress_note_page } from './progress-note.locator';
 export { default as Focus_note_page } from './focus-note.locator';
+export { default as Problem_list_page } from './problem-list.locator';
