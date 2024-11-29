@@ -22,6 +22,11 @@ export default {
   problem_list_form: '[data-testid="shortcut-menu-btn-add_problem"]',
   problem_list_page: '[data-testid="problem-list"]',
 
+  //Pre-assessment
+  pre_assessment_form:
+    '[data-testid="shortcut-menu-btn-add_nurse_pre_assessment"]',
+  pre_assessment_page: '[data-testid="pre-assessment"]',
+
   toast: 'ol',
   chip_label: '[data-testid="chip-label"]',
   confirm_bar: '[data-testid="submit-confirm-bar"]',
