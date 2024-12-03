@@ -466,10 +466,10 @@ export function viewPreAssessment(myFixture = 'view_pre-assessment.json') {
   cy.fixture(myFixture).then((d) => {
     const pa = d.pre_assessment;
     const paLength = pa.length;
+    cy.reload();
     for (let i = 0; i < paLength; i++) {
       // cy.get(Pre_assessment.view_content).eq(i).should('have.text',pa[i]);
       cy.get(Pre_assessment.view_content).eq(i).contains(pa[i]);
     }
-  })
-  cy.pause()
+  });
 }

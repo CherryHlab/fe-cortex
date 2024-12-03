@@ -1,15 +1,15 @@
 {
   "diagnosis": {
-    "principle_diagnosis": "Infectious disease",
-    "comorbid_diagnosis": ["Tay-Sachs disease","Diabetes mellitus"],
-    "complication_diagnosis": ["Retinopathy due to diabetes mellitus","Deep thrombophlebitis"],
-    "other_diagnosis": ["Retinopathy due to diabetes mellitus","Renal tubular acidosis"],
-    "external_cause_of_injury": ["Deep thrombophlebitis"]
+    "principle_diagnosis": "Carrier of infectious disease, unsepcifeid",
+    "comorbid_diagnosis": ["Addisonian crisis","Diabetes mellitus arising in pregnancy"],
+    "complication_diagnosis": ["Retinopathy of prematurity","Deep phlebothrombosis in pregnancy"],
+    "other_diagnosis": ["Retinopathy of prematurity","Acidosis"],
+    "external_cause_of_injury": ["Phlebitis and thrombophlebitis of other deep vessels of lower extremities"]
   },
   "operation": {
     "operating_room_procedure": [{
       "or_procedure": "Percutaneous transluminal coronary angioplasty",
-      "surgeon_name": "Physician Cortexcloud",
+      "surgeon_name": "วรันธร  สาลี",
       "start_date": "",
       "end_date": "",
       "equipment": "Artificial nails, device",

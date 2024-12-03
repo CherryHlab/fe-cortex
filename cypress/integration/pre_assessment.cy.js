@@ -44,7 +44,7 @@ describe('Add Pre-assessment ', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
@@ -54,7 +54,7 @@ describe('Add Pre-assessment ', () => {
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessment();
     PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment()
+    PreAsssessment.submitPreAssessment();
   });
 
   it('Super user should be add admision note', function () {
@@ -72,7 +72,7 @@ describe('Add Pre-assessment ', () => {
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessment();
     PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment()
+    PreAsssessment.submitPreAssessment();
   });
 });
 
@@ -94,7 +94,7 @@ describe('Edit Pre-assessment', () => {
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessment();
     PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment()
+    PreAsssessment.submitPreAssessment();
     Logout.navigateUserMenu();
     Logout.logoutButton();
     Login.navigateWelcomePage();
@@ -125,7 +125,7 @@ describe('Edit Pre-assessment', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
@@ -171,7 +171,7 @@ describe('View Pre-assessment', () => {
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessment();
     PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment()
+    PreAsssessment.submitPreAssessment();
     Logout.navigateUserMenu();
     Logout.logoutButton();
     Login.navigateWelcomePage();
@@ -209,7 +209,7 @@ describe('View Pre-assessment', () => {
     Bedlist.navigateBedlistPage();
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment()
+    PreAsssessment.viewPreAssessment();
   });
 
   it('Super user should be view pre-assessment', function () {
@@ -224,7 +224,7 @@ describe('View Pre-assessment', () => {
     Bedlist.navigateBedlistPage();
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment()
+    PreAsssessment.viewPreAssessment();
   });
 
   it('Nurse should be view pre-assessment', function () {
@@ -232,13 +232,13 @@ describe('View Pre-assessment', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
     Bedlist.navigateBedlistPage();
     Patient.navigatePatientPage();
     PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment()
+    PreAsssessment.viewPreAssessment();
   });
 });

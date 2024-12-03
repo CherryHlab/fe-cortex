@@ -14,7 +14,7 @@ export function navigateAdmissionNotePage() {
   cy.get(Patient_page.title).should('have.text', 'Admission Note');
 }
 
-export function addAdmissionNote(myFixture = 'admission-note.json') {
+export function addAdmissionNote(myFixture = 'admission-note-sit.json') {
   cy.fixture(myFixture).then((d) => {
     cy.get(Admission_page.chief_complaint).clear();
     cy.get(Admission_page.chief_complaint).type(d.chief_complaint);
@@ -151,12 +151,12 @@ export function submitAdmissionNote(isEdit = false) {
   cy.get(Admission_page.toast_submit).first().should('not.be.visible');
 }
 
-export function editAdmissionNote(myFixture = 'edit-admission-note.json') {
+export function editAdmissionNote(myFixture = 'edit_admission-note.json') {
   cy.get(Admission_page.button_edit).click();
   addAdmissionNote(myFixture);
 }
 
-export function viewAdmissionNote(myFixture = 'admission-note.json') {
+export function viewAdmissionNote(myFixture = 'admission-note-sit.json') {
   cy.fixture(myFixture).then((d) => {
     cy.get(Admission_page.view_admission_note)
       .eq(1)
