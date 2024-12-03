@@ -61,7 +61,7 @@ describe('Transfer in ward', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
@@ -141,7 +141,7 @@ describe('Transfer between ward', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();

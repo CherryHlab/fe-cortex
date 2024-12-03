@@ -1,0 +1,20 @@
+{
+  "chief_complaint": "ไข้ 3 วัน ก่อนมา รพ.",
+  "present_illness": "3 วันก่อนมา รพ. มีไข้สูง วัดได้ 39C ไข้สูงตลอด ทานยาลดไข้ไม่ดีขึ้น อ่อนเพลีย ปวดศีรษะ ปวดเมื่อยตามตัว เจ็บคอ pain score 4/10 ไอแห้ง มีน้ำมูกใส ไม่มีเสมหะ กินข้าวกินน้ำได้น้อย ไม่มีเหนื่อยหอบ ไม่มีเจ็บแน่นหน้าอก ไม่มีคลื่นไส้อาเจียน ถ่ายเหลว 3 ครั้งต่อวัน ไม่มีเลือดปน ไม่มีปัสสาวะแสบขัดหรือเป็นเลือดหรือขุ่นเป็นฟอง ไม่มีปวดข้อ ไม่มีผื่น แขนขาชาอ่อนแรง ไม่มีปากเบี้ยวหน้าเบี้ยว ไม่มีคนใกล้ชิดป่วย ไม่มีประวัติยุงเยอะที่บ้าน ไม่มีประวัติอยู่ใกล้ชิดผู้ป่วย COVID-19",
+  "initial_diagnosis": "Influenza",
+  "past_history": "เคยผ่าตัดไส้ติ่ง 10 ปีก่อน ไม่เคยประสบอุบัติเหตุ",
+  "family_history": "บิดาเป็นโรคความดันโลหิตสูง",
+  "drug_allergy": [{
+    "type_of_drug": "Medication",
+    "medication": "allopurinol (VTM)",
+    "symptom": "เป็นผื่นขึ้น"
+  },{
+    "type_of_drug": "Medication",
+    "medication": "cyproterone (SUBS)",
+    "symptom": "เป็นผื่นขึ้น"
+  }],
+  "other_allergy": [],
+  "physical_examination": "V/S BT 39 C BP 120/80 mmHg PR 105/min RR 20/min\nGA\tA Thai old man, good conscious, well co-operative, no dysarthria\nHEENT\tno pale conjunctivae, anicteric sclerae, sunken eyeball, clear nasal discharge, normal hearing, dry lip, injected pharynx, tonsils not enlarged\nNeck\tlymph node not palpable, no thyroid gland enlargement\nCVS\tfull, regular, symmetrical pulse, CRT < 2 sec, no clubbing finger, no neck wein engorgement, no active precordium, no heaving, no thrill, normal S1S2, no murmur\nRespi\tsymmetrical chest wall, no accessory muscle used, normal lung expansion, normal breath sound both lungs, no adventitious sound, normal vocal resonance, egophony negative\nAbdomen\tsoft, no abdominal distension, normoactive bowel sound, no rigidity, no guarding, no rebound tenderness\nNeuro\tgood consciousness, oriented to time, place, person, well co-operative, cranial nerve grossly intact, normal muscle tone, muscle power grade V all extremities, sensory grossly intact, stiff neck negative\nExtremities\tno edema, no deformity, no muscle wasting, no sign of inflammation, DPA 2+, PTA 2+\nSkin\tno abnormal pigmentation, no rash, no petechiae, no ecchymosis",
+  "template": "Physical Examination : Influenza",
+  "detail": ""
+}

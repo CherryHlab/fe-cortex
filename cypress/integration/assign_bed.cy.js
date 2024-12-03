@@ -59,7 +59,7 @@ describe('Assign bed', () => {
       Login.userLogin(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
+    SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();

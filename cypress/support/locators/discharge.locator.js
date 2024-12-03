@@ -1,4 +1,5 @@
 export default {
+  listbox: '[role="listbox"]',
   option: '[role="option"]',
   option_add: '[data-accent-color="blue"]',
   diagnosis: '[data-testid="input-select-diagnosis-summary"]',

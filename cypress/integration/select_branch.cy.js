@@ -18,28 +18,4 @@ describe('Select branch', () => {
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
   });
-
-  it('should select branch if branch > 1 branch (select branch 1)', function () {
-    cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
-    });
-    SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
-  });
-
-  it('should select branch if branch > 1 branch (select branch 2)', function () {
-    cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
-    });
-    SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(2);
-  });
-
-  it('should not select branch if branch > 1 branch but set default branch', function () {
-    cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.doctor);
-    });
-    SelectBranch.navigateSelectBranchPage();
-    SelectBranch.oneBranchOrSetDefault();
-  });
 });

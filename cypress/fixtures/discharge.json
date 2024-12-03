@@ -1,7 +1,7 @@
 {
   "diagnosis": {
     "principle_diagnosis": "Appendicitis",
-    "comorbid_diagnosis": ["Tay-Sachs disease"],
+    "comorbid_diagnosis": ["Addisonian crisis"],
     "complication_diagnosis": ["Retinopathy due to diabetes mellitus"],
     "other_diagnosis": ["Retinopathy due to diabetes mellitus"],
     "external_cause_of_injury": []
