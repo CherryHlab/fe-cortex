@@ -1,92 +1,92 @@
 {
   "problem": [{
     "name": "Acute febrile illness with upper respiratory tract symptom",
-    "problem_status": "Active",
+    "problemStatus": "Active",
     "severity": "Severe",
-    "start_time": {
-      "perform_time": "now",
-      "perform_date": "03/10/2024",
-      "perform_hour": "06",
-      "perform_minute": "13"
+    "startTime": {
+      "performTime": "now",
+      "performDate": "03/10/2024",
+      "performHour": "06",
+      "performMinute": "13"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": ""
   },{
     "name": "Moderate dehydration",
-    "problem_status": "Active",
+    "problemStatus": "Active",
     "severity": "Moderate",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "09",
-      "perform_minute": "10"
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "09",
+      "performMinute": "10"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": ""
   },{
     "name": "Diabetes mellitus type 2",
-    "problem_status": "Active",
+    "problemStatus": "Active",
     "severity": "Moderate",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "09",
-      "perform_minute": "32"
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "09",
+      "performMinute": "32"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": ""
   },{
     "name": "Mild hypokalemia",
-    "problem_status": "Active",
+    "problemStatus": "Active",
     "severity": "Mild",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "10",
-      "perform_minute": "16"
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "16"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": "K = 2.7 (Lab 1/4/67 8.00)"
   },{
     "name": "Acute febrile illness c acute RLQ pain c vomiting c decrease appetite",
-    "problem_status": "Resolved",
+    "problemStatus": "Resolved",
     "severity": "Moderate",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "18/11/2024",
-      "perform_hour": "11",
-      "perform_minute": "15"
+    "startTime": {
+      "performTime": "",
+      "performDate": "18/11/2024",
+      "performHour": "11",
+      "performMinute": "15"
     },
-    "end_time": {
-      "perform_time": "",
-      "perform_date": "18/11/2024",
-      "perform_hour": "18",
-      "perform_minute": "00"
+    "endTime": {
+      "performTime": "",
+      "performDate": "18/11/2024",
+      "performHour": "18",
+      "performMinute": "00"
     },
     "detail": ""
   },{
     "name": "Acute watery diarrhea",
-    "problem_status": "Inactive",
+    "problemStatus": "Inactive",
     "severity": "",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "10",
-      "perform_minute": "09"
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "09"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": "หลังจาก วันที่ 2/4/67 ถ่ายปกติ"
   },{
     "name": "Essential hypertension",
-    "problem_status": "Inactive",
+    "problemStatus": "Inactive",
     "severity": "",
-    "start_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "11",
-      "perform_minute": "15"
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "11",
+      "performMinute": "15"
     },
-    "end_time": {},
+    "endTime": {},
     "detail": ""
   }]
 }

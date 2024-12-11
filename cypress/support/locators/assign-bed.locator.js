@@ -1,30 +1,30 @@
 export default {
-  assign_modal: '[data-testid="assign-bed-modal"]',
-  chip_label: '[data-testid="chip-label"]',
-  search_hn: '[data-testid="search"]',
+  assignModal: '[data-testid="assign-bed-modal"]',
+  chipLabel: '[data-testid="chip-label"]',
+  searchHn: '[data-testid="search"]',
   listbox: '[role="listbox"]',
   option: '[role="option"]',
-  button_search: '[data-testid="search-patient-button"]',
+  buttonSearch: '[data-testid="search-patient-button"]',
 
-  patient_hn: '[data-testid="patient-hn"]',
-  patient_name: '[data-testid="patient-name"]',
+  patientHn: '[data-testid="patient-hn"]',
+  patientName: '[data-testid="patient-name"]',
   an: '[data-testid="an"]',
-  phone_number: '[data-testid="phoneNumber"]',
+  phoneNumber: '[data-testid="phoneNumber"]',
 
-  emergency_name: '[data-testid="emergencyContacts.0.name"]',
-  emergency_relationship: '[data-testid="emergencyContacts.0.relationship"]',
-  emergency_phone_number: '[data-testid="emergencyContacts.0.phoneNumber"]',
+  emergencyName: '[data-testid="emergencyContacts.0.name"]',
+  emergencyRelationship: '[data-testid="emergencyContacts.0.relationship"]',
+  emergencyPhoneNumber: '[data-testid="emergencyContacts.0.phoneNumber"]',
 
   physician: '[data-testid="input-select-primary-physician"]',
-  select_physician: '[data-testid="select-value-primary-physician"]',
+  selectPhysician: '[data-testid="select-value-primary-physician"]',
   department:
     '[data-testid="searchbox-trigger-select-department-needtoreplace"]',
-  select_department: '[data-value="needtoreplace"]',
-  consultname: '[data-testid="input-select-consult-physicians-needtoreplace"]',
-  select_consult:
+  selectDepartment: '[data-value="needtoreplace"]',
+  consultName: '[data-testid="input-select-consult-physicians-needtoreplace"]',
+  selectConsult:
     '[data-testid="select-value-consult-physicians-needtoreplace"]',
 
-  button_add_consult: '[data-testid="add-consult-physician"]',
-  button_submit: '[data-testid="assign-bed-submit-button"]',
-  toast_submit: 'ol',
+  buttonAddConsult: '[data-testid="add-consult-physician"]',
+  buttonSubmit: '[data-testid="assign-bed-submit-button"]',
+  toastSubmit: 'ol',
 };

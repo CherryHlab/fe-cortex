@@ -1,55 +1,55 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
-import * as Login from '../support/tasks/login';
-import * as SelectBranch from '../support/tasks/select_branch';
-import * as SelectClinic from '../support/tasks/select_clinic';
-import * as Bedlist from '../support/tasks/bed_list';
+import * as LogIn from '../support/tasks/login';
+import * as SelectBranch from '../support/tasks/select-branch';
+import * as SelectClinic from '../support/tasks/select-clinic';
+import * as BedList from '../support/tasks/bed-list';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
 describe('View bed list', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
   });
 
   it('physician should see the bed list page', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
+    BedList.navigateBedListPage();
+    BedList.checkHeaderBedlist();
+    BedList.checkBedlist();
   });
 
   it('nurse should see the bed list page', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
-    SelectBranch.navigateSelectBranchPage();
-    SelectBranch.selectBranch(1);
-    SelectClinic.navigateSelectClinicPage();
-    SelectClinic.selectDepartment();
-    SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
-  });
-
-  it('super user should see the bed list page', function () {
-    Login.userLogin();
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
-    Bedlist.checkHeaderBedlist();
-    Bedlist.checkBedlist();
+    BedList.navigateBedListPage();
+    BedList.checkHeaderBedlist();
+    BedList.checkBedlist();
+  });
+
+  it('super user should see the bed list page', function () {
+    LogIn.userLogIn();
+    SelectBranch.navigateSelectBranchPage();
+    SelectBranch.oneBranchOrSetDefault();
+    SelectClinic.navigateSelectClinicPage();
+    SelectClinic.selectDepartment();
+    SelectClinic.selectClinic();
+    BedList.navigateBedListPage();
+    BedList.checkHeaderBedlist();
+    BedList.checkBedlist();
   });
 });

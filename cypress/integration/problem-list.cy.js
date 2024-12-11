@@ -1,30 +1,30 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
-import * as Login from '../support/tasks/login';
-import * as Logout from '../support/tasks/logout';
-import * as SelectBranch from '../support/tasks/select_branch';
-import * as SelectClinic from '../support/tasks/select_clinic';
-import * as Bedlist from '../support/tasks/bed_list';
-import * as AssignBed from '../support/tasks/assign_bed';
+import * as LogIn from '../support/tasks/login';
+import * as LogOut from '../support/tasks/logout';
+import * as SelectBranch from '../support/tasks/select-branch';
+import * as SelectClinic from '../support/tasks/select-clinic';
+import * as BedList from '../support/tasks/bed-list';
+import * as AssignBed from '../support/tasks/assign-bed';
 import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
 import * as Sidebar from '../support/tasks/sidebar';
-import * as Problem from '../support/tasks/problem_list';
+import * as Problem from '../support/tasks/problem-list';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
 describe('Add Problem List', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -34,39 +34,39 @@ describe('Add Problem List', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('Physician should be add problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assignPatient(5);
     Patient.navigatePatientPage();
     Problem.addProblemList();
   });
 
   it('Super user should be add problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assignPatient(5);
     Patient.navigatePatientPage();
     Problem.addProblemList();
   });
@@ -75,31 +75,31 @@ describe('Add Problem List', () => {
 describe('Edit Problem List', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assignPatient(5);
     Patient.navigatePatientPage();
     Problem.addProblemList();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -109,21 +109,21 @@ describe('Edit Problem List', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('Physician should be edit problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.editProblemList();
@@ -131,14 +131,14 @@ describe('Edit Problem List', () => {
 
   it('Super user should be edit problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.editProblemList();
@@ -148,31 +148,31 @@ describe('Edit Problem List', () => {
 describe('Remove Problem List', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assignPatient(5);
     Patient.navigatePatientPage();
     Problem.addProblemList();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -182,36 +182,36 @@ describe('Remove Problem List', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
-  it('Physician should be view problem list', function () {
+  it('Physician should be remove problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.removeProblemList();
   });
 
-  it('Super user should be view problem list', function () {
+  it('Super user should be remove problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.removeProblemList();
@@ -221,31 +221,31 @@ describe('Remove Problem List', () => {
 describe('View Problem List', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(5);
+    AssignBed.assignPatient(5);
     Patient.navigatePatientPage();
     Problem.addProblemList();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -255,21 +255,21 @@ describe('View Problem List', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('Physician should be view problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.viewProblemList();
@@ -277,14 +277,14 @@ describe('View Problem List', () => {
 
   it('Super user should be view problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.viewProblemList();
@@ -292,14 +292,14 @@ describe('View Problem List', () => {
 
   it('Nurse should be view problem list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
     Problem.navigateProblemListPage();
     Problem.viewProblemList();

@@ -1,43 +1,43 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
-import * as Login from '../support/tasks/login';
-import * as Logout from '../support/tasks/logout';
-import * as SelectBranch from '../support/tasks/select_branch';
-import * as SelectClinic from '../support/tasks/select_clinic';
-import * as Bedlist from '../support/tasks/bed_list';
-import * as AssignBed from '../support/tasks/assign_bed';
+import * as LogIn from '../support/tasks/login';
+import * as LogOut from '../support/tasks/logout';
+import * as SelectBranch from '../support/tasks/select-branch';
+import * as SelectClinic from '../support/tasks/select-clinic';
+import * as BedList from '../support/tasks/bed-list';
+import * as AssignBed from '../support/tasks/assign-bed';
 import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
-import * as Sidebar from '../support/tasks/sidebar';
+import * as SideBar from '../support/tasks/sidebar';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
 describe('Add discharge and discharge patient from ward', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(1);
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    AssignBed.assignPatient(1);
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   after('Discharge patient from nurse', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -46,14 +46,14 @@ describe('Add discharge and discharge patient from ward', () => {
     SelectClinic.selectClinic();
     Patient.navigatePatientPage();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('physician should be discharge patient from bed list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -63,14 +63,14 @@ describe('Add discharge and discharge patient from ward', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('super user should be discharge patient from bed list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -80,14 +80,14 @@ describe('Add discharge and discharge patient from ward', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('nurse should not be discharge patient from bed list', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -97,38 +97,38 @@ describe('Add discharge and discharge patient from ward', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form(false);
+    Patient.submitForm(false);
   });
 });
 
 describe('Edit discharge', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(1);
+    AssignBed.assignPatient(1);
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('Discharge patient', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -137,14 +137,14 @@ describe('Edit discharge', () => {
     SelectClinic.selectClinic();
     Patient.navigatePatientPage();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('physician should be edit discharge', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -158,7 +158,7 @@ describe('Edit discharge', () => {
 
   it('super user should be edit discharge', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -172,7 +172,7 @@ describe('Edit discharge', () => {
 
   it('nurse should be edit discharge', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -188,32 +188,32 @@ describe('Edit discharge', () => {
 describe('View discharge', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(1);
+    AssignBed.assignPatient(1);
     Patient.navigatePatientPage();
     Patient.navigateDischargeSummary();
     Discharge.editDischarge(false, true);
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('Discharge patient', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -222,14 +222,14 @@ describe('View discharge', () => {
     SelectClinic.selectClinic();
     Patient.navigatePatientPage();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('physician should be view discharge summary', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -243,7 +243,7 @@ describe('View discharge', () => {
 
   it('super user should be view discharge summary', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -257,7 +257,7 @@ describe('View discharge', () => {
 
   it('nurse should be view discharge summary', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();

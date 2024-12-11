@@ -1,17 +1,17 @@
 {
   "diagnosis": {
-    "principle_diagnosis": "Appendicitis",
-    "comorbid_diagnosis": ["Addisonian crisis"],
-    "complication_diagnosis": ["Retinopathy due to diabetes mellitus"],
-    "other_diagnosis": ["Retinopathy due to diabetes mellitus"],
-    "external_cause_of_injury": []
+    "principleDiagnosis": "Appendicitis",
+    "comorbidDiagnosis": ["Addisonian crisis"],
+    "complicationDiagnosis": ["Retinopathy due to diabetes mellitus"],
+    "otherDiagnosis": ["Retinopathy due to diabetes mellitus"],
+    "externalCauseOfInjury": []
   },
   "operation": {
-    "operating_room_procedure": [],
-    "non_operating_room_procedure": []
+    "operatingRoomProcedure": [],
+    "nonOperatingRoomProcedure": []
   },
   "discharge":{
-    "discharge_status": "Improved",
-    "discharge_type": "With approval"
+    "dischargeStatus": "Improved",
+    "dischargeType": "With approval"
   }
 }

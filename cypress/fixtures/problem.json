@@ -1,0 +1,92 @@
+{
+  "problem": [{
+    "name": "Acute febrile illness with upper respiratory tract symptom",
+    "problem_status": "Active",
+    "severity": "Severe",
+    "start_time": {
+      "perform_time": "now",
+      "perform_date": "03/10/2567",
+      "perform_hour": "06",
+      "perform_minute": "13"
+    },
+    "end_time": {},
+    "detail": ""
+  },{
+    "name": "Moderate dehydration",
+    "problem_status": "Active",
+    "severity": "Moderate",
+    "start_time": {
+      "perform_time": "",
+      "perform_date": "03/10/2567",
+      "perform_hour": "09",
+      "perform_minute": "10"
+    },
+    "end_time": {},
+    "detail": ""
+  },{
+    "name": "Diabetes mellitus type 2",
+    "problem_status": "Active",
+    "severity": "Moderate",
+    "start_time": {
+      "perform_time": "now",
+      "perform_date": "03/10/2567",
+      "perform_hour": "09",
+      "perform_minute": "32"
+    },
+    "end_time": {},
+    "detail": ""
+  },{
+    "name": "Mild hypokalemia",
+    "problem_status": "Active",
+    "severity": "Mild",
+    "start_time": {
+      "perform_time": "now",
+      "perform_date": "03/10/2024",
+      "perform_hour": "10",
+      "perform_minute": "16"
+    },
+    "end_time": {},
+    "detail": "K = 2.7 (Lab 1/4/67 8.00)"
+  },{
+    "name": "Acute febrile illness c acute RLQ pain c vomiting c decrease appetite",
+    "problem_status": "Resolved",
+    "severity": "Moderate",
+    "start_time": {
+      "perform_time": "",
+      "perform_date": "18/11/2024",
+      "perform_hour": "11",
+      "perform_minute": "15"
+    },
+    "end_time": {
+      "perform_time": "",
+      "perform_date": "18/11/2024",
+      "perform_hour": "18",
+      "perform_minute": "00"
+    },
+    "detail": ""
+  },{
+    "name": "Acute watery diarrhea",
+    "problem_status": "Inactive",
+    "severity": "",
+    "start_time": {
+      "perform_time": "now",
+      "perform_date": "03/10/2024",
+      "perform_hour": "10",
+      "perform_minute": "09"
+    },
+    "end_time": {},
+    "detail": "หลังจาก วันที่ 2/4/67 ถ่ายปกติ"
+  },{
+    "name": "Essential hypertension",
+    "problem_status": "Inactive",
+    "severity": "",
+    "start_time": {
+      "perform_time": "",
+      "perform_date": "03/10/2024",
+      "perform_hour": "11",
+      "perform_minute": "15"
+    },
+    "end_time": {},
+    "detail": ""
+  }]
+}

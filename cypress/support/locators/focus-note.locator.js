@@ -1,16 +1,16 @@
 export default {
   title: '[data-testid="secondary-header-title"]',
-  focus_note_header: 'button[data-testid="tab-trigger-add_focus_note"]',
+  focusNoteHeader: 'button[data-testid="tab-trigger-add_focus_note"]',
 
-  button_reuse_form: '[data-ehr-path="generic-button-6661179"] > button',
+  buttonReuseForm: '[data-ehr-path="generic-button-6661179"] > button',
 
-  perform_date:
+  performDate:
     '[data-ehr-path="nursing_focus_note/assessment/clinical_synopsis/created_at/specific_datetime"] [placeholder="dd/MM/yyyy"]',
-  perform_hour:
+  performHour:
     '[data-ehr-path="nursing_focus_note/assessment/clinical_synopsis/created_at/specific_datetime"] [placeholder="HH"]',
-  perform_minute:
+  performMinute:
     '[data-ehr-path="nursing_focus_note/assessment/clinical_synopsis/created_at/specific_datetime"] [placeholder="MM"]',
-  button_today:
+  buttonToday:
     '[data-ehr-path="nursing_focus_note/assessment/clinical_synopsis/created_at/specific_datetime"] .set-today-button',
 
   focus:
@@ -19,41 +19,41 @@ export default {
     'textarea[aria-labelledby="nursing_focus_note/assessment/clinical_synopsis/synopsis-label"]',
   intervention:
     'textarea[aria-labelledby="nursing_focus_note/intervention/service_request/current_activity/description-label"]',
-  intervention_date:
+  interventionDate:
     '[data-ehr-path="generic-date_time-3317208"] [placeholder="dd/MM/yyyy"]',
-  intervention_hour:
+  interventionHour:
     '[data-ehr-path="generic-date_time-3317208"] [placeholder="HH"]',
-  intervention_minute:
+  interventionMinute:
     '[data-ehr-path="generic-date_time-3317208"] [placeholder="MM"]',
-  button_intervention_today:
+  buttonInterventionToday:
     '[data-ehr-path="generic-date_time-3317208"] .set-today-button',
 
   evaluation:
     'textarea[aria-labelledby="nursing_focus_note/evaluation/progress_note/progress_note-label"]',
-  evaluation_date:
+  evaluationDate:
     '[data-ehr-path="nursing_focus_note/evaluation/progress_note/time"] [placeholder="dd/MM/yyyy"]',
-  evaluation_hour:
+  evaluationHour:
     '[data-ehr-path="nursing_focus_note/evaluation/progress_note/time"] [placeholder="HH"]',
-  evaluation_minute:
+  evaluationMinute:
     '[data-ehr-path="nursing_focus_note/evaluation/progress_note/time"] [placeholder="MM"]',
-  button_evaluation_today:
+  buttonEvaluationToday:
     '[data-ehr-path="nursing_focus_note/evaluation/progress_note/time"] .set-today-button',
 
-  button_edit: '[data-testid="edit-button"]',
+  buttonEdit: '[data-testid="edit-button"]',
 
-  view_focus: '[data-testid="focus"] [data-testid="content"]',
-  view_assessment: '[data-testid="assessment"] [data-testid="content"]',
-  view_assessment_time:
+  viewFocus: '[data-testid="focus"] [data-testid="content"]',
+  viewAssessment: '[data-testid="assessment"] [data-testid="content"]',
+  viewAssessmentTime:
     '[data-testid="assessment"] [data-testid="perform-time"] [data-testid="content"]',
-  view_intervention: '[data-testid="intervention"] [data-testid="content"]',
-  view_intervention_time:
+  viewIntervention: '[data-testid="intervention"] [data-testid="content"]',
+  viewInterventionTime:
     '[data-testid="intervention"] [data-testid="perform-time"] [data-testid="content"]',
-  view_evaluation: '[data-testid="evaluation"] [data-testid="content"]',
-  view_evaluation_time:
+  viewEvaluation: '[data-testid="evaluation"] [data-testid="content"]',
+  viewEvaluationTime:
     '[data-testid="evaluation"] [data-testid="perform-time"] [data-testid="content"]',
 
-  button_cancel: '[data-testid="cancel-btn"]',
-  button_submit: '[data-testid="submit-btn"]',
+  buttonCancel: '[data-testid="cancel-btn"]',
+  buttonSubmit: '[data-testid="submit-btn"]',
 
   toast: 'ol:first',
 };

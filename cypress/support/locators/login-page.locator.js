@@ -1,7 +1,7 @@
 export default {
-  button_welcome: '[data-testid="welcome-sign-in-btn"]',
-  text_username: '[id="username"]',
-  text_password: '[id="password"]',
-  button_login: '[id="kc-login"]',
-  page_title: '[id="kc-header-wrapper"]',
+  buttonWelcome: '[data-testid="welcome-sign-in-btn"]',
+  textUsername: '[id="username"]',
+  textPassword: '[id="password"]',
+  buttonLogin: '[id="kc-login"]',
+  pageTitle: '[id="kc-header-wrapper"]',
 };

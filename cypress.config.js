@@ -1,7 +1,6 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: 'uefcks',
   e2e: {
     baseUrl: "https://sit-y.cortexcloud.co",
     chromeWebSecurity: false,

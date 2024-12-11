@@ -1,21 +1,21 @@
 {
-  "assign_bed": [{
+  "assignBed": [{
     "hn": "88800002",
     "name": "QA Automate Regressioin",
     "phone": "0987654321",
-    "emergency_name": "สมภิศ สุวรรณเขต",
+    "emergencyName": "สมภิศ สุวรรณเขต",
     "relationship": "บิดา",
-    "emergency_phone": "0123456789",
+    "emergencyPhone": "0123456789",
     "physician": "123",
     "department": [{ 
       "name" : "รังสี",
-      "consult_name": "002"
+      "consultName": "002"
     },{
       "name" : "เวชศาสตร์ฟื้นฟู",
-      "consult_name": "003"
+      "consultName": "003"
     },{
       "name" : "จักษุ",
-      "consult_name": "004"
+      "consultName": "004"
     }],
     "used": false
   },
@@ -23,13 +23,13 @@
     "hn": "88800003",
     "name": "QA Automate Regressioin",
     "phone": "0987654322",
-    "emergency_name": "มานี มีนา",
+    "emergencyName": "มานี มีนา",
     "relationship": "บิดา",
-    "emergency_phone": "0123456788",
+    "emergencyPhone": "0123456788",
     "physician": "005",
     "department": [{
       "name": "ผู้ป่วยหนัก",
-      "consult_name": "006"
+      "consultName": "006"
     }],
     "used": false
   },
@@ -37,13 +37,13 @@
     "hn": "88800004",
     "name": "QA Automate Regressioin",
     "phone": "0987654333",
-    "emergency_name": "พัฒน์ สุวรรณโชค",
+    "emergencyName": "พัฒน์ สุวรรณโชค",
     "relationship": "บิดา",
-    "emergency_phone": "0123456777",
+    "emergencyPhone": "0123456777",
     "physician": "007",
     "department": [{
       "name": "วิสัญญี",
-      "consult_name": "ฆาเม"
+      "consultName": "ฆาเม"
     }],
     "used": false
   },
@@ -51,13 +51,13 @@
     "hn": "88800005",
     "name": "QA Automate Regressioin",
     "phone": "0987654444",
-    "emergency_name": "วราภรณ์ ซาลาเปา",
+    "emergencyName": "วราภรณ์ ซาลาเปา",
     "relationship": "มารดา",
-    "emergency_phone": "0123456666",
+    "emergencyPhone": "0123456666",
     "physician": "006",
     "department": [{
       "name": "วิสัญญี",
-      "consult_name": "ดรัณภพ"
+      "consultName": "ดรัณภพ"
     }],
     "used": false
   },
@@ -65,13 +65,13 @@
     "hn": "88800006",
     "name": "QA Automate Regressioin",
     "phone": "0987655555",
-    "emergency_name": "ซาลาเปา วราภรณ์",
+    "emergencyName": "ซาลาเปา วราภรณ์",
     "relationship": "มารดา",
-    "emergency_phone": "0123455555",
+    "emergencyPhone": "0123455555",
     "physician": "ปวีณา เกียรติสกุล",
     "department": [{
       "name": "กุมารเวช",
-      "consult_name": "ดรัณภพ อนันต์ศาลพิทัก"
+      "consultName": "ดรัณภพ อนันต์ศาลพิทัก"
     }],
     "used": false
   },
@@ -79,13 +79,13 @@
     "hn": "88800007",
     "name": "QA Automate Regressioin",
     "phone": "0987666666",
-    "emergency_name": "เรวัต จิรวราพงศ์",
+    "emergencyName": "เรวัต จิรวราพงศ์",
     "relationship": "บิดา",
-    "emergency_phone": "0123444444",
+    "emergencyPhone": "0123444444",
     "physician": "ญาสิตา ธรรมรงค์สุนทร",
     "department": [{
       "name": "กุมารเวช",
-      "consult_name": "สุรวัฒน์ จักรพันธ์ประดิษฐ์"
+      "consultName": "สุรวัฒน์ จักรพันธ์ประดิษฐ์"
     }],
     "used": false
   },
@@ -93,13 +93,13 @@
     "hn": "88800008",
     "name": "QA Automate Regressioin",
     "phone": "0987777777",
-    "emergency_name": "จ้า สมวงศ์",
+    "emergencyName": "จ้า สมวงศ์",
     "relationship": "มารดา",
-    "emergency_phone": "0123333333",
+    "emergencyPhone": "0123333333",
     "physician": "สรยุทธ สาลี",
     "department": [{ 
       "name": "ศัลยศาสตร์",
-      "consult_name": "ณัฏฐกานต์ ณัฏฐกานต์"
+      "consultName": "ณัฏฐกานต์ ณัฏฐกานต์"
     }],
     "used": false
   },
@@ -107,13 +107,13 @@
     "hn": "88800009",
     "name": "QA Automate Regressioin",
     "phone": "0988888888",
-    "emergency_name": "วราวุด ใจดี",
+    "emergencyName": "วราวุด ใจดี",
     "relationship": "บิดา",
-    "emergency_phone": "0122222222",
+    "emergencyPhone": "0122222222",
     "physician": "ณัฏฐกานต์ ณัฏฐกานต์",
     "department": [{
       "name": "จักษุ",
-      "consult_name": "จักรภพ แสนสิรา"
+      "consultName": "จักรภพ แสนสิรา"
     }],
     "used": false
   },
@@ -121,13 +121,13 @@
     "hn": "88800010",
     "name": "QA Automate Regressioin",
     "phone": "0999999999",
-    "emergency_name": "บงกช เผ่ารอด",
+    "emergencyName": "บงกช เผ่ารอด",
     "relationship": "มารดา",
-    "emergency_phone": "0111111111",
+    "emergencyPhone": "0111111111",
     "physician": "วรันธร  สาลี",
     "department": [{ 
       "name": "หู คอ จมูก",
-      "consult_name": ""
+      "consultName": ""
     }],
     "used": false
   },
@@ -135,9 +135,9 @@
     "hn": "88800011",
     "name": "QA Automate Regressioin",
     "phone": "0912345678",
-    "emergency_name": "ศรุต ก้องกิจ",
+    "emergencyName": "ศรุต ก้องกิจ",
     "relationship": "บิดา",
-    "emergency_phone": "0198765432",
+    "emergencyPhone": "0198765432",
     "physician": "สรยุทธ สาลี",
     "department": [],
     "used": false

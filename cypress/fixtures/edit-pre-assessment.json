@@ -6,11 +6,11 @@
       "performHour": "06",
       "performMinute": "13"
     },
-    "receive": "OPD",
-    "receiveDetail": "OPD อายุรกรรม",
-    "arrive": "เปลนอน",
+    "receive": "Refer",
+    "receiveDetail": "Refer รพ.รังสิต",
+    "arrive": "รถนั่ง",
     "informat": "อื่นๆ",
-    "informatDetail": "ภรรยา",
+    "informatDetail": "สามี",
     "systolic": "146",
     "diastolic": "100",
     "pr": "105",
@@ -33,8 +33,8 @@
       "symptom": "หอบเหนื่อย ผื่นขึ้น"
     }],
     "otherAllergy": [],
-    "cigarette": "เคย",
-    "spirits": "เคย",
+    "cigarette": "ไม่เคย",
+    "spirits": "ไม่เคย",
     "narcotic": "ไม่เคย",
     "lifeStyleRisk": [],
 
@@ -43,12 +43,12 @@
     "m": "(6) Obeys commands",
     "total": "15",
 
-    "skin": "ปกติ",
-    "bone": "ปกติ",
+    "skin": "ไม่ปกติ",
+    "bone": "ไม่ปกติ",
     "physicalExam": [],
 
-    "pulse": "ปกติ",
-    "breathe": "ปกติ",
+    "pulse": "ไม่ปกติ",
+    "breathe": "ไม่ปกติ",
     "respiratoryAndBlood": [],
 
     "vision": "ไม่ปกติ",
@@ -60,18 +60,18 @@
     "foodLess": "ไม่ใช่",
     "bmi": "ไม่ใช่",
     "bmiDetail": "",
-    "crisis": "ใช่",
+    "crisis": "ไม่ใช่",
     "nutritionalRisk": [],
 
-    "drinkingWater": "ปกติ",
-    "appetite": "ปกติ",
+    "drinkingWater": "ไม่ปกติ",
+    "appetite": "ไม่ปกติ",
     "howToFeed": "ไม่ปกติ",
-    "oralCavity": "ปกติ",
+    "oralCavity": "ไม่ปกติ",
     "foodType": "ไม่ปกติ",
     "meal": [],
 
-    "urine": "ปกติ",
-    "stool": "ปกติ",
+    "urine": "ไม่ปกติ",
+    "stool": "ไม่ปกติ",
     "excretorySystemRisk": [],
 
     "lmp": "",
