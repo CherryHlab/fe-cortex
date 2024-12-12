@@ -1,26 +1,26 @@
 {
-  "focus_note": [{
+  "focusNote": [{
     "focus": "Start Oseltamivir first dose",
     "assessment": "Assessment (A)\tผู้ป่วยไม่เคยได้รับยา Oseltamivir มาก่อน",
     "time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "08",
-      "perform_minute": "30"
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
     },
     "intervention": "ให้ข้อมูลเรื่องยาแก่ผู้ป่วยและภรรยา และแนะนำให้สังเกตอาการผิดปกติ เช่น ผื่นแดง คัน แน่นหน้าอก คลื่นไส้อาเจียน หากมีอาหารดังกล่าว ให้รีบแจ้งพยาบาลทันที",
-    "intervention_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "08",
-      "perform_minute": "30"
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
     },
     "evaluation": "ผู้ป่วยและญาติเข้าใจและบอกถึงอาการที่ควรสังเกตได้",
-    "evaluation_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "08",
-      "perform_minute": "30"
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
     }
   }]
 }

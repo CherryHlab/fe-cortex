@@ -1,30 +1,30 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
-import * as Login from '../support/tasks/login';
-import * as Logout from '../support/tasks/logout';
-import * as SelectBranch from '../support/tasks/select_branch';
-import * as SelectClinic from '../support/tasks/select_clinic';
-import * as Bedlist from '../support/tasks/bed_list';
-import * as AssignBed from '../support/tasks/assign_bed';
+import * as LogIn from '../support/tasks/login';
+import * as LogOut from '../support/tasks/logout';
+import * as SelectBranch from '../support/tasks/select-branch';
+import * as SelectClinic from '../support/tasks/select-clinic';
+import * as BedList from '../support/tasks/bed-list';
+import * as AssignBed from '../support/tasks/assign-bed';
 import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
-import * as Sidebar from '../support/tasks/sidebar';
+import * as SideBar from '../support/tasks/sidebar';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
 describe('Assign bed', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
     // I use super admin to discharge patient
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -35,50 +35,50 @@ describe('Assign bed', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    SideBar.navigateBedList();
+    BedList.dischargePatient();
   });
 
   it('physician should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient();
+    AssignBed.assignPatient();
   });
 
   it('nurse should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient();
+    AssignBed.assignPatient();
   });
 
   it('super user should be assign patient to bed list page', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient();
+    AssignBed.assignPatient();
   });
 });

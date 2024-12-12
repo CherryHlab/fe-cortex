@@ -1,0 +1,33 @@
+{
+  "diagnosis": {
+    "principleDiagnosis": "Carrier of infectious disease, unsepcifeid",
+    "comorbidDiagnosis": ["Addisonian crisis","Diabetes mellitus arising in pregnancy"],
+    "complicationDiagnosis": ["Retinopathy of prematurity","Deep phlebothrombosis in pregnancy"],
+    "otherDiagnosis": ["Retinopathy of prematurity","Acidosis"],
+    "externalCauseOfInjury": ["Phlebitis and thrombophlebitis of other deep vessels of lower extremities"]
+  },
+  "operation": {
+    "operatingRoomProcedure": [{
+      "orProcedure": "Percutaneous transluminal coronary angioplasty",
+      "surgeonName": "วรันธร  สาลี",
+      "startDate": "",
+      "endDate": "",
+      "equipment": "Artificial nails, device",
+      "bodysite": "Structure of hypoglossal nerve lingual branches"
+    }],
+    "nonOperatingRoomProcedure": {
+      "inputType": ["PRC TRANSFUSION","Mechanical fragility red blood cell"],
+      "suggestion": ["PERITONEAL DIALYSIS","IVIG","PLATELET FACTORS TRANSFUSION"],
+      "other": [{
+        "suggestion": "CT SCAN OF",
+        "detail": "BONE"
+      }]
+    }
+  },
+  "discharge":{
+    "dischargeStatus": "Complete recovery",
+    "causeOfDead": "",
+    "dischargeType": "Escape",
+    "transferTo": ""
+  }
+}

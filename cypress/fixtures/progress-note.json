@@ -1,10 +1,10 @@
 {
-  "progress_note": [{
+  "progressNote": [{
     "time":{
-      "perform_time": "now",
-      "perform_date": "18/11/2024",
-      "perform_hour": "18",
-      "perform_minute": "00"
+      "performTime": "now",
+      "performDate": "18/11/2024",
+      "performHour": "18",
+      "performMinute": "00"
     },
     "subjective": "ตื่นดี มีไข้ 38C กินข้าวได้มื้อละ 2 คำ เจ็บคอพอเดิม มีน้ำมูกใสเล็กน้อย ไอแห้งเล็กน้อย ไม่มีเสมหะ ไม่มีหอบเหนื่อย ไม่มีคลื่นไส้อาเจียน ไม่ถ่ายเหลวแล้ว ไม่มีปัสสาวะแสบขัด",
     "objective": "V/S\tT 38C BP 128/94 mmhg PR 78/min RR 13/min\nGA\talert, fully conscious\nHEENT\tno pale conjunctivae, anicteric sclerae, clear nasal discharge, mild injected pharynx, tonsils not enlarged\nCVS\tfull regular symmetrical pulse, CRT < 2s, normal S1S2, no murmur\nRS\tclear equal breath sound both lungs\nAbdomen\tsoft, no distension, not tender\nNeuro\tE4V5M6, motor power gr.V all ext, sensory intact, CN grossly intact",
@@ -12,10 +12,10 @@
     "plan": "Acute febrile illness with upper respiratory tract symptom\tsupportive care, continue Oseltamivir day 2/5\nModerate dehydration\tobserve sign of dehydration, urine output\nMild hypokalemia\tobserve sign of hypokalemia\nEssential hypertension\tcontinue Enalapril\nDiabetes mellitus type 2\tcontinue Metformin\nAcute watery diarrhea\tobserve stool, sign of dehydration, urine output"
   },{
     "time":{
-      "perform_time": "",
-      "perform_date": "18/11/2024",
-      "perform_hour": "18",
-      "perform_minute": "00"
+      "performTime": "",
+      "performDate": "18/11/2024",
+      "performHour": "18",
+      "performMinute": "00"
     },
     "subjective": "ตื่นดี มีไข้ 39C กินข้าวได้มื้อละ 2 คำ เจ็บคอพอเดิม มีน้ำมูกใสเล็กน้อย ไอแห้งเล็กน้อย ไม่มีเสมหะ ไม่มีหอบเหนื่อย ไม่มีคลื่นไส้อาเจียน ไม่ถ่ายเหลวแล้ว ไม่มีปัสสาวะแสบขัด",
     "objective": "V/S\tT 39C BP 128/94 mmhg PR 78/min RR 13/min\nGA\talert, fully conscious\nHEENT\tno pale conjunctivae, anicteric sclerae, clear nasal discharge, mild injected pharynx, tonsils not enlarged\nCVS\tfull regular symmetrical pulse, CRT < 2s, normal S1S2, no murmur\nRS\tclear equal breath sound both lungs\nAbdomen\tsoft, no distension, not tender\nNeuro\tE4V5M6, motor power gr.V all ext, sensory intact, CN grossly intact",

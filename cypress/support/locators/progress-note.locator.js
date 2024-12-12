@@ -1,14 +1,14 @@
 export default {
   title: '[data-testid="secondary-header-title"]',
-  progress_note_header: 'button[data-testid="tab-trigger-progress_note"]',
+  progressNoteHeader: 'button[data-testid="tab-trigger-progress_note"]',
 
-  perform_date:
+  performDate:
     '[data-ehr-path="doctor_progress_note/context/perform_time/specific_datetime"] [placeholder="dd/MM/yyyy"]',
-  perform_hour:
+  performHour:
     '[data-ehr-path="doctor_progress_note/context/perform_time/specific_datetime"] [placeholder="HH"]',
-  perform_minute:
+  performMinute:
     '[data-ehr-path="doctor_progress_note/context/perform_time/specific_datetime"] [placeholder="MM"]',
-  button_today: '.set-today-button',
+  buttonToday: '.set-today-button',
 
   subjective:
     'textarea[aria-labelledby="doctor_progress_note/soap_headings/subjective_s/story_history/story-label"]',
@@ -18,16 +18,16 @@ export default {
     'textarea[aria-labelledby="doctor_progress_note/soap_headings/assessment_a/clinical_synopsis/synopsis-label"]',
   plan: 'textarea[aria-labelledby="doctor_progress_note/soap_headings/plan_p/service_request/narrative-label"]',
 
-  button_edit: '[data-testid="edit-button"]',
+  buttonEdit: '[data-testid="edit-button"]',
 
-  view_perform_time: '[data-testid="perform-time"] [data-testid="content"]',
-  view_subjective: '[data-testid="subjective"] [data-testid="content"]',
-  view_objective: '[data-testid="objective"] [data-testid="content"]',
-  view_assessment: '[data-testid="assessment"] [data-testid="content"]',
-  view_plan: '[data-testid="plan"] [data-testid="content"]',
+  viewPerformTime: '[data-testid="perform-time"] [data-testid="content"]',
+  viewSubjective: '[data-testid="subjective"] [data-testid="content"]',
+  viewObjective: '[data-testid="objective"] [data-testid="content"]',
+  viewAssessment: '[data-testid="assessment"] [data-testid="content"]',
+  viewPlan: '[data-testid="plan"] [data-testid="content"]',
 
-  button_cancel: '[data-testid="cancel-btn"]',
-  button_submit: '[data-testid="submit-btn"]',
+  buttonCancel: '[data-testid="cancel-btn"]',
+  buttonSubmit: '[data-testid="submit-btn"]',
 
   toast: 'ol:first',
 };

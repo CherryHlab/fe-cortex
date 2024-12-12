@@ -1,26 +1,26 @@
 {
-  "focus_note": [{
+  "focusNote": [{
     "focus": "ไข้",
     "assessment": "T = 38.7 C กระสับกระส่าย ผู้ป่วยบอกว่าปวดศีรษะ",
     "time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "10",
-      "perform_minute": "00"
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "00"
     },
     "intervention": "ให้กินยา Paracetamol เช็ดตัว วาง cold pack บริเวณหน้าผาก เปิดพัดลมเพื่อถ่ายเทความร้อน แนะนำและกระตุ้นให้ดื่มน้ำมากๆ",
-    "intervention_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "10",
-      "perform_minute": "00"
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "00"
     },
     "evaluation": "T = 37.5 C ผู้ป่วยบอกว่าสบายตัวขึ้น ดื่มน้ำได้",
-    "evaluation_time": {
-      "perform_time": "",
-      "perform_date": "03/10/2024",
-      "perform_hour": "10",
-      "perform_minute": "30"
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "30"
     }
   }]
 }

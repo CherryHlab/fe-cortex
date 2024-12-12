@@ -1,34 +1,34 @@
 /// <reference types="cypress" />
-import { Login_page } from '../locators';
+import { LogInPage } from '../locators';
 
 Cypress.config('defaultCommandTimeout', 50000);
 
 export function navigateWelcomePage() {
-  cy.get(Login_page.button_welcome).click();
-  cy.get(Login_page.page_title).contains('cortex');
-  cy.get(Login_page.text_username)
+  cy.get(LogInPage.buttonWelcome).click();
+  cy.get(LogInPage.pageTitle).contains('cortex');
+  cy.get(LogInPage.textUsername)
     .should('be.visible')
     .should('be.enabled')
     .should('be.empty');
-  cy.get(Login_page.text_password)
+  cy.get(LogInPage.textPassword)
     .should('be.visible')
     .should('be.enabled')
     .should('be.empty');
-  cy.get(Login_page.button_login).should('be.visible').should('be.enabled');
+  cy.get(LogInPage.buttonLogin).should('be.visible').should('be.enabled');
 }
 
-export function superuserLogin() {
-  cy.get(Login_page.text_username).type(data.super_user.username);
-  cy.get(Login_page.text_password).type(data.super_user.password);
-  cy.get(Login_page.button_login).click();
+export function superUserLogIn() {
+  cy.get(LogInPage.textUsername).type(data.superUser.username);
+  cy.get(LogInPage.textPassword).type(data.superUser.password);
+  cy.get(LogInPage.buttonLogin).click();
   cy.url().should('include', 'select-ward');
 }
 
-export function userLogin(
+export function userLogIn(
   data = { username: 'user1', password: 'MyPassw0rd' },
 ) {
-  cy.get(Login_page.text_username).type(data.username);
-  cy.get(Login_page.text_password).type(data.password);
-  cy.get(Login_page.button_login).click();
+  cy.get(LogInPage.textUsername).type(data.username);
+  cy.get(LogInPage.textPassword).type(data.password);
+  cy.get(LogInPage.buttonLogin).click();
   cy.url().should('include', 'select-branch');
 }

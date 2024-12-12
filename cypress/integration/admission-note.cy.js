@@ -1,30 +1,30 @@
 /// <reference types="cypress" />
 import * as Start from '../support/tasks/start';
-import * as Login from '../support/tasks/login';
-import * as Logout from '../support/tasks/logout';
-import * as SelectBranch from '../support/tasks/select_branch';
-import * as SelectClinic from '../support/tasks/select_clinic';
-import * as Bedlist from '../support/tasks/bed_list';
-import * as AssignBed from '../support/tasks/assign_bed';
+import * as LogIn from '../support/tasks/login';
+import * as LogOut from '../support/tasks/logout';
+import * as SelectBranch from '../support/tasks/select-branch';
+import * as SelectClinic from '../support/tasks/select-clinic';
+import * as BedList from '../support/tasks/bed-list';
+import * as AssignBed from '../support/tasks/assign-bed';
 import * as Patient from '../support/tasks/patient';
 import * as Discharge from '../support/tasks/discharge';
 import * as Sidebar from '../support/tasks/sidebar';
-import * as PreAsssessment from '../support/tasks/pre_assessment';
+import * as Admission from '../support/tasks/admission-note';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
-describe('Add Pre-assessment ', () => {
+describe('Add Admission Note', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -34,78 +34,78 @@ describe('Add Pre-assessment ', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
-  it('Nurse should be add pre-assessment', function () {
+  it('Physician should be add admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6);
+    AssignBed.assignPatient(9);
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment();
+    Admission.navigateAdmissionNote();
+    Admission.addAdmissionNote();
+    Admission.submitAdmissionNote();
   });
 
   it('Super user should be add admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6);
+    AssignBed.assignPatient(9);
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment();
+    Admission.navigateAdmissionNote();
+    Admission.addAdmissionNote();
+    Admission.submitAdmissionNote();
   });
 });
 
-describe('Edit Pre-assessment', () => {
+describe('Edit Admission Note', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6);
+    AssignBed.assignPatient(9);
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    Admission.navigateAdmissionNote();
+    Admission.addAdmissionNote();
+    Admission.submitAdmissionNote();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -115,74 +115,74 @@ describe('Edit Pre-assessment', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
-  it('Nurse should be edit pre-assessment', function () {
+  it('Physician should be edit admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.editPreAssessment();
-    PreAsssessment.submitPreAssessment(true);
+    Admission.navigateAdmissionNotePage();
+    Admission.editAdmissionNote();
+    Admission.submitAdmissionNote(true);
   });
 
-  it('Super user should be edit pre-assessment', function () {
+  it('Super user should be edit admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.editPreAssessment();
-    PreAsssessment.submitPreAssessment(true);
+    Admission.navigateAdmissionNotePage();
+    Admission.editAdmissionNote();
+    Admission.submitAdmissionNote(true);
   });
 });
 
-describe('View Pre-assessment', () => {
+describe('View Admission Note', () => {
   beforeEach('redirect to home page', function () {
     Start.PageRedirect('ipd', 'welcome');
-    Login.navigateWelcomePage();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
-    AssignBed.assign_patient(6);
+    AssignBed.assignPatient(9);
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment();
-    PreAsssessment.submitPreAssessment();
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    Admission.navigateAdmissionNote();
+    Admission.addAdmissionNote();
+    Admission.submitAdmissionNote();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
   });
 
   afterEach('discharge patient from bed', function () {
-    Logout.navigateUserMenu();
-    Logout.logoutButton();
-    Login.navigateWelcomePage();
+    LogOut.navigateUserMenu();
+    LogOut.logOutButton();
+    LogIn.navigateWelcomePage();
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
@@ -192,53 +192,53 @@ describe('View Pre-assessment', () => {
     Patient.navigatePatientPage();
     Discharge.dischargeSummary();
     Patient.navigateDischargeSummary();
-    Patient.submit_form();
-    Sidebar.navigateBedlist();
-    Bedlist.dischargePatient();
+    Patient.submitForm();
+    Sidebar.navigateBedList();
+    BedList.dischargePatient();
   });
 
-  it('Physician should be view pre-assessment', function () {
+  it('Physician should be view admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.physician);
+      LogIn.userLogIn(data.physician);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment();
+    Admission.navigateAdmissionNotePage();
+    Admission.viewAdmissionNote();
   });
 
-  it('Super user should be view pre-assessment', function () {
+  it('Super user should be view admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin();
+      LogIn.userLogIn();
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment();
+    Admission.navigateAdmissionNotePage();
+    Admission.viewAdmissionNote();
   });
 
-  it('Nurse should be view pre-assessment', function () {
+  it('Nurse should be view admision note', function () {
     cy.fixture('login-credential').then((data) => {
-      Login.userLogin(data.nurse);
+      LogIn.userLogIn(data.nurse);
     });
     SelectBranch.navigateSelectBranchPage();
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
     SelectClinic.selectClinic();
-    Bedlist.navigateBedlistPage();
+    BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    PreAsssessment.navigatePreAssessmentPage();
-    PreAsssessment.viewPreAssessment();
+    Admission.navigateAdmissionNotePage();
+    Admission.viewAdmissionNote();
   });
 });

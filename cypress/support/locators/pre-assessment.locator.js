@@ -1,22 +1,22 @@
 export default {
-  pre_assessment_header: '[data-testid="tab-trigger-add_nurse_pre_assessment"]',
+  preAssessmentHeader: '[data-testid="tab-trigger-add_nurse_pre_assessment"]',
 
-  perform_date:
+  performDate:
     '[data-ehr-path="nurse_pre_assessment/context/perform_time/specific_datetime"] [placeholder="dd/MM/yyyy"]',
-  perform_hour:
+  performHour:
     '[data-ehr-path="nurse_pre_assessment/context/perform_time/specific_datetime"] input[aria-label="Hours"]',
-  perform_minute:
+  performMinute:
     '[data-ehr-path="nurse_pre_assessment/context/perform_time/specific_datetime"] input[aria-label="Minutes"]',
-  button_set_today: '.set-today-button',
+  buttonSetToday: '.set-today-button',
 
   receive:
     '[aria-labelledby="nurse_pre_assessment/administration_information/arrival/referral_source-label"] input[id^=needtoreplace]',
-  receive_detail: 'textarea[aria-labelledby="generic-input_text-256715-label"]',
+  receiveDetail: 'textarea[aria-labelledby="generic-input_text-256715-label"]',
   arrive:
     '[aria-labelledby="nurse_pre_assessment/administration_information/arrival/entry_mode-label"] input[id^=needtoreplace]',
   informat:
     '[aria-labelledby="generic-layout_group-5935930|0/generic-layout_group-4579871|0/generic-coded_text-1360392-label"] input[id^=needtoreplace]',
-  informat_detail:
+  informatDetail:
     'textarea[aria-labelledby="generic-input_text-4930012-label"]',
 
   systolic:
@@ -31,53 +31,53 @@ export default {
     '[data-ehr-path="nurse_pre_assessment/weight_height/height_length/height_length"] input',
   weight:
     '[data-ehr-path="nurse_pre_assessment/weight_height/body_weight/weight"] input.form-control',
-  weight_type:
+  weightType:
     '[data-ehr-path="nurse_pre_assessment/weight_height/body_weight/weight"] ng-select',
 
-  chief_complaint:
+  chiefComplaint:
     'textarea[aria-labelledby="nurse_pre_assessment/patients_background/reason_for_encounter/presenting_problem-label"]',
-  present_illness:
+  presentIllness:
     'textarea[aria-labelledby="nurse_pre_assessment/patients_background/history_of_present_illness/any_event/story-label"]',
-  nursing_diagnosis:
+  nursingDiagnosis:
     'textarea[aria-labelledby="nurse_pre_assessment/patients_background/nursing_diagnosis/clinical_description-label"]',
-  past_history:
+  pastHistory:
     'textarea[aria-labelledby="nurse_pre_assessment/patients_background/history_of_past_illness/any_event/story-label"]',
-  family_history:
+  familyHistory:
     'textarea[aria-labelledby="nurse_pre_assessment/family_history/family_history/summary-label"]',
 
-  congenital_disease:
+  congenitalDisease:
     '[aria-labelledby="generic-layout_group-4774268|0/generic-layout_group-2852235|0/generic-coded_text-2956593-label"] input[id^=needtoreplace]',
-  congenital_disease_detail:
+  congenitalDiseaseDetail:
     'textarea[aria-labelledby="nurse_pre_assessment/patients_background/past_problem_diagnosis/clinical_description-label"]',
 
-  history_of_drug_allergy:
+  historyOfDrugAllergy:
     '[aria-labelledby="generic-layout_group-4774268|0/generic-layout_group-5224977|0/generic-coded_text-9292707-label"]',
-  history_of_other_allergy:
+  historyOfOtherAllergy:
     '[aria-labelledby="generic-layout_group-4774268|0/generic-layout_group-2267332|0/generic-coded_text-6418018-label"]',
 
   //Drug_allergy
-  type_of_drug:
+  typeOfDrug:
     '[data-ehr-path="nurse_pre_assessment/adverse_reaction_list/adverse_drug_reaction_risk/category"] input',
-  option_of_selection: '[role="option"]',
+  optionOfSelection: '[role="option"]',
   allergic:
     '[data-ehr-path="nurse_pre_assessment/adverse_reaction_list/adverse_drug_reaction_risk/substance"] input',
   symptom:
     'textarea[aria-labelledby="nurse_pre_assessment/adverse_reaction_list/adverse_drug_reaction_risk/adverse_reaction_event/reaction_description-label"]',
-  button_add_more:
+  buttonAddMore:
     '[aria-controls="adverse_drug_reaction_risk-container-content"] [aria-label="Add container"]',
-  button_remove_more:
+  buttonRemoveMore:
     '[aria-controls="adverse_drug_reaction_risk-container-content"] [aria-label="Remove container"]',
 
   //Other allrgey
-  type_of_other_allergy:
+  typeOfOtherAllergy:
     '[data-ehr-path="nurse_pre_assessment/adverse_reaction_list/adverse_reaction_risk/category"] input',
-  other_allergic:
+  otherAllergic:
     'textarea[aria-labelledby="nurse_pre_assessment/adverse_reaction_list/adverse_reaction_risk/substance-label"]',
-  other_symptom:
+  otherSymptom:
     'textarea[aria-labelledby="nurse_pre_assessment/adverse_reaction_list/adverse_reaction_risk/adverse_reaction_event/reaction_description-label"]',
-  button_add_other:
+  buttonAddOther:
     '[aria-controls="adverse_reaction_risk-container-content"] [aria-label="Add container"]',
-  button_remve_other:
+  buttonRemveOther:
     '[aria-controls="adverse_reaction_risk-container-content"] [aria-label="Remove container"]',
 
   //Health history
@@ -87,7 +87,7 @@ export default {
     '[aria-labelledby="nurse_pre_assessment/life_style_risk_assessment/substance_use_screening_questionnaire/specific_substance|1/used/coded_text_value-label"] [id^=needtoreplace]',
   narcotic:
     '[aria-labelledby="nurse_pre_assessment/life_style_risk_assessment/substance_use_screening_questionnaire/specific_substance|2/used/coded_text_value-label"] [id^=needtoreplace]',
-  life_style_risk:
+  lifeStyleRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/life_style_risk_assessment/substance_use_screening_questionnaire/specific_substance/comment-label"]', // Have 3
 
   //Evaluate physical examination
@@ -98,7 +98,7 @@ export default {
     '[aria-labelledby="nurse_pre_assessment/physical_examination/glasgow_coma_scale_gcs/total_score-label"]',
   skin: '[aria-labelledby="nurse_pre_assessment/physical_examination/physical_examination_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
   bone: '[aria-labelledby="nurse_pre_assessment/physical_examination/physical_examination_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  physical_exam:
+  physicalExam:
     'textarea[aria-labelledby="nurse_pre_assessment/physical_examination/physical_examination_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', // Have 2
 
   //Breathing and blood circulation
@@ -106,7 +106,7 @@ export default {
     '[aria-labelledby="nurse_pre_assessment/respiratory_and_blood_circulation/respiratory_and_blood_circulation_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
   breathe:
     '[aria-labelledby="nurse_pre_assessment/respiratory_and_blood_circulation/respiratory_and_blood_circulation_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  respiratory_and_blood:
+  respiratoryAndBlood:
     'textarea[aria-labelledby="nurse_pre_assessment/respiratory_and_blood_circulation/respiratory_and_blood_circulation_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 2
 
   //Self help
@@ -116,30 +116,30 @@ export default {
     '[aria-labelledby="nurse_pre_assessment/self-care/self-care_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
   movement:
     '[aria-labelledby="nurse_pre_assessment/self-care/self-care_screening_questionnaire/any_event/specific_symptom_sign|2/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  self_care:
+  selfCare:
     'textarea[aria-labelledby="nurse_pre_assessment/self-care/self-care_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 3
 
   //Nutritional status
-  weight_loss:
+  weightLoss:
     '[aria-labelledby="nurse_pre_assessment/nutritional_risk/nutrition_risk_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  food_less:
+  foodLess:
     '[aria-labelledby="nurse_pre_assessment/nutritional_risk/nutrition_risk_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
   bmi: '[aria-labelledby="nurse_pre_assessment/nutritional_risk/nutrition_risk_screening_questionnaire/any_event/specific_symptom_sign|2/presence/coded_text_value-label"] input[id^=needtoreplace]',
   crisis:
     '[aria-labelledby="nurse_pre_assessment/nutritional_risk/nutrition_risk_screening_questionnaire/any_event/specific_symptom_sign|3/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  nutritional_risk:
+  nutritionalRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/nutritional_risk/nutrition_risk_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 4
 
   //Eating
-  drinking_water:
+  drinkingWater:
     '[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
   appetite:
     '[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  how_to_feed:
+  howToFeed:
     '[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign|2/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  oral_cavity:
+  oralCavity:
     '[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign|3/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  food_type:
+  foodType:
     '[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign|4/presence/coded_text_value-label"] input[id^=needtoreplace]',
   meal: 'textarea[aria-labelledby="nurse_pre_assessment/meal/meal_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]',
 
@@ -148,28 +148,28 @@ export default {
     '[aria-labelledby="nurse_pre_assessment/excretory_system_risk/excretory_system_risk_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
   stool:
     '[aria-labelledby="nurse_pre_assessment/excretory_system_risk/excretory_system_risk_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  excretory_system_risk:
+  excretorySystemRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/excretory_system_risk/excretory_system_risk_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 2
 
   //Reproductive system
   lmp: '[data-ehr-path="nurse_pre_assessment/reproductive_system_risk/last_menstrual_period/date_of_onset_lmp"] [placeholder="dd/MM/yyyy"]',
-  menstruation_problems:
+  menstruationProblems:
     '[aria-labelledby="nurse_pre_assessment/reproductive_system_risk/reproductive_system_risk_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
   contraception:
     '[aria-labelledby="nurse_pre_assessment/reproductive_system_risk/reproductive_system_risk_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
   pregnancy:
     '[aria-labelledby="nurse_pre_assessment/reproductive_system_risk/reproductive_system_risk_screening_questionnaire/any_event/specific_symptom_sign|2/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  reproductive_system_risk:
+  reproductiveSystemRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/reproductive_system_risk/reproductive_system_risk_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 3
 
   //Symptoms and risks
   disturbing:
     '[aria-labelledby="nurse_pre_assessment/care_risk/care_risk_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  risk_of_falls:
+  riskOfFalls:
     '[aria-labelledby="nurse_pre_assessment/care_risk/care_risk_screening_questionnaire/any_event/specific_symptom_sign|1/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  pressure_sore_risk:
+  pressureSoreRisk:
     '[aria-labelledby="nurse_pre_assessment/care_risk/care_risk_screening_questionnaire/any_event/specific_symptom_sign|2/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  symptoms_and_risk:
+  symptomsAndRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/care_risk/care_risk_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 3
 
   //Advice
@@ -181,19 +181,19 @@ export default {
   //Mental, social and emotional state
   emotion:
     '[aria-labelledby="nurse_pre_assessment/social_risk/social_risk_screening_questionnaire/any_event/specific_symptom_sign|0/presence/coded_text_value-label"] input[id^=needtoreplace]',
-  emotion_risk:
+  emotionRisk:
     'textarea[aria-labelledby="nurse_pre_assessment/social_risk/social_risk_screening_questionnaire/any_event/specific_symptom_sign/comment-label"]', //Have 1
 
-  template_selection: '[role="combobox"]:last > input',
-  template_input: '.ck-content',
+  templateSelection: '[role="combobox"]:last > input',
+  templateInput: '.ck-content',
 
   //View Page
-  view_content: '[data-testid="pre-assessment-card-item-value-container"]',
+  viewContent: '[data-testid="pre-assessment-card-item-value-container"]',
 
-  toast_submit: 'ol',
-  list_option: '[role="option"]',
+  toastSubmit: 'ol',
+  listOption: '[role="option"]',
 
-  button_edit: '[data-testid="edit-button"]',
-  button_cancel: '[data-testid="cancel-btn"]',
-  button_submit: '[data-testid="submit-btn"]',
+  buttonEdit: '[data-testid="edit-button"]',
+  buttonCancel: '[data-testid="cancel-btn"]',
+  buttonSubmit: '[data-testid="submit-btn"]',
 };
