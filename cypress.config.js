@@ -7,6 +7,6 @@ module.exports = defineConfig({
     video: true,
     waitForAnimations: true,
     defaultCommandTimeout: 99000,
-    specPattern: 'cypress/integration/**/*.cy.js',
+    specPattern: 'cypress/e2e/**/*.cy.js',
   }
 });
