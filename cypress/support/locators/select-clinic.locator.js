@@ -9,4 +9,5 @@ export default {
   listSelectClinic: '[data-testid="searchbox-trigger-select-ward"]',
   textSearchClinic: '[data-testid="searchbox-search-select-ward"]',
   buttonSubmit: '[data-testid="submit-select-ward"]',
+  medicineDepartmentMockdata: '[data-value="อายุรศาสตร์"]'
 };

@@ -12,3 +12,4 @@ export { default as ProgressNotePage } from './progress-note.locator';
 export { default as FocusNotePage } from './focus-note.locator';
 export { default as ProblemListPage } from './problem-list.locator';
 export { default as PreAssessment } from './pre-assessment.locator';
+export { default as GraphicSheetPage } from './graphic-sheet.locator';

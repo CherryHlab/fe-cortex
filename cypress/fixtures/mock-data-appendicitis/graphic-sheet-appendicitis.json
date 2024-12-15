@@ -1,0 +1,341 @@
+{
+  "graphicSheet": [{
+    "time":{
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "45"
+    },
+    "systolic": "124",
+    "diastolic": "86",
+    "PR": "96",
+    "RR": "17",
+    "BT": "38.5",
+    "SPO2": "100",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+
+  },{
+    "time":{
+      "performDate": "03/10/2024",
+      "performHour": "12",
+      "performMinute": "30"
+    },
+    "systolic": "135",
+    "diastolic": "90",
+    "PR": "95",
+    "RR": "20",
+    "BT": "38.0",
+    "SPO2": "95",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "03/10/2024",
+      "performHour": "18",
+      "performMinute": "10"
+    },
+    "systolic": "130",
+    "diastolic": "92",
+    "PR": "80",
+    "RR": "25",
+    "BT": "38.0",
+    "SPO2": "98",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+    },
+  {
+    "time":{
+      "performDate": "03/10/2024",
+      "performHour": "21",
+      "performMinute": "00"
+    },
+    "systolic": "132",
+    "diastolic": "92",
+    "PR": "96",
+    "RR": "17",
+    "BT": "38.0",
+    "SPO2": "92",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+    },
+  {
+    "time":{
+      "performDate": "03/10/2024",
+      "performHour": "23",
+      "performMinute": "34"
+    },
+    "systolic": "128",
+    "diastolic": "88",
+    "PR": "80",
+    "RR": "21",
+    "BT": "38.5",
+    "SPO2": "92",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+    },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "03",
+      "performMinute": "05"
+    },
+   "systolic": "133",
+    "diastolic": "86",
+    "PR": "96",
+    "RR": "17",
+    "BT": "38.0",
+    "SPO2": "95",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {"time":{
+      "performDate": "04/10/2024",
+      "performHour": "06",
+      "performMinute": "20"
+    },
+    "systolic": "129",
+    "diastolic": "96",
+    "PR": "84",
+    "RR": "25",
+    "BT": "38.0",
+    "SPO2": "92",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+    },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "09",
+      "performMinute": "00"
+    },
+    "systolic": "132",
+    "diastolic": "91",
+    "PR": "98",
+    "RR": "22",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "12",
+      "performMinute": "00"
+    },
+    "systolic": "133",
+    "diastolic": "86",
+    "PR": "96",
+    "RR": "17",
+    "BT": "37.5",
+    "SPO2": "95",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "15",
+      "performMinute": "30"
+    },
+    "systolic": "132",
+    "diastolic": "91",
+    "PR": "98",
+    "RR": "22",
+    "BT": "38.0",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "18",
+      "performMinute": "22"
+    },
+    "systolic": "129",
+    "diastolic": "82",
+    "PR": "98",
+    "RR": "19",
+    "BT": "37.5",
+    "SPO2": "98",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "21",
+      "performMinute": "00"
+    },
+    "systolic": "130",
+    "diastolic": "84",
+    "PR": "98",
+    "RR": "17",
+    "BT": "38.0",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "23",
+      "performMinute": "45"
+    },
+    "systolic": "134",
+    "diastolic": "82",
+    "PR": "88",
+    "RR": "21",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "05/10/2024",
+      "performHour": "03",
+      "performMinute": "00"
+    },
+    "systolic": "129",
+    "diastolic": "81",
+    "PR": "94",
+    "RR": "17",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "05/10/2024",
+      "performHour": "06",
+      "performMinute": "10"
+    },
+    "systolic": "125",
+    "diastolic": "82",
+    "PR": "92",
+    "RR": "17",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "05/10/2024",
+      "performHour": "09",
+      "performMinute": "00"
+    },
+    "systolic": "127",
+    "diastolic": "87",
+    "PR": "85",
+    "RR": "25",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  },
+  {
+    "time":{
+      "performDate": "05/10/2024",
+      "performHour": "12",
+      "performMinute": "30"
+    },
+    "systolic": "128",
+    "diastolic": "83",
+    "PR": "86",
+    "RR": "19",
+    "BT": "37.5",
+    "SPO2": "96",
+    "Height": "170",
+    "Weight": "60",
+    "PainScore": "",
+    "FoodType": "",
+    "Fluid intake": "",
+    "Fluid output": "",
+    "Fluid balance": ""
+  }]
+}

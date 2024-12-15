@@ -106,3 +106,14 @@ export function assignPatient(patientSlot = 0, assign = true) {
     }
   });
 }
+
+export function SearchHN() {
+  cy.fixture('mock-patientInfo').then((data) => {
+    const hn = data.patient01.hn;
+ cy.get(AssignBedPage.hn)
+    .contains(hn)
+    .click();
+});
+
+
+}
