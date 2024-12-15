@@ -35,7 +35,6 @@ describe('Start Mocking patient data', () => {
     SelectClinic.selectClinicMockData();
     BedList.navigateBedListPage();
     AssignBed.SearchHN();
-    /*
     PreAsssessment.navigatePreAssessment();
     PreAsssessment.addPreAssessment("pre-assessment-appendicitis");
     PreAsssessment.submitPreAssessment();
@@ -45,15 +44,8 @@ describe('Start Mocking patient data', () => {
     Progress.addProgressNote(false,"progress-note-appendicitis");
     Focus.addFocusNote(false,"focus-note-appendicitis");
     Problem.addProblemList(false,"problem-list-appendicitis");
-    */
     GraphicSheet.addGraphicSheet(false,"mock-data-appendicitis/graphic-sheet-appendicitis");
-    
-    /*Discharge.dischargeSummary();
-    Patient.navigateDischargeSummary();
-    Patient.submitForm();
-    SideBar.navigateBedList();
-    BedList.dischargePatient();
     LogOut.navigateUserMenu();
-    LogOut.logOutButton(); */
+    LogOut.logOutButton(); 
   });
 });
