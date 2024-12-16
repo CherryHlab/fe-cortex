@@ -26,13 +26,14 @@ export function addGraphicSheet(
       if (pn[i].time.performTime == 'now') {
         cy.get(GraphicSheetPage.buttonToday).click();
       } else {
-        cy.get(GraphicSheetPage.performDate).clear();
+        cy.get(GraphicSheetPage.performDate).invoke('val', '');
+        //clear();
         cy.get(GraphicSheetPage.performDate).type(pn[i].time.performDate);
-
-        cy.get(GraphicSheetPage.performHour).clear();
+        
+        cy.get(GraphicSheetPage.performHour).invoke('val', '');
         cy.get(GraphicSheetPage.performHour).type(pn[i].time.performHour);
 
-        cy.get(GraphicSheetPage.performMinute).clear();
+        cy.get(GraphicSheetPage.performMinute).invoke('val', '');
         cy.get(GraphicSheetPage.performMinute).type(pn[i].time.performMinute);
       }
 

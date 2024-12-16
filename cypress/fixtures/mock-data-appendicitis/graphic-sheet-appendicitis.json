@@ -1,6 +1,7 @@
 {
   "graphicSheet": [{
     "time":{
+      "performTime": "",
       "performDate": "03/10/2024",
       "performHour": "08",
       "performMinute": "45"
@@ -21,6 +22,7 @@
 
   },{
     "time":{
+      "performTime": "",
       "performDate": "03/10/2024",
       "performHour": "12",
       "performMinute": "30"
@@ -29,7 +31,7 @@
     "diastolic": "90",
     "PR": "95",
     "RR": "20",
-    "BT": "38.0",
+    "BT": "38.5",
     "SPO2": "95",
     "Height": "170",
     "Weight": "60",
@@ -41,6 +43,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "03/10/2024",
       "performHour": "18",
       "performMinute": "10"
@@ -61,6 +64,7 @@
     },
   {
     "time":{
+      "performTime": "",
       "performDate": "03/10/2024",
       "performHour": "21",
       "performMinute": "00"
@@ -81,6 +85,7 @@
     },
   {
     "time":{
+      "performTime": "",
       "performDate": "03/10/2024",
       "performHour": "23",
       "performMinute": "34"
@@ -89,7 +94,7 @@
     "diastolic": "88",
     "PR": "80",
     "RR": "21",
-    "BT": "38.5",
+    "BT": "38.0",
     "SPO2": "92",
     "Height": "170",
     "Weight": "60",
@@ -101,6 +106,7 @@
     },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "03",
       "performMinute": "05"
@@ -120,6 +126,7 @@
     "Fluid balance": ""
   },
   {"time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "06",
       "performMinute": "20"
@@ -140,6 +147,7 @@
     },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "09",
       "performMinute": "00"
@@ -160,6 +168,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "12",
       "performMinute": "00"
@@ -180,6 +189,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "15",
       "performMinute": "30"
@@ -200,6 +210,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "18",
       "performMinute": "22"
@@ -220,6 +231,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "21",
       "performMinute": "00"
@@ -228,7 +240,7 @@
     "diastolic": "84",
     "PR": "98",
     "RR": "17",
-    "BT": "38.0",
+    "BT": "37.5",
     "SPO2": "96",
     "Height": "170",
     "Weight": "60",
@@ -240,6 +252,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "04/10/2024",
       "performHour": "23",
       "performMinute": "45"
@@ -260,6 +273,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "05/10/2024",
       "performHour": "03",
       "performMinute": "00"
@@ -280,6 +294,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "05/10/2024",
       "performHour": "06",
       "performMinute": "10"
@@ -300,6 +315,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "05/10/2024",
       "performHour": "09",
       "performMinute": "00"
@@ -320,6 +336,7 @@
   },
   {
     "time":{
+      "performTime": "",
       "performDate": "05/10/2024",
       "performHour": "12",
       "performMinute": "30"
