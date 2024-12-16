@@ -9,6 +9,7 @@ export default {
   patientHn: '[data-testid="patient-hn"]',
   patientName: '[data-testid="patient-name"]',
   an: '[data-testid="an"]',
+  hn: '[data-testid="admitted-patient-hn"]',
   phoneNumber: '[data-testid="phoneNumber"]',
 
   emergencyName: '[data-testid="emergencyContacts.0.name"]',

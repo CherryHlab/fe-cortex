@@ -1,0 +1,97 @@
+{
+  "preAssessment": {
+    "time": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "13"
+    },
+    "receive": "ER",
+    "receiveDetail": "ER โรคพยาบาลอื่น",
+    "arrive": "เปลนอน",
+    "informat": "อื่นๆ",
+    "informatDetail": "มารดา พามา",
+    "systolic": "124",
+    "diastolic": "86",
+    "pr": "96",
+    "rr": "17",
+    "bt": "39",
+    "spo": "95",
+    "height": "170",
+    "weight": "60",
+    "weightType": "kg",
+    "chiefComplaint": "ปวดท้อง 2 วัน PTA",
+    "presentIllness": "3 วัน PTA ปวดท้องทั่วๆ PS 3/10 ไม่มีไข้ กินได้ปกติ มีคลื่นไส้แต่ไม่อาเจียนไม่ถ่ายเหลว ไม่มีปัสสาวะแสบขัด หรือขุ่นเป็นฟองหรือมีเลือดปน 2 วัน PTA อาการปวดท้องเป็นมากขึ้นย้ายมาปวดที่ท้องน้อยด้านขวาปวดบีบๆเป็นพักๆ มีไข้ วัดได้ 38°C รับประทานยาลดไข้ ดีขึ้นเล็กน้อย คลื่นไส้อาเจียน วันละ 3 ครั้ง เป็นอาหารไม่มีเลือดปน ไม่มีถ่ายเหลว หรือถ่ายเป็นเลือด กินอาหารได้ลดลง ปัสสาวะปกติ",
+    "nursingDiagnosis": "Acute appendicitis",
+    "pastHistory": "รักษาตัวในโรงพยาบาล\tไม่เคย\nการผ่าตัด\tไม่เคย",
+    "familyHistory": "บิดาเป็นโรคความดันโลหิตสูง",
+    "congenitalDisease": "มี",
+    "congenitalDiseaseDetail": "เบาหวาน ความดันโลหิตสูง",
+    "historyOfDrugAllergy": [{
+      "typeOfDrug": "Medication",
+      "medication": "abacavir (VTM)",
+      "symptom": "หอบเหนื่อย ผื่นขึ้น"
+    }],
+    "otherAllergy": [],
+    "cigarette": "เคย",
+    "spirits": "เคย",
+    "narcotic": "ไม่เคย",
+    "lifeStyleRisk": [],
+
+    "e": "(4) Spontaneous",
+    "v": "(5) Orientated",
+    "m": "(6) Obeys commands",
+    "total": "15",
+
+    "skin": "ปกติ",
+    "bone": "ปกติ",
+    "physicalExam": [],
+
+    "pulse": "ปกติ",
+    "breathe": "ปกติ",
+    "respiratoryAndBlood": [],
+
+    "vision": "ไม่ปกติ",
+    "speak": "ไม่ปกติ",
+    "movement": "ไม่ปกติ",
+    "selfCare": [],
+
+    "weightLoss": "ไม่ใช่",
+    "foodLess": "ไม่ใช่",
+    "bmi": "ไม่ใช่",
+    "bmiDetail": "",
+    "crisis": "ใช่",
+    "nutritionalRisk": [],
+
+    "drinkingWater": "ปกติ",
+    "appetite": "ปกติ",
+    "howToFeed": "ไม่ปกติ",
+    "oralCavity": "ปกติ",
+    "foodType": "ไม่ปกติ",
+    "meal": [],
+
+    "urine": "ปกติ",
+    "stool": "ปกติ",
+    "excretorySystemRisk": [],
+
+    "lmp": "",
+    "menstruationProblems": "ไม่มี",
+    "contraception": "ไม่มี",
+    "pregnancy": "ไม่มี",
+    "reproductiveSystemRisk": [],
+    
+    "disturbing": "ไม่มี",
+    "riskOfFalls": "ไม่มี",
+    "pressureSoreRisk": "ไม่มี",
+    "symptomsAndRisk": [],
+
+    "knowledge": "ไม่มี",
+    "advice": [],
+    
+    "emotion": "ไม่มี",
+    "emotionRisk": [],
+    
+    "template": "Progress note : Objective",
+    "templateDetail": ""
+  }
+}

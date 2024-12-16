@@ -65,6 +65,17 @@ export function selectDepartment(department = 'กุมารเวช', length
     .should('be.visible')
     .should('not.have.attr', 'disabled', 'disabled');
 }
+export function selectDepartmentMockData(department = 'อายุรศาสตร์') {
+  cy.get(SelectClinicPage.listSelectDepartment).click();
+  cy.get(SelectClinicPage.textSearchDepartment);
+  cy.get(SelectClinicPage.listBox).scrollTo('bottom');
+  var indexOfDepartment = SelectClinicPage.item.indexOf('"');
+  var findDepartment =
+    SelectClinicPage.item.slice(0, indexOfDepartment + 1) +
+    department +
+    SelectClinicPage.item.slice(indexOfDepartment + 1);
+  cy.get(findDepartment).click();
+}
 
 export function selectClinic(clinic = 'บริบาลทารกแรกเกิด', length = 1) {
   cy.get(SelectClinicPage.listSelectClinic).click();
@@ -85,4 +96,16 @@ export function selectClinic(clinic = 'บริบาลทารกแรก�
     .should('not.have.attr', 'disabled', 'disabled');
   cy.get(SelectClinicPage.buttonSubmit).click();
   cy.url().should('include', 'ipd/bed-list');
+}
+
+export function selectClinicMockData(clinic = 'อายุรกรรม หญิง') {
+  cy.get(SelectClinicPage.listSelectClinic).click();
+  cy.get(SelectClinicPage.listBox).scrollTo('bottom');
+  var indexOfClinic = SelectClinicPage.item.indexOf('"');
+  var findClinic =
+    SelectClinicPage.item.slice(0, indexOfClinic + 1) +
+    clinic +
+    SelectClinicPage.item.slice(indexOfClinic + 1);
+  cy.get(findClinic).click();
+  cy.get(SelectClinicPage.buttonSubmit).click();
 }

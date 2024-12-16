@@ -1,0 +1,170 @@
+{
+  "focusNote": [{
+    "focus": "Start Ceftriaxone และ Metronidazole first dose",
+    "assessment": "ผู้ป่วยไม่เคยได้รับยา Ceftriaxone และ Metronidazole มาก่อน",
+    "time": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
+    },
+    "intervention": "ให้ข้อมูลเรื่องยาแก่ผู้ป่วยและภรรยา และแนะนำให้สังเกตอาการผิดปกติ เช่น ผื่นแดง คัน แน่นหน้าอก คลื่นไส้อาเจียน าหกมีอาหารดังกล่าว ให้รีบแจ้งพยาบาลทันที",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
+    },
+    "evaluation": "ผู้ป่วยและญาติเข้าใจและบอกถึงอาการที่ควรสังเกตได้",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
+    }
+  },
+  {
+    "focus": "ปวดแผล PS 7/10 ",
+    "assessment": "ปวดแผล PS 7/10 ",
+    "time": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "15",
+      "performMinute": "30"
+    },
+    "intervention": "ให้ยา Paracetamol",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "15",
+      "performMinute": "40"
+    },
+    "evaluation": "ปวดแผลลดลง PS 3/10",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "16",
+      "performMinute": "20"
+    }
+  },
+  {
+    "focus": "ปวดแผล PS 6/10 ",
+    "assessment": "ปวดแผล PS 6/10 ",
+    "time": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "22",
+      "performMinute": "00"
+    },
+    "intervention": "ให้ยา Paracetamol",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "22",
+      "performMinute": "10"
+    },
+    "evaluation": "ปวดแผลลดลง PS 2/10",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "22",
+      "performMinute": "50"
+    }
+  },
+  {
+    "focus": "ปวดแผล PS 6/10",
+    "assessment": "ปวดแผล PS 6/10",
+    "time": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "04",
+      "performMinute": "00"
+    },
+    "intervention": "ให้ยา Paracetamol",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "04",
+      "performMinute": "10"
+    },
+    "evaluation": "ปวดแผลลดลง PS 2/10",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "04",
+      "performMinute": "50"
+    }
+  },
+  {
+    "focus": "ปวดแผล PS 8/10 ",
+    "assessment": "ปวดแผล PS 8/10 ",
+    "time": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "10",
+      "performMinute": "20"
+    },
+    "intervention": "ให้ยา Paracetamol เพิ่ม",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "10",
+      "performMinute": "22"
+    },
+    "evaluation": "ปวดแผลลดลง PS 2/10",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "11",
+      "performMinute": "15"
+    }
+  },
+  {
+    "focus": "ปวดแผล PS 5/10 ",
+    "assessment": "ปวดแผล PS 7/10 ",
+    "time": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "03",
+      "performMinute": "15"
+    },
+    "intervention": "ให้ยา Paracetamol",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "03",
+      "performMinute": "20"
+    },
+    "evaluation": "ปวดแผลลดลง PS 2/10",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "04",
+      "performMinute": "00"
+    }
+  },
+  {
+    "focus": "Discharge",
+    "assessment": "แพทย์อนุญาตให้กลับบ้านได้",
+    "time": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
+    },
+    "intervention": "แนะนำเรื่องการรับประทานยา ทบทวนและเน้นย้ำเรื่องการดูแลผู้ป่วยที่บ้าน",
+    "interventionTime": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "08",
+      "performMinute": "45"
+    },
+    "evaluation": "ญาติรับทราบ ตอบคำถามได้ถูกต้อง",
+    "evaluationTime": {
+      "performTime": "",
+      "performDate": "06/10/2024",
+      "performHour": "08",
+      "performMinute": "45"
+    }
+  }]
+}
