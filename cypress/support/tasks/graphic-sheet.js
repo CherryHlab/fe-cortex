@@ -18,22 +18,28 @@ export function addGraphicSheet(
   isEdit = false,
   myFixture = 'graphic-sheet.json',
 ) {
+  cy.intercept('/emr-api/note-templates/*').as('noteTemplate')
+  cy.intercept('/thinkehr/rest/v1/draft/*').as('thinkehr')
   cy.fixture(myFixture).then((d) => {
     let pn = d.graphicSheet;
     for (let i = 0; i < pn.length; i++) {
       if (!isEdit) navigateGraphicSheetePage();
-
+      let nowDate = dateNow()
+      cy.wait('@noteTemplate', {timeout: 10000})
+      cy.wait('@thinkehr', {timeout: 10000})
       if (pn[i].time.performTime == 'now') {
         cy.get(GraphicSheetPage.buttonToday).click();
       } else {
-        cy.get(GraphicSheetPage.performDate).invoke('val', '');
-        //clear();
+        cy.get(GraphicSheetPage.performDate).should('be.visible');
+        cy.get(GraphicSheetPage.buttonToday).should('have.class', 'disabled');
+        cy.get(GraphicSheetPage.performDate).clear()
         cy.get(GraphicSheetPage.performDate).type(pn[i].time.performDate);
-        
-        cy.get(GraphicSheetPage.performHour).invoke('val', '');
+        cy.get(GraphicSheetPage.performDate).invoke('val',pn[i].time.performDate);
+
+        cy.get(GraphicSheetPage.performHour).clear()
         cy.get(GraphicSheetPage.performHour).type(pn[i].time.performHour);
 
-        cy.get(GraphicSheetPage.performMinute).invoke('val', '');
+        cy.get(GraphicSheetPage.performMinute).clear()
         cy.get(GraphicSheetPage.performMinute).type(pn[i].time.performMinute);
       }
 
@@ -72,4 +78,14 @@ export function submitGraphicSheetForm(isEdit = false) {
     cy.get(GraphicSheetPage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(GraphicSheetPage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
   cy.get(GraphicSheetPage.toast).should('not.be.visible');
+}
+
+function dateNow () {
+  const event = new Date();
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  };
+  return event.toLocaleDateString('en-GB', options);
 }
