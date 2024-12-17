@@ -24,7 +24,6 @@ export function addGraphicSheet(
     let pn = d.graphicSheet;
     for (let i = 0; i < pn.length; i++) {
       if (!isEdit) navigateGraphicSheetePage();
-      let nowDate = dateNow()
       cy.wait('@noteTemplate', {timeout: 10000})
       cy.wait('@thinkehr', {timeout: 10000})
       if (pn[i].time.performTime == 'now') {
@@ -78,14 +77,4 @@ export function submitGraphicSheetForm(isEdit = false) {
     cy.get(GraphicSheetPage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(GraphicSheetPage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
   cy.get(GraphicSheetPage.toast).should('not.be.visible');
-}
-
-function dateNow () {
-  const event = new Date();
-  const options = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  };
-  return event.toLocaleDateString('en-GB', options);
 }
