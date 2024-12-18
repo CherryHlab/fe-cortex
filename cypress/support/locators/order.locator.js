@@ -30,7 +30,7 @@ export default {
   //Lab
   labUrgency: '[data-testid="select-trigger-urgency"]',
   labDate: '[name="order-lab-date"]',
-  labTime: '[data-testid="time-picker-order-lab-time"]',
+  labTime: '[data-testid="time-picker-order-lab-time"] > div[type="button"]',
   labHour: '[data-testid="time-picker-order-lab-time"] input:first',
   labMinute: '[data-testid="time-picker-order-lab-time"] input:last',
   labNote: '[data-testid="additional-instruction"]',
@@ -58,9 +58,15 @@ export default {
 
 
   //Edit order
-  medItem: '[data-testid="one-day-order"] [data-testid="medication-item"]',
-  buttonEdit: '[data-testid="popover-trigger-btn"]',
-  allergy: '[data-testid="allergy-symbol"]',
+  oneDayOrder: '[data-testid="one-day-order"]',
+  medItem: '[data-testid="medication-item"]',
+  labItem: '[data-testid="lab-request-item"]',
+  ellipsis: '[data-testid="popover-trigger-btn"]',
+  editMedButton: '[data-testid="action-button-edit-medication-item"]',
+  editLabButton: '[data-testid="action-button-edit-lab-order-item"]',
+  editActivityButton: '[data-testid="action-button-edit-activity-order-item"]',
+  allergySymbol: '[data-testid="order-search-medication-detail"] [data-testid="allergy-symbol"]',
+  buttonPopupSymbol: '[data-testid="order-search-medication-detail"] iconify-icon._icon-wrapper_18r0f_24',
 
 
 

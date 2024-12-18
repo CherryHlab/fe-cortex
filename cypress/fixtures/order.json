@@ -1,0 +1,93 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "detail": "1 tab po q6h prn pain/fever",
+    "stat": false,
+    "had": false
+  },{
+    "autoModal": false,
+    "name": "Amoxicillin Cap 500 mg [Amoxycillin Community]",
+    "detail": "1 cap po tid pc+mo+no+ev",
+    "stat": true,
+    "had": false
+  },{
+    "autoModal": false,
+    "name": "Lorazepam Tab 1 mg [Travan]",
+    "detail": "1 tab po OD hs",
+    "stat": false,
+    "had": true,
+    "hadReason": "จำเป็นต้องใช้ยา"
+  },{
+    "autoModal": true,
+    "name": "Sodium Hyaluronate Eye Drop 0.18% 0.3 mL (60S) [Vislube]",
+    "detail": "1 drop eyeDropB qid mo+no+ev+hs",
+    "stat": false,
+    "had": false,
+    "reason": "B",
+    "diagnosis": "มีอาการตาแห้งทั้งสองข้าง",
+    "doctorNumber": "123011"
+  }],
+  "supply": [{
+    "autoModal": false,
+    "name": "สายยางชุดระบบการไหลเวียนโลหิตขนาดผู้ใหญ่",
+    "detail": "1 สาย",
+    "stat": false,
+    "had": false
+  },{
+    "autoModal": false,
+    "name": "เยื่อบุหัวใจ-ทำจากวัว 4 cmx 4cm-Xenosure",
+    "detail": "1 ชิ้น",
+    "stat": true,
+    "had": false
+  },{
+    "autoModal": false,
+    "name": "ถุง TPN EVA ขนาด 1000 ml.",
+    "detail": "1 ถุง",
+    "stat": false,
+    "had": false
+  }],
+  "lab": [{
+    "name": "Triglyceride",
+    "urgency": "Routine",
+    "detail": "Lipid profile"
+  },{
+    "name": "HDL-Cholesterol",
+    "urgency": "Urgent",
+    "detail": ""
+  },{
+    "name": "LDL (calculated)",
+    "urgency": "Fast track",
+    "detail": ""
+  },{
+    "name": "Cholesterol",
+    "urgency": "Future",
+    "date": "27/12/2024",
+    "hour": "10",
+    "minute": "30",
+    "detail": ""
+  }],
+  "activity": [{
+    "name": "กายภาพบำบัด",
+    "urgency": "Routine",
+    "frequency": "3",
+    "detail": ""
+  },{
+    "name": "ปั้มหัวใจ",
+    "urgency": "Urgent",
+    "detail": "100-120 ครั้งต่อนาที"
+  },{
+    "name": "ฉีดยากระตุ้นหัวใจ",
+    "urgency": "Emergency",
+    "detail": ""
+  },{
+    "name": "กายบริหาร",
+    "urgency": "Future",
+    "date": "28/12/2024",
+    "frequency": "1",
+    "detail": "ทำเป็นระยะเวลา 3 เดือน"
+  }],
+  "template": "Physical Examination : Influenza",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}
