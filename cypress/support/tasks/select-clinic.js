@@ -98,7 +98,7 @@ export function selectClinic(clinic = 'บริบาลทารกแรก�
   cy.url().should('include', 'ipd/bed-list');
 }
 
-export function selectClinicMockData(clinic = 'อายุรกรรม หญิง') {
+export function selectClinicMockData(clinic = 'อายุรกรรม ชาย') {
   cy.get(SelectClinicPage.listSelectClinic).click();
   cy.get(SelectClinicPage.listBox).scrollTo('bottom');
   var indexOfClinic = SelectClinicPage.item.indexOf('"');
