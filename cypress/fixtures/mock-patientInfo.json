@@ -1,22 +1,6 @@
 {
     "patient01": {
-            "hn": "HN 01000001",
-            "idCard": "2566450532591",
-            "phone": "0999334499",
-            "emergencyName": "สมภิศ สุวรรณเขต",
-            "relationship": "บิดา",
-            "emergencyPhone": "0123456789",
-            "physician": "123",
-            "department": [{ 
-            "name" : "รังสี",
-            "consultName": "002"
-            },{
-            "name" : "เวชศาสตร์ฟื้นฟู",
-            "consultName": "003"
-            },{
-            "name" : "จักษุ",
-            "consultName": "004"
-            }]
+            "hn": "HN 00000309"
         },
     "patient02": {
 

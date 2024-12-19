@@ -31,7 +31,8 @@ describe('Run E2E', () => {
     SelectBranch.oneBranchOrSetDefault();
     SelectClinic.navigateSelectClinicPage();
     SelectClinic.selectDepartment();
-    SelectClinic.selectClinic();
+    //SelectClinic.selectClinic();
+    SelectClinic.selectClinicMockData("บริบาลทารกแรกเกิด");
     BedList.navigateBedListPage();
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient();

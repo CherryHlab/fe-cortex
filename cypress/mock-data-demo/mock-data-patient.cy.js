@@ -36,15 +36,15 @@ describe('Start Mocking patient data', () => {
     BedList.navigateBedListPage();
     AssignBed.SearchHN();
     /*PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment("pre-assessment-appendicitis");
+    PreAsssessment.addPreAssessment("mock-data-appendicitis/pre-assessment-appendicitis");
     PreAsssessment.submitPreAssessment();
     Admission.navigateAdmissionNote();
-    Admission.addAdmissionNote("admission-note-appendicitis");
+    Admission.addAdmissionNote("mock-data-appendicitis/admission-note-appendicitis");
     Admission.submitAdmissionNote();
-    Progress.addProgressNote(false,"progress-note-appendicitis");
-    Focus.addFocusNote(false,"focus-note-appendicitis");
-    Problem.addProblemList(false,"problem-list-appendicitis");*/
-    GraphicSheet.addGraphicSheet(false,"mock-data-appendicitis/graphic-sheet-appendicitis");
+    Progress.addProgressNote(false,"mock-data-appendicitis/progress-note-appendicitis");
+    Focus.addFocusNote(false,"mock-data-appendicitis/focus-note-appendicitis");
+    Problem.addProblemList(false,"mock-data-appendicitis/problem-list-appendicitis");*/
+    GraphicSheet.addGraphicSheet(false,"mock-data-appendicitis/graphic-sheet-appendicitis-copy");
     LogOut.navigateUserMenu();
     LogOut.logOutButton(); 
   });
