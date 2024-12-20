@@ -1,0 +1,92 @@
+{
+  "problem": [{
+    "name": "Acute febrile illness with upper respiratory tract symptom",
+    "problemStatus": "Active",
+    "severity": "Severe",
+    "startTime": {
+      "performTime": "now",
+      "performDate": "03/10/2024",
+      "performHour": "06",
+      "performMinute": "13"
+    },
+    "endTime": {},
+    "detail": ""
+  },{
+    "name": "Moderate dehydration",
+    "problemStatus": "Active",
+    "severity": "Moderate",
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "09",
+      "performMinute": "10"
+    },
+    "endTime": {},
+    "detail": ""
+  },{
+    "name": "Diabetes mellitus type 2",
+    "problemStatus": "Active",
+    "severity": "Moderate",
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "09",
+      "performMinute": "32"
+    },
+    "endTime": {},
+    "detail": ""
+  },{
+    "name": "Mild hypokalemia",
+    "problemStatus": "Active",
+    "severity": "Mild",
+    "startTime": {
+      "performTime": "",
+      "performDate": "03/10/2024",
+      "performHour": "10",
+      "performMinute": "16"
+    },
+    "endTime": {},
+    "detail": "K = 2.7 (Lab 1/4/67 8.00)"
+  },{
+    "name": "Acute febrile illness c acute RLQ pain c vomiting c decrease appetite",
+    "problemStatus": "Resolved",
+    "severity": "Moderate",
+    "startTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "11",
+      "performMinute": "15"
+    },
+    "endTime": {
+      "performTime": "",
+      "performDate": "04/10/2024",
+      "performHour": "18",
+      "performMinute": "00"
+    },
+    "detail": ""
+  },{
+    "name": "Acute watery diarrhea",
+    "problemStatus": "Inactive",
+    "severity": "",
+    "startTime": {
+      "performTime": "",
+      "performDate": "05/10/2024",
+      "performHour": "10",
+      "performMinute": "09"
+    },
+    "endTime": {},
+    "detail": "หลังจาก วันที่ 04/10/67 ถ่ายปกติ"
+  },{
+    "name": "Essential hypertension",
+    "problemStatus": "Inactive",
+    "severity": "",
+    "startTime": {
+      "performTime": "",
+      "performDate": "05/10/2024",
+      "performHour": "11",
+      "performMinute": "15"
+    },
+    "endTime": {},
+    "detail": ""
+  }]
+}

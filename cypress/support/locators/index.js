@@ -13,3 +13,4 @@ export { default as FocusNotePage } from './focus-note.locator';
 export { default as ProblemListPage } from './problem-list.locator';
 export { default as PreAssessment } from './pre-assessment.locator';
 export { default as Order } from './order.locator';
+export { default as GraphicSheetPage } from './graphic-sheet.locator';

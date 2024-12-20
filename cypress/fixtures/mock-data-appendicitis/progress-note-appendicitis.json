@@ -1,0 +1,34 @@
+{
+  "progressNote": [{
+    "time":{
+      "performDate": "04/10/2024",
+      "performHour": "12",
+      "performMinute": "34"
+    },
+    "subjective": "ตื่นดี ไม่มีไข้ ปวดแผลผ่าตัดเล็กน้อย ผายลมได้ ยังไม่ถ่าย ปัสสาวะปกติ ลุกยืนได้",
+    "objective": "V/S T 37C BP 120/80 mmhg PR 80/min RR 15/min GA alert, fully conscious HEENT no abnormal eye discharge, no pale conjunctivae, anicteric sclerae CVS normal S1S2, no murmur RS clear equal breath sound both lungs Abdomen soft, mild pain at surgical site, on distension Neuro E4V5M6",
+    "assessment": "Improved",
+    "plan": "con't ATB + pain control promote ambulation and step diet observe fever dressing wound OD"
+  },{
+    "time":{
+      "performDate": "05/10/2024",
+      "performHour": "18",
+      "performMinute": "02"
+    },
+    "subjective": "ตื่นดี ไม่มีไข้ ปวดแผลผ่าตัดลดลง ผายลมได้ ถ่ายแล้ว 1 ครั้งปกติ กินอาหารเหลวได้ ปัสสาวะปกติ เดินเองได้",
+    "objective": "V/S T 37C BP 120/80 mmhg PR 80/min RR 15/min GA alert, fully conscious HEENT no abnormal eye discharge, no pale conjunctivae, anicteric sclerae CVS normal S1S2, no murmur RS clear equal breath sound both lungs Abdomen soft, mild pain at surgical site, no distension, on distension Neuro E4V5M6",
+    "assessment": "Improved",
+    "plan": "con't ATB + pain control promote ambulation and step diet observe fever dressing wound OD"
+  },
+  {
+    "time":{
+      "performDate": "06/10/2024",
+      "performHour": "08",
+      "performMinute": "30"
+    },
+    "subjective": "ตื่นดี ไม่มีไข้ ปวดแผลผ่าตัดลดลง ผายลมได้ ถ่ายแล้ว 1 ครั้งปกติ กินอาหารอ่อนได้ ปัสสาวะปกติ เดินเองได้ ",
+    "objective": "V/S T 37C BP 120/80 mmhg PR 80/min RR 15/min GA alert, fully conscious HEENT no abnormal eye discharge, no pale conjunctivae, anicteric sclerae CVS normal S1S2, no murmur RS clear equal breath sound both lungs Abdomen soft, mild pain at surgical site, on distension Neuro E4V5M6",
+    "assessment": "Improved",
+    "plan": "D/C นัด F/U OPD Sx 1 wk เปลี่ยน tegaderm"
+  }]
+}

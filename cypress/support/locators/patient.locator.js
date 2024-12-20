@@ -27,6 +27,11 @@ export default {
     '[data-testid="shortcut-menu-btn-add_nurse_pre_assessment"]',
   preAssessmentPage: '[data-testid="pre-assessment"]',
 
+   //Graphic Sheet
+   graphicSheetForm:
+   '[data-testid="shortcut-menu-btn-add_ipd_vital_sign"]',
+   graphicSheetPage: '[data-testid="graphic-form"]',
+
   //One day order
   oneDayOrderForm: '[data-testid="shortcut-menu-btn-one_day_order"]',
   orderPage: '[data-testid="order"]',
