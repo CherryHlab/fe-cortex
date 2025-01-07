@@ -8,7 +8,7 @@
     "detail": ""
   },{
     "autoModal": false,
-    "name": "Morphine Inj 1 mg/mL 3 mL [Morphine M&H]",
+    "name": "Morphine SR Cap 100 mg [Kapanol]",
     "instruction": "1 cap po OD mo",
     "stat": true,
     "allergy": false,
@@ -61,39 +61,12 @@
     "allergy": false,
     "detail": ""
   }],
-  "lab": [{
-    "name": "Cl-",
-    "urgency": "Future",
-    "date": "27/12/2024",
-    "hour": "10",
-    "minute": "30",
-    "detail": ""
-  },{
-    "name": "K+",
-    "urgency": "Fast track",
-    "detail": "Lipid profile"
-  },{
-    "name": "Na+",
-    "urgency": "Urgent",
-    "detail": "Lipid profile"
-  },{
-    "name": "CO2 (HCO3-)",
-    "urgency": "Routine",
-    "detail": "Lipid profile"
-  }],
+  "lab": [],
   "activity": [{
     "name": "กายภาพบำบัด",
     "urgency": "Future",
     "date": "28/12/2024",
     "frequency": "3",
-    "detail": ""
-  },{
-    "name": "ปั้มหัวใจ",
-    "urgency": "Emergency",
-    "detail": "100-120 ครั้งต่อนาที"
-  },{
-    "name": "ฉีดยากระตุ้นหัวใจ",
-    "urgency": "Urgent",
     "detail": ""
   },{
     "name": "กายบริหาร",

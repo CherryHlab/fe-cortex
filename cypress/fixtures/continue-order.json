@@ -5,19 +5,12 @@
     "instruction": "1 tab po q6h prn pain/fever",
     "stat": false,
     "allergy": false,
-    "detail": "ห้ามกินเกินวันละ 8 เม็ด"
-  },{
-    "autoModal": false,
-    "name": "Morphine Inj 1 mg/mL 3 mL [Morphine M&H]",
-    "instruction": "1 cap po OD mo",
-    "stat": false,
-    "allergy": false,
     "detail": ""
   },{
     "autoModal": false,
-    "name": "Chlorambucil Tab 2 mg [Leukeran]",
-    "instruction": "1 tab po bid ac+mo+ev",
-    "stat": true,
+    "name": "Morphine SR Cap 100 mg [Kapanol]",
+    "instruction": "1 cap po OD mo",
+    "stat": false,
     "allergy": false,
     "detail": ""
   },{
@@ -68,38 +61,11 @@
     "allergy": false,
     "detail": ""
   }],
-  "lab": [{
-    "name": "Cl-",
-    "urgency": "Routine",
-    "detail": "Lipid profile"
-  },{
-    "name": "K+ ",
-    "urgency": "Urgent",
-    "detail": ""
-  },{
-    "name": "Na+",
-    "urgency": "Fast track",
-    "detail": ""
-  },{
-    "name": "CO2 (HCO3-)",
-    "urgency": "Future",
-    "date": "27/12/2024",
-    "hour": "10",
-    "minute": "30",
-    "detail": ""
-  }],
+  "lab": [],
   "activity": [{
     "name": "กายภาพบำบัด",
     "urgency": "Routine",
     "frequency": "3",
-    "detail": ""
-  },{
-    "name": "ปั้มหัวใจ",
-    "urgency": "Urgent",
-    "detail": "100-120 ครั้งต่อนาที"
-  },{
-    "name": "ฉีดยากระตุ้นหัวใจ",
-    "urgency": "Emergency",
     "detail": ""
   },{
     "name": "กายบริหาร",
@@ -108,7 +74,7 @@
     "frequency": "1",
     "detail": "ทำเป็นระยะเวลา 3 เดือน"
   }],
-  "template": "Physical Examination : Influenza",
+  "template": "Influenza [Continue]",
   "additionalOrder": "",
   "licenseNumber": "123003"
 }
