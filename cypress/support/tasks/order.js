@@ -59,7 +59,7 @@ export function addOrder(
       cy.get(Order.activityAddButton).click()
       orderActivity(false, oa[i])
     }
-    addTemplate(false, d.template, d.licenseNumber)
+    addTemplate(false, orderType, d.template, d.licenseNumber)
     // addLicenseNumber(d.licenseNumber)
     submitOrder(true);
   });
@@ -131,8 +131,8 @@ function checkModal (isEdit = false, od) {
     }
     if(od.detail){
       cy.get(Order.medDetail).parent().find('input').last().as('medDetail')
-      cy.get('@medDetail').clear()
-      cy.get('@medDetail').type(od.detail)
+      cy.get('@medDetail').clear({force: true})
+      cy.get('@medDetail').type(od.detail, {force: true})
     }
 }
 
@@ -178,11 +178,17 @@ function orderActivity(isEdit = false, od) {
   if(!isEdit) cy.get(Order.addMed).click();
 }
 
-function addTemplate (isEdit = false, template, licenseNumber) {
+function addTemplate (isEdit = false, orderType, template, licenseNumber) {
   cy.intercept('/emr-api/note-templates/*').as('getTemplate')
+  if(orderType == 'oneDay')
+    cy.get(Order.oneDayOrder).as('orderMed')
+  else if (orderType == 'continue') {
+    cy.get(Order.continueOrder).as('orderMed')
+  }
+
   if (template && isEdit == true) {
-    cy.get(Order.additionalOrder).find(Order.ellipsis).click()
-    cy.get(Order.editAdditionalOrder).click()
+    cy.get('@orderMed').find(Order.additionalOrder).find(Order.ellipsis).click()
+    cy.get('@orderMed').find(Order.editAdditionalOrder).click()
   }
   cy.get(Order.template).click()
   cy.get(Order.templateSearch).clear()
@@ -192,6 +198,7 @@ function addTemplate (isEdit = false, template, licenseNumber) {
     cy.get(Order.templateItem).click()
     cy.get(Order.templateButtonSubmit).click()
     cy.get(Order.toast).should('have.text', 'คัดลอกสำเร็จ');
+    cy.get(Order.toastTitle).should('not.exist');
     cy.get(Order.toast).should('not.be.visible');
   })
   addLicenseNumber(licenseNumber)
@@ -222,11 +229,13 @@ export function submitOrder(isEdit = false) {
     cy.get(Order.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else
     cy.get(Order.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
+  cy.get(Order.toastTitle).should('not.exist');
   cy.get(Order.toast).should('not.be.visible');
 }
 
 function deleteSuccess() {
   cy.get(Order.toast).should('have.text', 'ยกเลิก Order สำเร็จ');
+  cy.get(Order.toastTitle).should('not.exist');
   cy.get(Order.toast).should('not.be.visible');
 }
 
@@ -277,7 +286,7 @@ export function editOrder(
       orderActivity(true, oa[i])
       submitOrder();
     }
-    addTemplate (true, d.template, d.licenseNumber)
+    addTemplate (true, orderType, d.template, d.licenseNumber)
   })
 }
 
@@ -344,13 +353,17 @@ export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
         cy.get('@medItem').find(Order.medAllergy).should('be.visible')
         cy.get('@medItem').find(Order.medAllergy).should('have.text','A')
       }
-      if(om[i].reason && om[i].detail){
+      if(om[i].reason && om[i].diagnosis && om[i].doctorNumber && om[i].detail){
         cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
         cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}, ว. ${om[i].doctorNumber}, ${om[i].detail}`)
       }
-      else if(om[i].reason) {
+      else if(om[i].reason && om[i].diagnosis && om[i].doctorNumber) {
         cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
         cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}, ว. ${om[i].doctorNumber}`)
+      }
+      else if(om[i].reason && om[i].diagnosis) {
+        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}`)
       }
       else if(om[i].detail) {
         cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')

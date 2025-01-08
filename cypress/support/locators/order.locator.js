@@ -99,6 +99,7 @@ export default {
   activityTag: '[data-testid="order-tag"]',
 
   toast: 'ol',
+  toastTitle: '.toast-title',
   listBox: '[role="listbox"]',
   option: '[role="option"]',
   buttonSubmit: '[data-testid="submit-btn"]',
