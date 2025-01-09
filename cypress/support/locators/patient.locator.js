@@ -36,6 +36,9 @@ export default {
   oneDayOrderForm: '[data-testid="shortcut-menu-btn-one_day_order"]',
   orderPage: '[data-testid="order"]',
 
+  continueOrderForm: '[data-testid="shortcut-menu-btn-continue_order"]',
+
+
   toast: 'ol',
   chipLabel: '[data-testid="chip-label"]',
   confirmBar: '[data-testid="submit-confirm-bar"]',

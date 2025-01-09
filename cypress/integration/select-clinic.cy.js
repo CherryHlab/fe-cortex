@@ -19,7 +19,7 @@ describe('Select clinic', () => {
 
   it('should select clinic', function () {
     SelectClinic.navigateSelectClinicPage();
-    cy.fixture('department-clinic').then((department) => {
+    cy.fixture('sit-department-clinic').then((department) => {
       SelectClinic.checkDepartmentAndClinic(department);
     });
     SelectClinic.selectDepartment();

@@ -51,4 +51,5 @@ export default {
   buttonSubmit: '[data-testid="submit-btn"]',
 
   toast: 'ol:first',
+  toastTitle: '.toast-title',
 };

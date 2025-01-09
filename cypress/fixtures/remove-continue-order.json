@@ -1,0 +1,50 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "instruction": "1 tab po q6h prn pain/fever",
+    "stat": false,
+    "allergy": false,
+    "detail": "ห้ามกินเกินวันละ 8 เม็ด"
+  },{
+    "autoModal": false,
+    "name": "Morphine SR Cap 100 mg [Kapanol]",
+    "instruction": "1 cap po OD mo",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Amoxicillin Cap 500 mg [Amoxycillin Community]",
+    "instruction": "1 cap po tid pc+mo+no+ev",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  }],
+  "supply": [{
+    "autoModal": false,
+    "name": "สายยางชุดระบบการไหลเวียนโลหิตขนาดผู้ใหญ่",
+    "instruction": "1 สาย",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "ถุง TPN EVA ขนาด 1000 ml.",
+    "instruction": "1 ถุง",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  }],
+  "lab": [],
+  "activity": [{
+    "name": "กายบริหาร",
+    "urgency": "Future",
+    "date": "28/12/2024",
+    "frequency": "1",
+    "detail": "ทำเป็นระยะเวลา 3 เดือน"
+  }],
+  "template": "Physical Examination : Influenza",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}

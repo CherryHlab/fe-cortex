@@ -77,7 +77,7 @@ export function selectDepartmentMockData(department = 'อายุรศาส�
   cy.get(findDepartment).click();
 }
 
-export function selectClinic(clinic = 'บริบาลทารกแรกเกิด', length = 1) {
+export function selectClinic(clinic = 'บริบาลทารกแรกเกิด', length = 2) {
   cy.get(SelectClinicPage.listSelectClinic).click();
   cy.get(SelectClinicPage.textSearchClinic)
     .should('be.visible')

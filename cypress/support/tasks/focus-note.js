@@ -98,6 +98,7 @@ export function submitFocusNote(isEdit = false) {
   if (isEdit)
     cy.get(FocusNotePage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(FocusNotePage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
+  cy.get(FocusNotePage.toastTitle).should('not.exist');
   cy.get(FocusNotePage.toast).should('not.be.visible');
 }
 

@@ -1,0 +1,80 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "instruction": "1 tab po q6h prn pain",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Morphine SR Cap 100 mg [Kapanol]",
+    "instruction": "1 cap po OD mo",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Amoxicillin Cap 500 mg [Amoxycillin Community]",
+    "instruction": "1 cap po qid pc+mo+no+ev+hs",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Lorazepam Tab 1 mg [Travan]",
+    "instruction": "2 tab po OD hs",
+    "stat": false,
+    "allergy": true,
+    "allergyReason": "ผู้ป่วยมีความจำเป็นต้องใช้ยาเพื่อรักษาอาการวิตกกังวล",
+    "detail": ""
+  },{
+    "autoModal": true,
+    "name": "Sodium Hyaluronate Eye Drop 0.18% 0.3 mL (60S) [Vislube]",
+    "instruction": "1 drop eyeDropB every 2 hr.",
+    "stat": false,
+    "allergy": false,
+    "reason": "A",
+    "diagnosis": "มีอาการตาแห้งทั้งสองข้างเนื่องจากมีอาการแพ้ฝุ่น",
+    "doctorNumber": "123002",
+    "detail": ""
+  }],
+  "supply": [{
+    "autoModal": false,
+    "name": "สายยางชุดระบบการไหลเวียนโลหิตขนาดผู้ใหญ่",
+    "instruction": "4 สาย",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "เยื่อบุหัวใจ-ทำจากวัว 4 cmx 4cm-Xenosure",
+    "instruction": "4 ชิ้น",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "ถุง TPN EVA ขนาด 1000 ml.",
+    "instruction": "2 ถุง",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  }],
+  "lab": [],
+  "activity": [{
+    "name": "กายภาพบำบัด",
+    "urgency": "Future",
+    "date": "28/12/2024",
+    "frequency": "3",
+    "detail": ""
+  },{
+    "name": "กายบริหาร",
+    "urgency": "Routine",
+    "frequency": "1",
+    "detail": "ทำเป็นระยะเวลา 1 เดือน"
+  }],
+  "template": "Influenza [One Day]",
+  "additionalOrder": "",
+  "licenseNumber": ""
+}

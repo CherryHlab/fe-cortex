@@ -80,6 +80,7 @@ export function submitProblemList(isEdit = false) {
   if (isEdit)
     cy.get(ProblemListPage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(ProblemListPage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
+  cy.get(ProblemListPage.toastTitle).should('not.exist');
   cy.get(ProblemListPage.toast).should('not.be.visible');
 }
 
@@ -172,6 +173,7 @@ export function removeProblemList() {
   cy.get(ProblemListPage.buttonEllipsis).eq(0).click();
   cy.get(ProblemListPage.buttonRemove).click();
   cy.get(ProblemListPage.toast).should('be.visible');
+  cy.get(ProblemListPage.toastTitle).should('not.exist');
   cy.get(ProblemListPage.toast).should('not.be.visible');
   cy.get(ProblemListPage.viewProblemItem).should('have.length', 6);
 }

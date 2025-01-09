@@ -59,6 +59,7 @@ export function submitProgressNote(isEdit = false) {
   if (isEdit)
     cy.get(ProgressNotePage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(ProgressNotePage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
+  cy.get(ProgressNotePage.toastTitle).should('not.exist');
   cy.get(ProgressNotePage.toast).should('not.be.visible');
 }
 
