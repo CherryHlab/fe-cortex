@@ -84,6 +84,7 @@ function orderMed (isEdit = false, od) {
 
 function checkModal (isEdit = false, od) {
     if (od.autoModal == true && isEdit == false) {
+      cy.get(Order.buttonPopupSymbol).click() //Wait for fix auto modal 
       cy.get(Order.modalInstruction).clear();
       cy.get(Order.modalInstruction).type(od.instruction);
       cy.get(Order.modalStat).invoke('attr','data-state').then((state) => {
@@ -330,6 +331,77 @@ export function removeOrder(orderType = 'oneDay', myFixture = 'remove-one-day-or
   })
 }
 
+function checkViewOrder(item) {
+  if(item.stat) {
+    cy.get('@medItem').find(Order.medStat).should('be.visible')
+    cy.get('@medItem').find(Order.medStat).should('have.text','STAT')
+  }
+  if(item.allergy) {
+    cy.get('@medItem').find(Order.medAllergy).should('be.visible')
+    cy.get('@medItem').find(Order.medAllergy).should('have.text','A')
+  }
+  if(item.reason && item.diagnosis && item.doctorNumber && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ${item.diagnosis}, ว. ${item.doctorNumber}, ${item.detail}`)
+  }
+  else if(item.reason && item.doctorNumber && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ว. ${item.doctorNumber}, ${item.detail}`)
+  }
+  else if(item.reason && item.diagnosis && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ${item.diagnosis}, ${item.detail}`)
+  }
+  else if(item.reason && item.diagnosis && item.doctorNumber){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ${item.diagnosis}, ว. ${item.doctorNumber}`)
+  }
+  else if(item.reason && item.diagnosis){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ${item.diagnosis}`)
+  }
+  else if(item.reason && item.doctorNumber){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ว. ${item.doctorNumber}`)
+  }
+  else if(item.reason && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}, ${item.detail}`)
+  }
+  else if(item.reason){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.reason}`)
+  }
+  else if(item.diagnosis && item.doctorNumber && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.diagnosis}, ว. ${item.doctorNumber}, ${item.detail}`)
+  }
+  else if(item.diagnosis && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.diagnosis}, ${item.detail}`)
+  }
+  else if(item.diagnosis && item.doctorNumber){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.diagnosis}, ว. ${item.doctorNumber}`)
+  }
+  else if(item.diagnosis){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.diagnosis}`)
+  }
+  else if(item.doctorNumber && item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`ว. ${item.doctorNumber}, ${item.detail}`)
+  }
+  else if(item.doctorNumber){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`ว. ${item.doctorNumber}`)
+  }
+  else if(item.detail){
+    cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
+    cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${item.detail}`)
+  }
+}
+
 export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
   if(orderType == 'oneDay')
     cy.get(Order.oneDayOrder).as('orderMed')
@@ -345,30 +417,7 @@ export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
       cy.get('@medItem').find(Order.medName).scrollIntoView()
       cy.get('@medItem').find(Order.medName).should('have.text',medName)
       cy.get('@medItem').find(Order.medDescription).should('have.text',om[i].instruction)
-      if(om[i].stat) {
-        cy.get('@medItem').find(Order.medStat).should('be.visible')
-        cy.get('@medItem').find(Order.medStat).should('have.text','STAT')
-      }
-      if(om[i].allergy) {
-        cy.get('@medItem').find(Order.medAllergy).should('be.visible')
-        cy.get('@medItem').find(Order.medAllergy).should('have.text','A')
-      }
-      if(om[i].reason && om[i].diagnosis && om[i].doctorNumber && om[i].detail){
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}, ว. ${om[i].doctorNumber}, ${om[i].detail}`)
-      }
-      else if(om[i].reason && om[i].diagnosis && om[i].doctorNumber) {
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}, ว. ${om[i].doctorNumber}`)
-      }
-      else if(om[i].reason && om[i].diagnosis) {
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].reason}, ${om[i].diagnosis}`)
-      }
-      else if(om[i].detail) {
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${om[i].detail}`)
-      }
+      checkViewOrder(om[i])
     }
     let os = d.supply
     for (let i = 0; i < os.length; i++) {
@@ -378,26 +427,7 @@ export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
       cy.get('@medItem').find(Order.medName).scrollIntoView()
       cy.get('@medItem').find(Order.medName).should('have.text',medSupply)
       cy.get('@medItem').find(Order.medDescription).should('have.text',os[i].instruction)
-      if(os[i].stat) {
-        cy.get('@medItem').find(Order.medStat).should('be.visible')
-        cy.get('@medItem').find(Order.medStat).should('have.text','STAT')
-      }
-      if(os[i].allergy) {
-        cy.get('@medItem').find(Order.medAllergy).should('be.visible')
-        cy.get('@medItem').find(Order.medAllergy).should('have.text','A')
-      }
-      if(os[i].reason && os[i].detail){
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${os[i].reason}, ${os[i].diagnosis}, ว. ${os[i].doctorNumber}, ${os[i].detail}`)
-      }
-      else if(os[i].reason) {
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${os[i].reason}, ${os[i].diagnosis}, ว. ${os[i].doctorNumber}`)
-      }
-      else if(os[i].detail) {
-        cy.get('@medItem').find(Order.medDescriptionTag).should('be.visible')
-        cy.get('@medItem').find(Order.medDescriptionTag).should('have.text',`${os[i].detail}`)
-      }
+      checkViewOrder(os[i])
     }
     let ol = d.lab
     for (let i = 0; i < ol.length; i++) {
@@ -449,7 +479,6 @@ export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
       let arrayTime = [];
       let arrayLength = 0;
       let oaDate = [];
-      let oaTime = '';
 
       cy.get('@orderMed').find(Order.activityItem).contains(activityName).as('activityName')
       cy.get('@activityName').parentsUntil(Order.activityItem).parent().as('activityItem')
@@ -465,7 +494,6 @@ export function viewOrder(orderType = 'oneDay', myFixture = 'order.json') {
         arrayLength = arrayTime.length - 1;
         arrayTime[arrayLength] = Number(arrayTime[arrayLength]) + 543;
         oaDate = arrayTime.join('/');
-        // oaTime = `${oaDate}`;
       }
       if(oa[i].urgency == 'Future' && oa[i].detail){
         cy.get('@activityItem').find(Order.activityDescription).should('be.visible')

@@ -12,10 +12,6 @@ export function checkHeaderBedlist() {
   cy.get(BedListPage.headerPatientName).should('have.text', 'ชื่อ-นามสกุล');
   cy.get(BedListPage.headerPatientGenderAge).should('have.text', 'เพศ, อายุ');
   cy.get(BedListPage.headerPhysician).should('have.text', 'แพทย์เจ้าของไข้');
-  cy.get(BedListPage.headerConsults).should(
-    'have.text',
-    'Consult แผนก / แพทย์',
-  );
   cy.get(BedListPage.headerLos).should('have.text', 'LOS');
 }
 

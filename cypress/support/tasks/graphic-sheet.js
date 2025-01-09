@@ -76,5 +76,6 @@ export function submitGraphicSheetForm(isEdit = false) {
   if (isEdit)
     cy.get(GraphicSheetPage.toast).should('have.text', 'บันทึกข้อมูลสำเร็จ');
   else cy.get(GraphicSheetPage.toast).should('have.text', 'แก้ไขข้อมูลสำเร็จ');
+  cy.get(GraphicSheetPage.toastTitle).should('not.exist');
   cy.get(GraphicSheetPage.toast).should('not.be.visible');
 }
