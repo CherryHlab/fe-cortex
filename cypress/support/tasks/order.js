@@ -79,7 +79,7 @@ function orderMed(isEdit = false, od) {
 
 function checkModal(isEdit = false, od) {
   if (od.autoModal == true && isEdit == false) {
-    cy.get(Order.buttonPopupSymbol).click(); //Wait for fix auto modal
+    // cy.get(Order.buttonPopupSymbol).click(); //Wait for fix auto modal
     cy.get(Order.modalInstruction).clear();
     cy.get(Order.modalInstruction).type(od.instruction);
     cy.get(Order.modalStat)
