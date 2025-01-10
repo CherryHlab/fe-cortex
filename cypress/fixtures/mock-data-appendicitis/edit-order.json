@@ -1,0 +1,16 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "instruction": "2 tab po q6h prn pain/fever",
+    "stat": false,
+    "allergy": false,
+    "detail": "ห้ามกินเกินวันละ 8 เม็ด"
+  }],
+  "supply": [],
+  "lab": [],
+  "activity": [],
+  "template": "Physical Examination : Influenza",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}

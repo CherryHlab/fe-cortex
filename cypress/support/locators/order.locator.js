@@ -22,12 +22,18 @@ export default {
 
   //Modal
   modal: '[data-testid="medication-instruction-modal"]',
-  modalInstruction: '[data-testid="medication-instruction-modal"] [data-testid="auto-complete-input"]',
-  modalStat: '[data-testid="medication-instruction-modal"] [data-testid="med-stat"]',
-  modalReason: '[data-testid="medication-instruction-modal"] [data-testid="select-trigger-af-reason"]',
-  modalDiagnosis: '[data-testid="medication-instruction-modal"] [data-testid="diagnosis"]',
-  modalDoctorNumber: '[data-testid="medication-instruction-modal"] [data-testid="license"] input[type="text"]',
-  modalSubmit: '[data-testid="medication-instruction-modal"] [data-testid="submit-button"]',
+  modalInstruction:
+    '[data-testid="medication-instruction-modal"] [data-testid="auto-complete-input"]',
+  modalStat:
+    '[data-testid="medication-instruction-modal"] [data-testid="med-stat"]',
+  modalReason:
+    '[data-testid="medication-instruction-modal"] [data-testid="select-trigger-af-reason"]',
+  modalDiagnosis:
+    '[data-testid="medication-instruction-modal"] [data-testid="diagnosis"]',
+  modalDoctorNumber:
+    '[data-testid="medication-instruction-modal"] [data-testid="license"] input[type="text"]',
+  modalSubmit:
+    '[data-testid="medication-instruction-modal"] [data-testid="submit-button"]',
 
   //Lab
   labUrgency: '[data-testid="select-trigger-order-lab-urgency"]',
@@ -59,8 +65,8 @@ export default {
   //license number
   licenseNumber: '[data-testid="input-select-undefined"]:last',
 
-
-  medSearch: '[data-testid="order-search-input"] [data-testid="select-value-undefined"]',
+  medSearch:
+    '[data-testid="order-search-input"] [data-testid="select-value-undefined"]',
 
   //Edit order
   oneDayOrder: '[data-testid="one-day-order"]',
@@ -73,15 +79,20 @@ export default {
   editMedButton: '[data-testid="action-button-edit-medication-item"]',
   editLabButton: '[data-testid="action-button-edit-lab-order-item"]',
   editActivityButton: '[data-testid="action-button-edit-activity-order-item"]',
-  editAdditionalOrder: '[data-testid="action-button-edit-additional-order-item"]',
-  allergySymbol: '[data-testid="order-search-medication-detail"] [data-testid="allergy-symbol"]',
-  buttonPopupSymbol: '[data-testid="order-search-medication-detail"] iconify-icon._icon-wrapper_18r0f_24',
+  editAdditionalOrder:
+    '[data-testid="action-button-edit-additional-order-item"]',
+  allergySymbol:
+    '[data-testid="order-search-medication-detail"] [data-testid="allergy-symbol"]',
+  buttonPopupSymbol:
+    '[data-testid="order-search-medication-detail"] iconify-icon._icon-wrapper_18r0f_24',
 
   //Remove order
   buttonDelete: '[data-testid="action-button-delete-medication-item"]',
   buttonDeleteLab: '[data-testid="action-button-delete-lab-order-item"]',
-  buttonDeleteActivity: '[data-testid="action-button-delete-activity-order-item"]',
-  buttonDeleteAdditionalOrder: '[data-testid="action-button-delete-additional-order-item"]',
+  buttonDeleteActivity:
+    '[data-testid="action-button-delete-activity-order-item"]',
+  buttonDeleteAdditionalOrder:
+    '[data-testid="action-button-delete-additional-order-item"]',
 
   //View order
   medName: '[data-testid="med-name"]',
@@ -103,5 +114,4 @@ export default {
   listBox: '[role="listbox"]',
   option: '[role="option"]',
   buttonSubmit: '[data-testid="submit-btn"]',
-  
 };

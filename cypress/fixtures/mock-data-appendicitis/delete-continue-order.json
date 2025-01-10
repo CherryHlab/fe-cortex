@@ -1,0 +1,16 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "instruction": "1 tab po q6h prn pain/fever",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  }],
+  "supply": [],
+  "lab": [],
+  "activity": [],
+  "template": "Influenza [Continue]",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}

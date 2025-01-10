@@ -15,6 +15,7 @@ import * as Progress from '../support/tasks/progress-note';
 import * as Problem from '../support/tasks/problem-list';
 import * as Focus from '../support/tasks/focus-note';
 import * as GraphicSheet from '../support/tasks/graphic-sheet.js';
+import * as Order from '../support/tasks/order.js';
 
 Cypress.config('defaultCommandTimeout', 30000);
 
@@ -35,16 +36,22 @@ describe('Start Mocking patient data', () => {
     SelectClinic.selectClinicMockData();
     BedList.navigateBedListPage();
     AssignBed.SearchHN();
-    /*PreAsssessment.navigatePreAssessment();
-    PreAsssessment.addPreAssessment("pre-assessment-appendicitis");
+    PreAsssessment.navigatePreAssessment();
+    PreAsssessment.addPreAssessment("mock-data-appendicitis/pre-assessment-appendicitis");
     PreAsssessment.submitPreAssessment();
     Admission.navigateAdmissionNote();
-    Admission.addAdmissionNote("admission-note-appendicitis");
+    Admission.addAdmissionNote("mock-data-appendicitis/admission-note-appendicitis");
     Admission.submitAdmissionNote();
-    Progress.addProgressNote(false,"progress-note-appendicitis");
-    Focus.addFocusNote(false,"focus-note-appendicitis");
-    Problem.addProblemList(false,"problem-list-appendicitis");*/
+    Progress.addProgressNote(false,"mock-data-appendicitis/progress-note-appendicitis");
+    Focus.addFocusNote(false,"mock-data-appendicitis/focus-note-appendicitis");
+    Problem.addProblemList(false,"mock-data-appendicitis/problem-list-appendicitis");
     GraphicSheet.addGraphicSheet(false,"mock-data-appendicitis/graphic-sheet-appendicitis");
+    Order.addOrder('oneDay',"mock-data-appendicitis/dev-order")
+    Order.editOrder('oneDay',"mock-data-appendicitis/edit-order")
+    Order.removeOrder('oneDay',"mock-data-appendicitis/delete-order")
+    Order.addOrder('continue',"mock-data-appendicitis/dev-continue-order")
+    Order.editOrder('continue',"mock-data-appendicitis/edit-continue-order")
+    Order.removeOrder('continue',"mock-data-appendicitis/delete-continue-order")
     LogOut.navigateUserMenu();
     LogOut.logOutButton(); 
   });

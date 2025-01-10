@@ -338,7 +338,7 @@ describe('Add Continue Med', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient(6, true, 101, 101);
     Patient.navigatePatientPage();
-    Order.addOrder('continue','continue-order');
+    Order.addOrder('continue', 'continue-order');
   });
 
   it('Super user should be add continue med', function () {
@@ -354,7 +354,7 @@ describe('Add Continue Med', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient(6, true, 101, 101);
     Patient.navigatePatientPage();
-    Order.addOrder('continue','continue-order');
+    Order.addOrder('continue', 'continue-order');
   });
 });
 
@@ -374,7 +374,7 @@ describe('Edit Continue Med', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient(6, true, 101, 101);
     Patient.navigatePatientPage();
-    Order.addOrder('continue','continue-order');
+    Order.addOrder('continue', 'continue-order');
     LogOut.navigateUserMenu();
     LogOut.logOutButton();
     LogIn.navigateWelcomePage();
@@ -411,7 +411,7 @@ describe('Edit Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.editOrder('continue','edit-continue-order');
+    Order.editOrder('continue', 'edit-continue-order');
   });
 
   it('Super user should be edit continue med', function () {
@@ -425,7 +425,7 @@ describe('Edit Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.editOrder('continue','edit-continue-order');
+    Order.editOrder('continue', 'edit-continue-order');
   });
 });
 
@@ -445,7 +445,7 @@ describe('Remove Continue Med', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient(6, true, 101, 101);
     Patient.navigatePatientPage();
-    Order.addOrder('continue','continue-order');
+    Order.addOrder('continue', 'continue-order');
     LogOut.navigateUserMenu();
     LogOut.logOutButton();
     LogIn.navigateWelcomePage();
@@ -482,7 +482,7 @@ describe('Remove Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.removeOrder('continue','remove-continue-order');
+    Order.removeOrder('continue', 'remove-continue-order');
   });
 
   it('Super user should be remove conitue med', function () {
@@ -496,7 +496,7 @@ describe('Remove Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.removeOrder('continue','remove-continue-order');
+    Order.removeOrder('continue', 'remove-continue-order');
   });
 });
 
@@ -516,7 +516,7 @@ describe('View Continue Med', () => {
     AssignBed.randomAvailableBed();
     AssignBed.assignPatient(6, true, 101, 101);
     Patient.navigatePatientPage();
-    Order.addOrder('continue','continue-order');
+    Order.addOrder('continue', 'continue-order');
     LogOut.navigateUserMenu();
     LogOut.logOutButton();
     LogIn.navigateWelcomePage();
@@ -553,7 +553,7 @@ describe('View Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.viewOrder('continue','continue-order');
+    Order.viewOrder('continue', 'continue-order');
   });
 
   it('Super user should be view continue med', function () {
@@ -567,7 +567,7 @@ describe('View Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.viewOrder('continue','continue-order');
+    Order.viewOrder('continue', 'continue-order');
   });
 
   it('Nurse should be view continue med', function () {
@@ -581,6 +581,6 @@ describe('View Continue Med', () => {
     SelectClinic.selectClinic();
     BedList.navigateBedListPage();
     Patient.navigatePatientPage();
-    Order.viewOrder('continue','continue-order');
+    Order.viewOrder('continue', 'continue-order');
   });
 });

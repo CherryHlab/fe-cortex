@@ -1,0 +1,73 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Paracetamol Tab 500 mg [Sara]",
+    "instruction": "1 tab po q6h prn pain/fever",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Morphine SR Cap 100 mg [Kapanol]",
+    "instruction": "1 cap po OD mo",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "Amoxicillin Cap 500 mg [Amoxycillin Community]",
+    "instruction": "1 cap po tid pc+mo+no+ev",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": true,
+    "name": "Cefdinir Cap 100 mg [Samnir]",
+    "instruction": "1 cap po tid pc+mo+no+ev",
+    "stat": false,
+    "allergy": false,
+    "allergyReason": "จำเป็นต้องใช้ยา",
+    "reason": "C",
+    "diagnosis": "จำเป็นต้องใช้ยานี้",
+    "doctorNumber": "123011",
+    "detail": ""
+  }],
+  "supply": [{
+    "autoModal": false,
+    "name": "สายยางชุดระบบการไหลเวียนโลหิตขนาดผู้ใหญ่",
+    "instruction": "1 สาย",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "เยื่อบุหัวใจ-ทำจากวัว 4 cmx 4cm-Xenosure",
+    "instruction": "1 ชิ้น",
+    "stat": true,
+    "allergy": false,
+    "detail": ""
+  },{
+    "autoModal": false,
+    "name": "ถุง TPN EVA ขนาด 1000 ml.",
+    "instruction": "1 ถุง",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  }],
+  "lab": [],
+  "activity": [{
+    "name": "กายภาพบำบัด",
+    "urgency": "Routine",
+    "frequency": "3",
+    "detail": ""
+  },{
+    "name": "กายบริหาร",
+    "urgency": "Future",
+    "date": "28/12/2024",
+    "frequency": "1",
+    "detail": "ทำเป็นระยะเวลา 3 เดือน"
+  }],
+  "template": "Influenza [Continue]",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}

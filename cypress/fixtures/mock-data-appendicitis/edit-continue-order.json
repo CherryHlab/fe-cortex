@@ -1,0 +1,16 @@
+{
+  "med": [{
+    "autoModal": false,
+    "name": "Amoxicillin Cap 500 mg [Amoxycillin Community]",
+    "instruction": "1-2 cap po tid pc+mo+no+ev",
+    "stat": false,
+    "allergy": false,
+    "detail": ""
+  }],
+  "supply": [],
+  "lab": [],
+  "activity": [],
+  "template": "Influenza [Continue]",
+  "additionalOrder": "",
+  "licenseNumber": "123003"
+}
