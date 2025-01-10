@@ -25,7 +25,12 @@ export function randomAvailableBed() {
     });
 }
 
-export function assignPatient(patientSlot = 0, assign = true, startAN = 101, endAN = 106) {
+export function assignPatient(
+  patientSlot = 0,
+  assign = true,
+  startAN = 101,
+  endAN = 106,
+) {
   cy.fixture('assign-bed').then((data) => {
     let patient = data.assignBed;
     let patientLength = data.assignBed.length;
@@ -110,10 +115,6 @@ export function assignPatient(patientSlot = 0, assign = true, startAN = 101, end
 export function SearchHN() {
   cy.fixture('mock-patientInfo').then((data) => {
     const hn = data.patient01.hn;
- cy.get(AssignBedPage.hn)
-    .contains(hn)
-    .click();
-});
-
-
+    cy.get(AssignBedPage.hn).contains(hn).click();
+  });
 }
